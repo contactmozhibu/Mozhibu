@@ -186,7 +186,7 @@ import {
       }
       .admin-table th {
         padding: 16px 24px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 13px;
         color: var(--ink-soft);
@@ -332,7 +332,7 @@ export class AuthorsComponent implements OnInit {
   });
 
   currentPage = signal(1);
-  itemsPerPage = 30;
+  itemsPerPage = 10;
 
   paginatedAuthors = computed(() => {
     const startIndex = (this.currentPage() - 1) * this.itemsPerPage;

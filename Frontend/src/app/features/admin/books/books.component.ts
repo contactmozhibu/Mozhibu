@@ -254,7 +254,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
       }
       .admin-table th {
         padding: 16px 24px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 13px;
         color: var(--ink-soft);
@@ -308,7 +308,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
         color: var(--forest-deep);
       }
       .status-badge.rejected {
-        background: #fee2e2;
+        background: rgba(239, 68, 68, 0.1);
         color: #991b1b;
       }
       .status-badge.suspended {
@@ -342,7 +342,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
       }
       .status-badge.draft {
         background: #f3f4f6;
-        color: #4b5563;
+        color: var(--sd-muted);
       }
 
       .action-buttons {
@@ -434,7 +434,7 @@ export class BooksComponent implements OnInit {
   });
 
   currentPage = signal(1);
-  itemsPerPage = 30;
+  itemsPerPage = 10;
 
   paginatedBooks = computed(() => {
     const startIndex = (this.currentPage() - 1) * this.itemsPerPage;

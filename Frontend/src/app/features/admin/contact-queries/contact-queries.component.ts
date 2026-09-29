@@ -166,15 +166,15 @@ interface ContactQuery {
     .header h1 {
       font-size: 24px;
       font-weight: 600;
-      color: #111;
+      color: var(--sd-text);
       margin-bottom: 8px;
     }
     .header p {
-      color: #666;
+      color: var(--sd-muted);
       font-size: 14px;
     }
     .card {
-      background: #fff;
+      background: var(--sd-sidebar);
       border-radius: 8px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       overflow: hidden;
@@ -189,26 +189,26 @@ interface ContactQuery {
     }
     .table th, .table td {
       padding: 16px 24px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--sd-border);
     }
     .table th {
-      background: #f8f9fa;
+      background: var(--sd-icon-btn);
       font-weight: 600;
-      color: #444;
+      color: var(--sd-muted);
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .table td {
       font-size: 14px;
-      color: #333;
+      color: var(--sd-text);
       vertical-align: middle;
     }
     .table tr:last-child td {
       border-bottom: none;
     }
     tr.unread td {
-      background-color: #f8fbfb;
+      background-color: var(--sd-icon-btn);
     }
     tr.unread td.font-medium {
       font-weight: 700;
@@ -218,7 +218,7 @@ interface ContactQuery {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: #555;
+      color: var(--sd-muted);
     }
     .text-nowrap {
       white-space: nowrap;
@@ -234,7 +234,7 @@ interface ContactQuery {
       padding-bottom: 32px;
     }
     .text-gray-500 {
-      color: #6b7280;
+      color: var(--sd-muted);
     }
     
     .badge {
@@ -245,19 +245,19 @@ interface ContactQuery {
       font-weight: 600;
     }
     .badge-new {
-      background: #e3f2fd;
+      background: rgba(59, 130, 246, 0.1);
       color: #1976d2;
     }
     .badge-read {
-      background: #f1f3f5;
-      color: #6c757d;
+      background: var(--sd-icon-btn);
+      color: var(--sd-muted);
     }
     .badge-replied {
-      background: #e6f4ea;
+      background: rgba(16, 185, 129, 0.1);
       color: #1e8e3e;
     }
     .badge-user {
-      background: #fff3e0;
+      background: rgba(245, 158, 11, 0.1);
       color: #f57c00;
       margin-left: 8px;
     }
@@ -285,11 +285,11 @@ interface ContactQuery {
     .btn-outline {
       background: transparent;
       border: 1px solid #ddd;
-      color: #333;
+      color: var(--sd-text);
     }
     .btn-outline:hover:not(:disabled) {
-      background: #f8f9fa;
-      border-color: #ccc;
+      background: var(--sd-icon-btn);
+      border-color: var(--sd-border);
     }
     .btn-outline-primary {
       background: transparent;
@@ -297,7 +297,7 @@ interface ContactQuery {
       color: #1976d2;
     }
     .btn-outline-primary:hover:not(:disabled) {
-      background: #e3f2fd;
+      background: rgba(59, 130, 246, 0.1);
     }
     .btn-primary {
       background: #111;
@@ -331,7 +331,7 @@ interface ContactQuery {
       padding: 24px;
     }
     .modal-content {
-      background: #fff;
+      background: var(--sd-sidebar);
       border-radius: 8px;
       width: 100%;
       max-width: 600px;
@@ -342,7 +342,7 @@ interface ContactQuery {
     }
     .modal-header {
       padding: 20px 24px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--sd-border);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -357,11 +357,11 @@ interface ContactQuery {
       border: none;
       font-size: 24px;
       cursor: pointer;
-      color: #666;
+      color: var(--sd-muted);
       line-height: 1;
     }
     .close-btn:hover {
-      color: #111;
+      color: var(--sd-text);
     }
     .modal-body {
       padding: 24px;
@@ -374,12 +374,12 @@ interface ContactQuery {
     .detail-label {
       width: 100px;
       font-weight: 600;
-      color: #555;
+      color: var(--sd-muted);
       font-size: 14px;
     }
     .detail-value {
       flex: 1;
-      color: #111;
+      color: var(--sd-text);
       font-size: 14px;
       display: flex;
       align-items: center;
@@ -390,17 +390,17 @@ interface ContactQuery {
     .full-message {
       margin-top: 8px;
       padding: 16px;
-      background: #f8f9fa;
+      background: var(--sd-icon-btn);
       border-radius: 6px;
       font-size: 14px;
       line-height: 1.6;
-      color: #333;
+      color: var(--sd-text);
       white-space: pre-wrap;
     }
     .full-reply {
       margin-top: 8px;
       padding: 16px;
-      background: #e6f4ea;
+      background: rgba(16, 185, 129, 0.1);
       border: 1px solid #cce8d6;
       border-radius: 6px;
       font-size: 14px;
@@ -420,16 +420,16 @@ interface ContactQuery {
     }
     .reply-textarea:focus {
       outline: none;
-      border-color: #111;
+      border-color: var(--sd-text);
     }
     .reply-help {
       margin-top: 6px;
       font-size: 12px;
-      color: #666;
+      color: var(--sd-muted);
     }
     .modal-footer {
       padding: 16px 24px;
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--sd-border);
       display: flex;
       justify-content: flex-end;
     }
@@ -437,7 +437,7 @@ interface ContactQuery {
     .loading-state {
       padding: 48px;
       text-align: center;
-      color: #666;
+      color: var(--sd-muted);
     }
     .loader {
       border: 3px solid #f3f3f3;
@@ -458,14 +458,14 @@ interface ContactQuery {
       align-items: center;
       gap: 16px;
       padding: 16px;
-      background: #fff;
-      border-top: 1px solid #eee;
+      background: var(--sd-sidebar);
+      border-top: 1px solid var(--sd-border);
     }
     .pagination button {
       padding: 6px 12px;
       border-radius: 6px;
       border: 1px solid #ddd;
-      background: #fff;
+      background: var(--sd-sidebar);
       cursor: pointer;
       font-size: 13px;
     }
@@ -486,7 +486,7 @@ export class ContactQueriesComponent implements OnInit {
   isReplying = signal<boolean>(false);
 
   currentPage = signal(1);
-  itemsPerPage = 30;
+  itemsPerPage = 10;
 
   paginatedQueries = computed(() => {
     const startIndex = (this.currentPage() - 1) * this.itemsPerPage;

@@ -14,6 +14,7 @@ export interface AdminStats {
   chartLabels: string[];
   totalAuthors: number;
   pendingBooks: number;
+  activeSubscriptions: number;
 }
 
 export interface AdminBook {

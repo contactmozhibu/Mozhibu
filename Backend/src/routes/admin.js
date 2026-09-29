@@ -35,6 +35,10 @@ router.get("/stats", async (req, res) => {
     const totalAuthors = await User.countDocuments({
       role: { $in: ["writer", "superadmin"] },
     });
+    const activeSubscriptions = await UserSubscription.countDocuments({
+      status: "active",
+      endDate: { $gte: new Date() }
+    });
 
     const filter = req.query.filter || 'This Year';
     let startDate = new Date();
@@ -151,6 +155,7 @@ router.get("/stats", async (req, res) => {
       monthlyBooksData: monthlyBooks.data,
       monthlyUsersData: monthlyUsers.data,
       chartLabels: monthlyBooks.labels,
+      activeSubscriptions,
     });
   } catch (err) {
     res.status(500).json({ msg: "Server Error" });

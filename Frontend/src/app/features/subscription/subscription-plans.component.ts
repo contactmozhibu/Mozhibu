@@ -578,11 +578,6 @@ export class SubscriptionPlansComponent implements OnInit {
     this.subscriptionService.getPlans().subscribe({
       next: (plans) => {
         this.plans.set(plans);
-        // Pre-select a plan (middle one if 3, else first)
-        if (plans.length > 0) {
-          const defaultPlan = plans.length >= 3 ? plans[1] : plans[0];
-          this.selectPlan(defaultPlan);
-        }
         this.isLoading.set(false);
       },
       error: () => this.isLoading.set(false),
@@ -601,6 +596,14 @@ export class SubscriptionPlansComponent implements OnInit {
     this.appliedCoupon.set(null);
     this.couponCode = '';
     this.couponError.set(null);
+
+    // Give Angular a tiny moment to render the checkout section, then scroll to it
+    setTimeout(() => {
+      const checkoutSection = document.querySelector('.coupon-section');
+      if (checkoutSection) {
+        checkoutSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
   }
 
   finalPrice(): string {

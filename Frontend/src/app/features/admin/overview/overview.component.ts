@@ -45,11 +45,6 @@ import { Router } from '@angular/router';
               <div class="stat-label">Total Users</div>
               <div class="stat-bottom">
                 <div class="stat-value">{{ stats()!.totalUsers }}</div>
-                @if (getTrend(stats()!.monthlyUsersData) !== 0) {
-                  <div class="trend positive">
-                    ↑ {{ formatTrend(stats()!.monthlyUsersData) }}
-                  </div>
-                }
               </div>
             </div>
 
@@ -66,11 +61,6 @@ import { Router } from '@angular/router';
               <div class="stat-label">Published Books</div>
               <div class="stat-bottom">
                 <div class="stat-value">{{ stats()!.totalPublishedBooks }}</div>
-                @if (getTrend(stats()!.monthlyBooksData) !== 0) {
-                  <div class="trend positive">
-                    ↑ {{ formatTrend(stats()!.monthlyBooksData) }}
-                  </div>
-                }
               </div>
             </div>
 
@@ -105,6 +95,21 @@ import { Router } from '@angular/router';
                 <div class="stat-value">{{ stats()!.readers }}</div>
               </div>
             </div>
+
+            <div class="stat-card">
+              <div class="stat-header">
+                <div class="stat-icon subscriptions-icon" style="color: var(--emerald); background: var(--emerald-tint);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-label">Active Subscriptions</div>
+              <div class="stat-bottom">
+                <div class="stat-value">{{ stats()!.activeSubscriptions || 0 }}</div>
+              </div>
+            </div>
           </div>
 
           <!-- Charts Row -->
@@ -122,8 +127,8 @@ import { Router } from '@angular/router';
                       class="time-tab"
                       (click)="selectSort(opt)"
                       style="padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s;"
-                      [style.background]="opt === currentSort() ? '#94a3b8' : '#f1f5f9'"
-                      [style.color]="opt === currentSort() ? 'white' : '#475569'"
+                      [style.background]="opt === currentSort() ? 'var(--sd-active)' : 'var(--sd-icon-btn)'"
+                      [style.color]="opt === currentSort() ? '#fff' : 'var(--sd-text)'"
                       [disabled]="chartLoading()"
                       [style.opacity]="chartLoading() ? '0.5' : '1'"
                     >
@@ -133,28 +138,28 @@ import { Router } from '@angular/router';
                 </div>
               </div>
 
-              <div class="analytics-metrics" [style.opacity]="chartLoading() ? '0.5' : '1'" style="display: flex; justify-content: space-around; margin-bottom: 40px; text-align: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 24px; transition: opacity 0.3s;">
+              <div class="analytics-metrics" [style.opacity]="chartLoading() ? '0.5' : '1'" style="display: flex; justify-content: space-around; margin-bottom: 40px; text-align: center; border-bottom: 1px dashed var(--sd-border); padding-bottom: 24px; transition: opacity 0.3s;">
                 <div class="metric-item" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                  <span class="label" style="font-size: 14px; font-weight: 500; color: #64748b;">New Users (This Month)</span>
+                  <span class="label" style="font-size: 14px; font-weight: 500; color: var(--sd-muted);">New Users (This Month)</span>
                   <div style="display: flex; align-items: baseline; gap: 8px;">
-                    <span class="value" style="font-family: var(--display); font-size: 24px; font-weight: 700; color: #1e293b;">{{ stats()!.monthlyUsersData[stats()!.monthlyUsersData.length - 1] || 0 }}</span>
+                    <span class="value" style="font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--sd-text);">{{ stats()!.monthlyUsersData[stats()!.monthlyUsersData.length - 1] || 0 }}</span>
                     <span class="trend positive" style="font-size: 12px; font-weight: 600; color: #10b981; background: transparent; padding: 0;">{{ formatTrend(stats()!.monthlyUsersData) }} ↑</span>
                   </div>
                 </div>
                 <div class="metric-item" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                  <span class="label" style="font-size: 14px; font-weight: 500; color: #64748b;">New Books (This Month)</span>
+                  <span class="label" style="font-size: 14px; font-weight: 500; color: var(--sd-muted);">New Books (This Month)</span>
                   <div style="display: flex; align-items: baseline; gap: 8px;">
-                    <span class="value" style="font-family: var(--display); font-size: 24px; font-weight: 700; color: #1e293b;">{{ stats()!.monthlyBooksData[stats()!.monthlyBooksData.length - 1] || 0 }}</span>
+                    <span class="value" style="font-family: var(--display); font-size: 24px; font-weight: 700; color: var(--sd-text);">{{ stats()!.monthlyBooksData[stats()!.monthlyBooksData.length - 1] || 0 }}</span>
                     <span class="trend positive" style="font-size: 12px; font-weight: 600; color: #10b981; background: transparent; padding: 0;">{{ formatTrend(stats()!.monthlyBooksData) }} ↑</span>
                   </div>
                 </div>
               </div>
 
               <div class="chart-legend" style="display: flex; justify-content: flex-end; gap: 16px; margin-bottom: -16px; position: relative; z-index: 2;">
-                <div class="legend-item" style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #64748b;">
+                <div class="legend-item" style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--sd-muted);">
                   <span class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: #6366f1;"></span> New Users
                 </div>
-                <div class="legend-item" style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #64748b;">
+                <div class="legend-item" style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--sd-muted);">
                   <span class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></span> New Books
                 </div>
               </div>
@@ -180,9 +185,9 @@ import { Router } from '@angular/router';
                     </defs>
 
                     <!-- Horizontal Grid Lines -->
-                    <line x1="0" y1="50" x2="1000" y2="50" stroke="#f1f5f9" stroke-width="1" />
-                    <line x1="0" y1="150" x2="1000" y2="150" stroke="#f1f5f9" stroke-width="1" />
-                    <line x1="0" y1="250" x2="1000" y2="250" stroke="#f1f5f9" stroke-width="1" />
+                    <line x1="0" y1="50" x2="1000" y2="50" stroke="var(--sd-border)" stroke-width="1" />
+                    <line x1="0" y1="150" x2="1000" y2="150" stroke="var(--sd-border)" stroke-width="1" />
+                    <line x1="0" y1="250" x2="1000" y2="250" stroke="var(--sd-border)" stroke-width="1" />
 
                     <!-- New Books Smooth Area -->
                     <path [attr.d]="getAreaPath(stats()!.monthlyBooksData, true, true)" fill="url(#orangeGradient)" />
@@ -380,7 +385,7 @@ import { Router } from '@angular/router';
 
       .metrics-row {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 24px;
       }
 
@@ -536,7 +541,7 @@ import { Router } from '@angular/router';
         position: absolute;
         top: 20px;
         transform: translateX(-50%);
-        background: white;
+        background: var(--card);
         border: 1px solid var(--sd-border);
         border-radius: 8px;
         padding: 12px;
@@ -548,7 +553,7 @@ import { Router } from '@angular/router';
       .tooltip-header {
         font-size: 13px;
         font-weight: 700;
-        color: #1e293b;
+        color: var(--sd-text);
         margin-bottom: 8px;
         padding-bottom: 6px;
         border-bottom: 1px solid var(--sd-border);
@@ -558,12 +563,12 @@ import { Router } from '@angular/router';
         align-items: center;
         gap: 6px;
         font-size: 12px;
-        color: #64748b;
+        color: var(--sd-muted);
         margin-bottom: 4px;
       }
       .tooltip-row:last-child { margin-bottom: 0; }
       .tooltip-row .dot { width: 8px; height: 8px; border-radius: 50%; }
-      .tooltip-row strong { color: #1e293b; margin-left: auto; }
+      .tooltip-row strong { color: var(--sd-text); margin-left: auto; }
 
       .analytics-chart-wrapper {
         display: flex;
@@ -577,7 +582,7 @@ import { Router } from '@angular/router';
         justify-content: space-between;
         font-size: 12px;
         font-weight: 500;
-        color: #94a3b8;
+        color: var(--sd-muted);
         padding-top: 55px;
         padding-right: 24px;
         padding-bottom: 24px;
@@ -605,7 +610,7 @@ import { Router } from '@angular/router';
         justify-content: space-between;
         font-size: 12px;
         font-weight: 500;
-        color: #94a3b8;
+        color: var(--sd-muted);
       }
 
       /* Mobile Responsive */
@@ -696,11 +701,11 @@ export class OverviewComponent implements OnInit {
     return Math.round(((current - prev) / prev) * 100);
   }
 
-  // Display-safe trend: caps at 999%+
+  // Display trend percentage, capped at 100% for readability
   formatTrend(data: number[]): string {
     const t = this.getTrend(data);
-    if (t > 999) return '999%+';
-    if (t < -999) return '999%-';
+    if (t > 100) return '100%+';
+    if (t < -100) return '100%-';
     return `${Math.abs(t)}%`;
   }
 

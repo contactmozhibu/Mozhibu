@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, inject } from '@angular/core';
+import { Component, OnInit, signal, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../../core/services/api.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +18,16 @@ export class PayoutsComponent implements OnInit {
   payouts = signal<any[]>([]);
   loading = signal(true);
   processingId = signal<string | null>(null);
+
+  currentPage = signal(1);
+  itemsPerPage = 10;
+
+  paginatedPayouts = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.payouts().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.payouts().length / this.itemsPerPage)));
 
   ngOnInit(): void {
     this.loadPayouts();

@@ -175,13 +175,13 @@ input:checked + .slider:before {
 }
 
 .alert.success {
-  background: #e8f5e9;
+  background: rgba(16, 185, 129, 0.1);
   color: #2e7d32;
   border: 1px solid #c8e6c9;
 }
 
 .alert.error {
-  background: #ffebee;
+  background: rgba(239, 68, 68, 0.1);
   color: #c62828;
   border: 1px solid #ffcdd2;
 }
@@ -248,7 +248,7 @@ input:checked + .slider:before {
   aspect-ratio: 2/3;
   width: 100%;
   cursor: pointer;
-  background: #f5f5f5;
+  background: var(--sd-icon-btn);
   overflow: hidden;
 }
 

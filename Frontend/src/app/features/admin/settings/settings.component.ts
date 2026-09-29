@@ -169,15 +169,15 @@ import { ApiService } from '../../../core/services/api.service';
       .header h1 {
         font-size: 24px;
         font-weight: 600;
-        color: #111;
+        color: var(--sd-text);
         margin-bottom: 8px;
       }
       .header p {
-        color: #666;
+        color: var(--sd-muted);
         font-size: 14px;
       }
       .card {
-        background: #fff;
+        background: var(--sd-sidebar);
         border-radius: 8px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         margin-bottom: 24px;
@@ -185,12 +185,12 @@ import { ApiService } from '../../../core/services/api.service';
       }
       .card-header {
         padding: 16px 24px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--sd-border);
       }
       .card-header h2 {
         font-size: 16px;
         font-weight: 600;
-        color: #333;
+        color: var(--sd-text);
       }
       .tabs {
         display: flex;
@@ -204,16 +204,16 @@ import { ApiService } from '../../../core/services/api.service';
         padding: 8px 16px;
         font-size: 14px;
         font-weight: 500;
-        color: #666;
+        color: var(--sd-muted);
         cursor: pointer;
         border-bottom: 2px solid transparent;
       }
       .tabs button:hover {
-        color: #111;
+        color: var(--sd-text);
       }
       .tabs button.active {
-        color: #1e342c;
-        border-bottom-color: #1e342c;
+        color: var(--sd-text);
+        border-bottom-color: var(--sd-text);
       }
       .mt-4 { margin-top: 16px; }
       .coupon-form {
@@ -233,7 +233,7 @@ import { ApiService } from '../../../core/services/api.service';
       .form-group label {
         font-size: 13px;
         font-weight: 500;
-        color: #444;
+        color: var(--sd-muted);
       }
       .form-control {
         padding: 8px 12px;
@@ -244,7 +244,7 @@ import { ApiService } from '../../../core/services/api.service';
       }
       .form-control:focus {
         outline: none;
-        border-color: #1e342c;
+        border-color: var(--sd-text);
       }
       .form-actions {
         display: flex;
@@ -278,10 +278,10 @@ import { ApiService } from '../../../core/services/api.service';
       .btn-outline {
         background: transparent;
         border: 1px solid #ddd;
-        color: #333;
+        color: var(--sd-text);
       }
       .btn-outline:hover {
-        background: #f9f9f9;
+        background: var(--sd-icon-btn);
       }
       .btn-danger {
         background: transparent;
@@ -289,7 +289,7 @@ import { ApiService } from '../../../core/services/api.service';
         color: #d32f2f;
       }
       .btn-danger:hover {
-        background: #fde8e8;
+        background: rgba(239, 68, 68, 0.1);
       }
       .ml-2 { margin-left: 8px; }
       .table-responsive {
@@ -302,13 +302,13 @@ import { ApiService } from '../../../core/services/api.service';
       .table th, .table td {
         padding: 12px 24px;
         text-align: left;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--sd-border);
         font-size: 14px;
       }
       .table th {
-        background: #f9fafb;
+        background: var(--sd-icon-btn);
         font-weight: 500;
-        color: #6b7280;
+        color: var(--sd-muted);
         text-transform: uppercase;
         font-size: 12px;
       }
@@ -319,17 +319,17 @@ import { ApiService } from '../../../core/services/api.service';
         font-weight: 500;
       }
       .badge-active {
-        background: #def7ec;
+        background: rgba(16, 185, 129, 0.1);
         color: #03543f;
       }
       .badge-inactive {
-        background: #fde8e8;
+        background: rgba(239, 68, 68, 0.1);
         color: #9b1c1c;
       }
-      .text-sm { font-size: 12px; color: #666; }
+      .text-sm { font-size: 12px; color: var(--sd-muted); }
       .text-center { text-align: center; }
       .py-4 { padding-top: 16px; padding-bottom: 16px; }
-      .text-gray-500 { color: #6b7280; }
+      .text-gray-500 { color: var(--sd-muted); }
       .error-msg {
         color: #d32f2f;
         font-size: 13px;

@@ -21,6 +21,7 @@ import {
           <input
             type="text"
             [(ngModel)]="searchQuery"
+            (ngModelChange)="currentPage.set(1)"
             placeholder="Search by name or email..."
             class="search-input"
           />
@@ -59,7 +60,7 @@ import {
               </tr>
             </thead>
             <tbody>
-              @for (author of filteredAuthors(); track author._id) {
+              @for (author of paginatedAuthors(); track author._id) {
                 <tr>
                   <td>
                     <div class="title-cell">
@@ -100,6 +101,13 @@ import {
             </tbody>
           </table>
         </div>
+        @if (totalPages() > 1) {
+          <div class="pagination">
+            <button [disabled]="currentPage() === 1" (click)="currentPage.set(currentPage() - 1)">Previous</button>
+            <span>Page {{ currentPage() }} of {{ totalPages() }}</span>
+            <button [disabled]="currentPage() === totalPages()" (click)="currentPage.set(currentPage() + 1)">Next</button>
+          </div>
+        }
       }
     </div>
   `,
@@ -137,6 +145,31 @@ import {
       }
       .search-input:focus {
         border-color: var(--forest);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        background: var(--card);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-m);
+        margin-top: 16px;
+      }
+      .pagination button {
+        padding: 6px 12px;
+        border-radius: var(--radius-s);
+        border: 1px solid var(--border-soft);
+        background: var(--card);
+        color: var(--ink);
+        cursor: pointer;
+        font-family: var(--body);
+        font-size: 14px;
+      }
+      .pagination button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
 
       .loading-state,
@@ -178,7 +211,7 @@ import {
       }
       .admin-table th {
         padding: 16px 24px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 13px;
         color: var(--ink-soft);
@@ -266,6 +299,16 @@ export class AuthorApprovalsComponent implements OnInit {
         a.email.toLowerCase().includes(q),
     );
   });
+
+  currentPage = signal(1);
+  itemsPerPage = 10;
+
+  paginatedAuthors = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.filteredAuthors().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.filteredAuthors().length / this.itemsPerPage)));
 
   ngOnInit() {
     this.loadPendingAuthors();

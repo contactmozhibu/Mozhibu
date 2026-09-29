@@ -36,8 +36,13 @@ interface AdminNotification {
           <div class="nav-group">
             <span class="nav-group-label">Dashboard</span>
             <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link">
-              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
-              <span class="nav-label">Overview</span>
+              <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 10.9V4.1C22 2.6 21.36 2 19.77 2H15.73C14.14 2 13.5 2.6 13.5 4.1V10.9C13.5 12.4 14.14 13 15.73 13H19.77C21.36 13 22 12.4 22 10.9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path opacity="0.4" d="M22 19.9V18.1C22 16.6 21.36 16 19.77 16H15.73C14.14 16 13.5 16.6 13.5 18.1V19.9C13.5 21.4 14.14 22 15.73 22H19.77C21.36 22 22 21.4 22 19.9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5 13.1V19.9C10.5 21.4 9.86 22 8.27 22H4.23C2.64 22 2 21.4 2 19.9V13.1C2 11.6 2.64 11 4.23 11H8.27C9.86 11 10.5 11.6 10.5 13.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path opacity="0.4" d="M10.5 4.1V5.9C10.5 7.4 9.86 8 8.27 8H4.23C2.64 8 2 7.4 2 5.9V4.1C2 2.6 2.64 2 4.23 2H8.27C9.86 2 10.5 2.6 10.5 4.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="nav-label">Dashboard</span>
             </a>
           </div>
 
@@ -191,13 +196,42 @@ interface AdminNotification {
               }
             </div>
 
-            <button class="icon-btn" (click)="toggleDark()">
-              @if (isDark()) {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-              } @else {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-              }
-            </button>
+            <div class="day-night-toggle" [class.night]="isDark()" (click)="toggleDark($event)">
+              <div class="toggle-bg">
+                <!-- Sky -->
+                <div class="sky day-sky"></div>
+                <div class="sky night-sky"></div>
+
+                <!-- Sun / Moon in background -->
+                <div class="sun-bg"></div>
+                <div class="moon-bg">
+                  <svg viewBox="0 0 24 24" fill="white"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </div>
+
+                <!-- Clouds & Stars -->
+                <div class="cloud c1"></div>
+                <div class="cloud c2"></div>
+                <div class="star s1"></div>
+                <div class="star s2"></div>
+                <div class="star s3"></div>
+                
+                <!-- Tree -->
+                <div class="tree-wrapper">
+                  <div class="trunk"></div>
+                  <div class="leaves l1"></div>
+                  <div class="leaves l2"></div>
+                </div>
+
+                <!-- Hills -->
+                <div class="hills-wrapper">
+                  <div class="hill h1"></div>
+                  <div class="hill h2"></div>
+                  <div class="bush b1"></div>
+                  <div class="bush b2"></div>
+                </div>
+              </div>
+              <div class="toggle-knob"></div>
+            </div>
 
             <div class="profile-wrapper" (click)="toggleMenu(); $event.stopPropagation()">
               <div class="avatar-btn">
@@ -250,6 +284,12 @@ interface AdminNotification {
       --sd-avatar: #4f6ef7;
     }
     .admin-shell.dark {
+      color-scheme: dark;
+      --forest: #529b86;
+      --forest-deep: #8cd6c0;
+      --forest-tint: rgba(82, 155, 134, 0.15);
+      --rose: #df8a9e;
+      --rose-tint: rgba(223, 138, 158, 0.15);
       --sd-bg: #0f1117;
       --sd-sidebar: #161b27;
       --sd-border: #232a3b;
@@ -263,6 +303,15 @@ interface AdminNotification {
       --sd-icon-btn-hover: #252e45;
       --sd-shadow: 0 2px 20px rgba(0,0,0,0.35);
       --sd-avatar: #4f6ef7;
+
+      /* Map global variables to admin dark theme variables */
+      --card: var(--sd-sidebar);
+      --paper: var(--sd-bg);
+      --paper-warm: var(--sd-sidebar);
+      --ink: var(--sd-text);
+      --ink-soft: var(--sd-muted);
+      --border-soft: var(--sd-border);
+      --border: var(--sd-border);
     }
     .admin-shell {
       display: flex;
@@ -369,6 +418,52 @@ interface AdminNotification {
     .content { flex: 1; overflow-y: auto; padding: 24px 28px; }
     .content::-webkit-scrollbar { width: 5px; }
     .content::-webkit-scrollbar-thumb { background: var(--sd-border); border-radius: 5px; }
+    
+    /* Day/Night Toggle CSS */
+    .day-night-toggle { width: 64px; height: 32px; border-radius: 16px; cursor: pointer; position: relative; background: #a1c4fd; overflow: hidden; box-shadow: inset 0 2px 6px rgba(0,0,0,0.15); transition: background 0.4s ease; flex-shrink: 0; }
+    .day-night-toggle.night { background: #2b3c5a; }
+    .toggle-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 16px; overflow: hidden; }
+    .sky { position: absolute; top: 0; left: 0; right: 0; bottom: 0; transition: opacity 0.4s ease; }
+    .day-sky { background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); opacity: 1; }
+    .night-sky { background: linear-gradient(to bottom, #1e2a47, #2b3c5a); opacity: 0; }
+    .day-night-toggle.night .day-sky { opacity: 0; }
+    .day-night-toggle.night .night-sky { opacity: 1; }
+    .sun-bg { position: absolute; width: 18px; height: 18px; background: #ffdf80; border-radius: 50%; top: 12px; left: 24px; box-shadow: 0 0 10px #ffdf80; transition: transform 0.4s ease, opacity 0.4s ease; }
+    .moon-bg { position: absolute; width: 14px; height: 14px; top: 10px; left: 16px; opacity: 0; transform: translateY(10px); transition: transform 0.4s ease, opacity 0.4s ease; }
+    .moon-bg svg { width: 100%; height: 100%; display: block; transform: rotate(-15deg); }
+    .day-night-toggle.night .sun-bg { transform: translateY(20px); opacity: 0; }
+    .day-night-toggle.night .moon-bg { transform: translateY(0); opacity: 1; }
+    .cloud { position: absolute; background: rgba(255,255,255,0.8); border-radius: 10px; transition: transform 0.4s ease, opacity 0.4s ease; }
+    .c1 { width: 14px; height: 6px; top: 8px; left: 24px; }
+    .c1::after { content: ''; position: absolute; width: 8px; height: 8px; background: inherit; border-radius: 50%; top: -4px; left: 3px; }
+    .c2 { width: 10px; height: 4px; top: 16px; left: 40px; }
+    .c2::after { content: ''; position: absolute; width: 6px; height: 6px; background: inherit; border-radius: 50%; top: -3px; left: 2px; }
+    .day-night-toggle.night .cloud { transform: translateX(10px); opacity: 0; }
+    .star { position: absolute; background: white; border-radius: 50%; opacity: 0; transition: opacity 0.4s ease; }
+    .s1 { width: 2px; height: 2px; top: 6px; left: 28px; }
+    .s2 { width: 1px; height: 1px; top: 12px; left: 36px; }
+    .s3 { width: 1.5px; height: 1.5px; top: 8px; left: 46px; }
+    .day-night-toggle.night .star { opacity: 0.8; }
+    .tree-wrapper { position: absolute; bottom: 2px; right: 4px; width: 16px; height: 22px; z-index: 2; }
+    .trunk { position: absolute; bottom: 0; left: 6px; width: 4px; height: 10px; background: #a67c52; border-radius: 2px; transition: background 0.4s ease; }
+    .leaves { position: absolute; background: #81c784; border-radius: 50%; transition: background 0.4s ease; }
+    .l1 { width: 14px; height: 14px; top: 2px; left: -2px; }
+    .l2 { width: 12px; height: 12px; top: -2px; left: 4px; }
+    .day-night-toggle.night .trunk { background: #5d4037; }
+    .day-night-toggle.night .leaves { background: #388e3c; }
+    .hills-wrapper { position: absolute; bottom: 0; left: 0; right: 0; height: 12px; z-index: 1; }
+    .hill { position: absolute; background: #a5d6a7; border-radius: 50%; transition: background 0.4s ease; }
+    .h1 { width: 50px; height: 20px; bottom: -8px; left: -10px; }
+    .h2 { width: 60px; height: 24px; bottom: -12px; left: 20px; background: #81c784; }
+    .bush { position: absolute; background: #66bb6a; border-radius: 50%; transition: background 0.4s ease; }
+    .b1 { width: 10px; height: 6px; bottom: 2px; left: 6px; }
+    .b2 { width: 14px; height: 8px; bottom: 1px; left: 42px; background: #4caf50; }
+    .day-night-toggle.night .h1 { background: #455a64; }
+    .day-night-toggle.night .h2 { background: #37474f; }
+    .day-night-toggle.night .b1 { background: #263238; }
+    .day-night-toggle.night .b2 { background: #1c313a; }
+    .toggle-knob { position: absolute; top: 2px; left: 2px; width: 28px; height: 28px; background: white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 3; }
+    .day-night-toggle.night .toggle-knob { transform: translateX(32px); }
   `]
 })
 export class AdminLayoutComponent implements OnInit {
@@ -401,9 +496,46 @@ export class AdminLayoutComponent implements OnInit {
     if (this.notifOpen()) this.fetchNotifications();
   }
 
-  toggleDark() {
-    this.isDark.update(v => !v);
-    this.applyTheme(this.isDark());
+  toggleDark(event?: MouseEvent) {
+    const nextIsDark = !this.isDark();
+    
+    if (!(document as any).startViewTransition || !event) {
+      this.isDark.set(nextIsDark);
+      this.applyTheme(nextIsDark);
+      return;
+    }
+
+    const x = event.clientX;
+    const y = event.clientY;
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = (document as any).startViewTransition(() => {
+      this.isDark.set(nextIsDark);
+      this.applyTheme(nextIsDark);
+    });
+
+    transition.ready.then(() => {
+      const clipPath = [
+        `circle(0px at ${x}px ${y}px)`,
+        `circle(${endRadius}px at ${x}px ${y}px)`
+      ];
+
+      document.documentElement.animate(
+        {
+          clipPath: nextIsDark ? clipPath : [...clipPath].reverse()
+        },
+        {
+          duration: 400,
+          easing: 'ease-in-out',
+          pseudoElement: nextIsDark
+            ? '::view-transition-new(root)'
+            : '::view-transition-old(root)'
+        }
+      );
+    });
   }
 
   applyTheme(dark: boolean) {

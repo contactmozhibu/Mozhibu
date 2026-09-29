@@ -230,7 +230,7 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
       }
       .admin-table th {
         padding: 16px 24px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 13px;
         color: var(--ink-soft);
@@ -364,7 +364,7 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
         border: none;
         font-size: 1.2rem;
         cursor: pointer;
-        color: #94a3b8;
+        color: var(--sd-muted);
       }
       .modal-desc {
         color: var(--ink-soft, #64748b);
@@ -502,7 +502,7 @@ export class UsersComponent implements OnInit {
   });
 
   currentPage = signal(1);
-  itemsPerPage = 30;
+  itemsPerPage = 10;
 
   paginatedUsers = computed(() => {
     const startIndex = (this.currentPage() - 1) * this.itemsPerPage;

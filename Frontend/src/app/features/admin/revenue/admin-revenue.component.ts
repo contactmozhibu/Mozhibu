@@ -304,11 +304,11 @@ import { AdminPlansComponent } from '../plans/admin-plans.component';
         font-weight: 600;
       }
       .badge-active {
-        background: #e6f4ea;
+        background: rgba(16, 185, 129, 0.1);
         color: #137333;
       }
       .badge-inactive {
-        background: #fce8e6;
+        background: rgba(239, 68, 68, 0.1);
         color: #c5221f;
       }
       .btn-icon-small {

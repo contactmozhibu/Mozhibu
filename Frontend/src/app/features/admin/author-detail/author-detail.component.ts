@@ -522,7 +522,7 @@ import {
         border: none;
         font-size: 1.2rem;
         cursor: pointer;
-        color: #94a3b8;
+        color: var(--sd-muted);
       }
       .modal-desc {
         color: var(--ink-soft, #64748b);

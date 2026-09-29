@@ -206,7 +206,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
 
       .action-panel {
         width: 300px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         padding: 24px;
         border-radius: var(--radius-s);
         border: 1px solid var(--border-soft);

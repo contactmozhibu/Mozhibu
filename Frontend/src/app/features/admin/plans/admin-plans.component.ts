@@ -15,8 +15,6 @@ interface SubscriptionPlan {
     unlimited_premium_access: boolean;
     ad_free: boolean;
     early_access_days: number;
-    offline_downloads: boolean;
-    max_offline_downloads: number;
     multi_language_access: boolean;
     priority_support: boolean;
   };
@@ -216,23 +214,7 @@ interface SubscriptionPlan {
               />
               Ad Free
             </label>
-            <label class="checkbox-label">
-              <input
-                type="checkbox"
-                [(ngModel)]="formData.structuredBenefits.offline_downloads"
-                name="offline_downloads"
-              />
-              Offline Downloads
-            </label>
-            <div class="form-group">
-              <label>Max Offline Downloads</label>
-              <input
-                type="number"
-                [(ngModel)]="formData.structuredBenefits.max_offline_downloads"
-                name="max_offline_downloads"
-                class="form-control"
-              />
-            </div>
+
             <label class="checkbox-label">
               <input
                 type="checkbox"
@@ -317,7 +299,7 @@ interface SubscriptionPlan {
     `
       .admin-container {
         padding: 24px;
-        color: #1f2937;
+        color: var(--sd-text);
       }
       .header-actions {
         display: flex;
@@ -346,10 +328,10 @@ interface SubscriptionPlan {
         border-bottom: 1px solid #e5e7eb;
       }
       .admin-table th {
-        background: #f9fafb;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 14px;
-        color: #4b5563;
+        color: var(--sd-muted);
       }
 
       .badge {
@@ -359,11 +341,11 @@ interface SubscriptionPlan {
         font-weight: 600;
       }
       .badge-active {
-        background: #def7ec;
+        background: rgba(16, 185, 129, 0.1);
         color: #03543f;
       }
       .badge-inactive {
-        background: #fde8e8;
+        background: rgba(239, 68, 68, 0.1);
         color: #9b1c1c;
       }
 
@@ -383,7 +365,7 @@ interface SubscriptionPlan {
         opacity: 1;
       }
       .btn-icon.danger:hover {
-        background: #fee2e2;
+        background: rgba(239, 68, 68, 0.1);
         border-radius: 4px;
       }
 
@@ -405,7 +387,7 @@ interface SubscriptionPlan {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         margin-bottom: 24px;
-        background: #f9fafb;
+        background: var(--sd-icon-btn);
         padding: 16px;
         border-radius: 8px;
       }
@@ -469,7 +451,7 @@ interface SubscriptionPlan {
       }
       .btn-secondary {
         background: #f3f4f6;
-        color: #374151;
+        color: var(--sd-text);
       }
       .btn-secondary:hover {
         background: #e5e7eb;
@@ -495,8 +477,6 @@ export class AdminPlansComponent implements OnInit {
       unlimited_premium_access: false,
       ad_free: false,
       early_access_days: 0,
-      offline_downloads: false,
-      max_offline_downloads: 0,
       multi_language_access: false,
       priority_support: false,
     },

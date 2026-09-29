@@ -12,8 +12,6 @@ const SubscriptionPlanSchema = new mongoose.Schema(
       unlimited_premium_access: { type: Boolean, default: false },
       ad_free: { type: Boolean, default: false },
       early_access_days: { type: Number, default: 0 },
-      offline_downloads: { type: Boolean, default: false },
-      max_offline_downloads: { type: Number, default: 0 },
       multi_language_access: { type: Boolean, default: false },
       priority_support: { type: Boolean, default: false },
     },

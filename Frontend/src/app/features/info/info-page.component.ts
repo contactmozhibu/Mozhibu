@@ -7,24 +7,34 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="info-layout">
-      <div class="info-header">
-        <h1>{{ title }}</h1>
-        <p class="subtitle">Last updated: August 25, 2026</p>
+    <div class="page-layout">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-content wrap">
+          <h1>{{ title }}</h1>
+        </div>
+        <div class="hero-bg"></div>
       </div>
 
-      <div class="info-content">
-        @if (content) {
-          <div [innerHTML]="content"></div>
-        } @else {
-          <p class="placeholder-text">
-            This is a placeholder page for <strong>{{ title }}</strong
-            >. The actual content will be added here by the legal or content
-            team.
-          </p>
+      <!-- Content -->
+      <div class="content-section wrap">
+        <div class="policy-container">
+          
+          <div class="policy-block intro">
+            <p>Last updated: August 25, 2026</p>
+          </div>
 
-          <div class="placeholder-sections">
-            <section>
+          @if (content) {
+            <div class="policy-block" [innerHTML]="content"></div>
+          } @else {
+            <div class="policy-block">
+              <p class="highlight-box warning">
+                This is a placeholder page for <strong>{{ title }}</strong>. 
+                The actual content will be added here by the legal or content team.
+              </p>
+            </div>
+
+            <div class="policy-block">
               <h2>1. Introduction</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -32,136 +42,163 @@ import { ActivatedRoute } from '@angular/router';
                 vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
                 porttitor.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2>2. Information Collection</h2>
+            <div class="policy-block">
+              <h2>2. Standard Terms</h2>
               <p>
                 Ut tristique lectus ac ligula congue, vel auctor libero
                 venenatis. Phasellus nisl mi, hendrerit quis viverra ut,
                 venenatis in nisl.
               </p>
-            </section>
-
-            <section>
-              <h2>3. Data Usage</h2>
-              <p>
-                Praesent egestas neque eu enim fringilla, vel tincidunt quam
-                vulputate. Morbi in ipsum sit amet pede facilisis laoreet. Donec
-                lacus nunc, viverra nec, blandit vel, egestas et, augue.
-              </p>
-            </section>
-          </div>
-        }
+            </div>
+          }
+        </div>
       </div>
     </div>
   `,
   styles: [
     `
-      .info-layout {
-        min-height: calc(100vh - 73px);
+      :host {
+        display: block;
+        min-height: 100vh;
         background: var(--paper);
-        padding: 64px 24px;
-      }
-
-      .info-header {
-        max-width: 800px;
-        margin: 0 auto 48px;
-        text-align: center;
-      }
-
-      .info-header h1 {
-        font-family: var(--display);
-        font-size: 42px;
-        font-weight: 700;
         color: var(--ink);
-        margin-bottom: 16px;
       }
-
-      .subtitle {
-        font-size: 15px;
-        color: var(--ink-faint);
+      
+      .page-layout {
+        padding-top: 80px;
       }
-
-      .info-content {
+      
+      /* Hero Section */
+      .hero {
+        position: relative;
+        padding: 80px 24px;
+        background: var(--ink);
+        color: var(--paper);
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
         max-width: 800px;
         margin: 0 auto;
-        background: var(--card);
-        border: 1px solid var(--border-soft);
-        border-radius: var(--radius-m);
-        padding: 48px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
       }
-
-      .placeholder-text {
-        font-size: 18px;
-        color: var(--forest-deep);
-        background: var(--forest-tint);
-        padding: 16px 24px;
-        border-radius: 8px;
-        margin-bottom: 32px;
-        border-left: 4px solid var(--forest);
-      }
-
-      .placeholder-sections section {
-        margin-bottom: 32px;
-      }
-
-      .placeholder-sections h2 {
+      .hero h1 {
         font-family: var(--display);
-        font-size: 22px;
-        font-weight: 600;
-        color: var(--ink);
-        margin-bottom: 16px;
+        font-size: 48px;
+        font-weight: 800;
+        margin: 0;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
       }
-
-      .placeholder-sections p {
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at top right,
+          var(--forest-deep),
+          transparent 60%
+        );
+        opacity: 0.3;
+        z-index: 1;
+      }
+      
+      /* Content */
+      .content-section {
+        padding: 60px 24px;
+        background: var(--paper);
+      }
+      .policy-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .policy-block {
+        margin-bottom: 48px;
+      }
+      .policy-block.intro {
         font-size: 16px;
-        line-height: 1.8;
+        color: var(--ink-faint);
+        border-bottom: 1px solid var(--border-soft);
+        padding-bottom: 24px;
+      }
+      .policy-block h2 {
+        font-family: var(--display);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--border-soft);
+      }
+      .policy-block p {
+        font-size: 16px;
+        line-height: 1.7;
         color: var(--ink-soft);
         margin-bottom: 16px;
       }
-
-      ::ng-deep .info-content table {
+      
+      /* Highlight boxes */
+      .highlight-box {
+        background: var(--forest-tint);
+        border-left: 4px solid var(--forest);
+        padding: 16px 20px;
+        border-radius: 0 8px 8px 0;
+        color: var(--forest-deep) !important;
+        font-weight: 500;
+        margin: 24px 0 !important;
+      }
+      .highlight-box.warning {
+        background: #fffbeb;
+        border-left-color: #f59e0b;
+        color: #b45309 !important;
+      }
+      
+      ::ng-deep .policy-container table {
         width: 100%;
         border-collapse: collapse;
         margin: 24px 0;
       }
-      ::ng-deep .info-content th, ::ng-deep .info-content td {
+      ::ng-deep .policy-container th, ::ng-deep .policy-container td {
         border: 1px solid var(--border-soft);
         padding: 12px 16px;
         text-align: left;
       }
-      ::ng-deep .info-content th {
+      ::ng-deep .policy-container th {
         background: var(--surface);
         font-weight: 600;
         color: var(--ink);
       }
-      ::ng-deep .info-content td {
+      ::ng-deep .policy-container td {
         color: var(--ink-soft);
       }
-      ::ng-deep .info-content ol, ::ng-deep .info-content ul {
+      ::ng-deep .policy-container ol, ::ng-deep .policy-container ul {
         margin-bottom: 24px;
         padding-left: 24px;
         color: var(--ink-soft);
       }
-      ::ng-deep .info-content p {
+      ::ng-deep .policy-container p {
         margin-bottom: 16px;
         color: var(--ink-soft);
         line-height: 1.6;
       }
-      ::ng-deep .info-content strong {
+      ::ng-deep .policy-container strong {
         color: var(--ink);
       }
+      
       @media (max-width: 768px) {
-        .info-layout {
-          padding: 32px 16px;
+        .hero {
+          padding: 60px 16px;
         }
-        .info-header h1 {
-          font-size: 32px;
+        .hero h1 {
+          font-size: 36px;
         }
-        .info-content {
-          padding: 24px;
+        .content-section {
+          padding: 40px 16px;
         }
       }
     `,

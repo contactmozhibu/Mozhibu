@@ -123,7 +123,7 @@ import { AdminService, AdminBook } from '../../../core/services/admin.service';
       }
       .admin-table th {
         padding: 16px 24px;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         font-weight: 600;
         font-size: 13px;
         color: var(--ink-soft);
@@ -179,7 +179,7 @@ import { AdminService, AdminBook } from '../../../core/services/admin.service';
         color: var(--ink-soft);
         font-style: italic;
         line-height: 1.5;
-        background: #f8fafc;
+        background: var(--sd-icon-btn);
         padding: 8px 12px;
         border-radius: 4px;
         border-left: 2px solid var(--border-soft);
