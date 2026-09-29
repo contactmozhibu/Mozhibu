@@ -18,6 +18,7 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
           <input
             type="text"
             [(ngModel)]="searchQuery"
+            (ngModelChange)="currentPage.set(1)"
             placeholder="Search users by name or email..."
             class="search-input"
           />
@@ -25,7 +26,33 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
       </header>
 
       @if (loading()) {
-        <div class="loading-state">Loading users...</div>
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (i of [1,2,3,4,5,6]; track i) {
+                <tr class="skeleton-row">
+                  <td>
+                    <div class="skeleton-text skeleton-title"></div>
+                    <div class="skeleton-text skeleton-sub"></div>
+                  </td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-text skeleton-sub"></div></td>
+                  <td><div class="skeleton-actions"></div></td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
       } @else {
         <div class="table-container">
           <table class="admin-table">
@@ -39,7 +66,7 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
               </tr>
             </thead>
             <tbody>
-              @for (user of filteredUsers(); track user._id) {
+              @for (user of paginatedUsers(); track user._id) {
                 <tr>
                   <td>
                     <div class="title-cell">
@@ -94,6 +121,14 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
             </tbody>
           </table>
         </div>
+
+        @if (totalPages() > 1) {
+          <div class="pagination">
+            <button [disabled]="currentPage() === 1" (click)="currentPage.set(currentPage() - 1)">Previous</button>
+            <span>Page {{ currentPage() }} of {{ totalPages() }}</span>
+            <button [disabled]="currentPage() === totalPages()" (click)="currentPage.set(currentPage() + 1)">Next</button>
+          </div>
+        }
       }
 
       @if (showSuspendModal() && userToSuspend()) {
@@ -391,6 +426,28 @@ import { AdminService, AdminUser } from '../../../core/services/admin.service';
         color: #dc2626;
         margin-top: 4px;
       }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        background: var(--card);
+        border-top: 1px solid var(--border-soft);
+      }
+      .pagination button {
+        padding: 6px 12px;
+        border-radius: var(--radius-s);
+        border: 1px solid var(--border-soft);
+        background: var(--card);
+        cursor: pointer;
+        font-family: var(--body);
+        font-size: 14px;
+      }
+      .pagination button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     `,
   ],
 })
@@ -444,12 +501,23 @@ export class UsersComponent implements OnInit {
     );
   });
 
+  currentPage = signal(1);
+  itemsPerPage = 30;
+
+  paginatedUsers = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.filteredUsers().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.filteredUsers().length / this.itemsPerPage)));
+
   ngOnInit() {
     this.loadUsers();
   }
 
   loadUsers() {
     this.loading.set(true);
+    this.currentPage.set(1);
     this.adminService.getUsers().subscribe({
       next: (data) => {
         this.users.set(data);

@@ -20,6 +20,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
           <input
             type="text"
             [(ngModel)]="searchQuery"
+            (ngModelChange)="currentPage.set(1)"
             placeholder="Search by title or author..."
             class="search-input"
           />
@@ -39,7 +40,31 @@ import { ConfirmService } from '../../../core/services/confirm.service';
       </header>
 
       @if (loading()) {
-        <div class="loading-state">Loading books...</div>
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Title & Author</th>
+                <th>Status</th>
+                <th>Submitted</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (i of [1,2,3,4,5,6]; track i) {
+                <tr class="skeleton-row">
+                  <td>
+                    <div class="skeleton-text skeleton-title"></div>
+                    <div class="skeleton-text skeleton-sub"></div>
+                  </td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-text skeleton-sub"></div></td>
+                  <td><div class="skeleton-actions"></div></td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
       } @else if (books().length === 0) {
         <div class="empty-state">
           No books found matching the current filter.
@@ -58,7 +83,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
               </tr>
             </thead>
             <tbody>
-              @for (book of filteredBooks(); track book._id) {
+              @for (book of paginatedBooks(); track book._id) {
                 <tr>
                   <td>
                     <div class="title-cell">
@@ -145,6 +170,14 @@ import { ConfirmService } from '../../../core/services/confirm.service';
             </tbody>
           </table>
         </div>
+        
+        @if (totalPages() > 1) {
+          <div class="pagination">
+            <button [disabled]="currentPage() === 1" (click)="currentPage.set(currentPage() - 1)">Previous</button>
+            <span>Page {{ currentPage() }} of {{ totalPages() }}</span>
+            <button [disabled]="currentPage() === totalPages()" (click)="currentPage.set(currentPage() + 1)">Next</button>
+          </div>
+        }
       }
     </div>
   `,
@@ -356,6 +389,28 @@ import { ConfirmService } from '../../../core/services/confirm.service';
         background: #f1f5f9;
         color: var(--ink);
       }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        background: var(--card);
+        border-top: 1px solid var(--border-soft);
+      }
+      .pagination button {
+        padding: 6px 12px;
+        border-radius: var(--radius-s);
+        border: 1px solid var(--border-soft);
+        background: var(--card);
+        cursor: pointer;
+        font-family: var(--body);
+        font-size: 14px;
+      }
+      .pagination button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     `,
   ],
 })
@@ -378,12 +433,23 @@ export class BooksComponent implements OnInit {
     );
   });
 
+  currentPage = signal(1);
+  itemsPerPage = 30;
+
+  paginatedBooks = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.filteredBooks().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.filteredBooks().length / this.itemsPerPage)));
+
   ngOnInit() {
     this.loadBooks();
   }
 
   loadBooks() {
     this.loading.set(true);
+    this.currentPage.set(1);
 
     if (this.statusFilter === 'reported') {
       this.adminService.getReportedBooks().subscribe({

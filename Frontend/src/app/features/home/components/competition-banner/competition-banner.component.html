@@ -1,5 +1,5 @@
 @if (config) {
-  <section class="section alt">
+  <section class="section">
     <div class="wrap">
       <div class="competition">
         <div class="competition-left">
@@ -44,29 +44,13 @@
                 <span>{{ "competition.mins" | translate }}</span>
               </div>
             </div>
-            @if (isExternalLink(config.buttonLink)) {
-              <a
-                [href]="config.buttonLink"
-                (click)="handleCtaClick($event)"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-light"
-                >{{ config.buttonText }}</a
-              >
-            } @else {
-              <a
-                [routerLink]="
-                  (config.buttonLink || '/competitions').split('?')[0]
-                "
-                [queryParams]="getQueryParams(config.buttonLink)"
+              <button
                 (click)="handleCtaClick($event)"
                 class="btn btn-light"
-                >{{ config.buttonText }}</a
-              >
-            }
+              >{{ config.buttonText }}</button>
           } @else if (config.winnerBookIds && config.winnerBookIds.length > 0) {
-            <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 8px;">
-              @for (winner of config.winnerBookIds; track winner._id) {
+            <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 8px; align-items: center;">
+              @for (winner of (showAllWinners() ? config.winnerBookIds : config.winnerBookIds.slice(0, 3)); track winner._id) {
                 <div
                   class="winner-info"
                   style="
@@ -88,7 +72,7 @@
                       >{{ winner.title }}</strong
                     >
                     <div style="font-size: 14px; opacity: 0.9">
-                      By {{ winner.author.username }}
+                      By <a [routerLink]="['/author', winner.author.username]" style="color: white; text-decoration: underline;">{{ winner.author.username }}</a>
                     </div>
                   </div>
                   <a
@@ -98,6 +82,16 @@
                     >Read</a
                   >
                 </div>
+              }
+              
+              @if (config.winnerBookIds.length > 3) {
+                <button 
+                  (click)="toggleShowAllWinners()" 
+                  class="btn btn-outline" 
+                  style="color: white; border-color: rgba(255,255,255,0.4); white-space: nowrap; height: fit-content;"
+                >
+                  {{ showAllWinners() ? 'Show Less' : 'View all ' + config.winnerBookIds.length + ' winners' }}
+                </button>
               }
             </div>
           }

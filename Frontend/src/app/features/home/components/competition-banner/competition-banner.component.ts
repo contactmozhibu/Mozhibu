@@ -26,6 +26,7 @@ export class CompetitionBannerComponent implements OnInit, OnDestroy {
   config: CompetitionConfig | null = null;
   showUpgradeModal = signal(false);
   isUpgrading = signal(false);
+  showAllWinners = signal(false);
 
   days = 0;
   hours = 0;
@@ -92,12 +93,7 @@ export class CompetitionBannerComponent implements OnInit, OnDestroy {
   }
 
   handleCtaClick(event: Event) {
-    if (!this.config?.buttonLink) return;
-
-    // If external link, let the standard href handle it
-    if (this.isExternalLink(this.config.buttonLink)) {
-      return;
-    }
+    event.preventDefault();
 
     const user = this.authService.user();
 
@@ -108,15 +104,16 @@ export class CompetitionBannerComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // If logged in as reader, show upgrade modal
+    // If logged in as reader, redirect to profile with upgrade parameter
     if (user.role === 'reader') {
-      event.preventDefault();
-      this.showUpgradeModal.set(true);
-      document.body.style.overflow = 'hidden';
+      this.router.navigate(['/profile'], {
+        queryParams: { upgrade: 'competition' }
+      });
       return;
     }
 
-    // Otherwise (writer/admin), the routerLink will handle the navigation naturally
+    // Otherwise navigate to author studio
+    this.router.navigate(['/write']);
   }
 
   closeUpgradeModal() {
@@ -162,6 +159,10 @@ export class CompetitionBannerComponent implements OnInit, OnDestroy {
       result[key] = value;
     });
     return result;
+  }
+
+  toggleShowAllWinners() {
+    this.showAllWinners.set(!this.showAllWinners());
   }
 
   ngOnDestroy(): void {

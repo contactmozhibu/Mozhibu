@@ -17,19 +17,20 @@ import { ConfirmService } from '../../../core/services/confirm.service';
         style="display: flex; justify-content: space-between; align-items: center;"
       >
         <div>
-          <h1>Competition Management</h1>
+          <h1>{{ isCompetitionClosed ? 'Start a New Competition' : 'Competition Management' }}</h1>
           <p>
-            Manage the active competition banner, notify writers, and pick a
-            winner.
+            {{ isCompetitionClosed ? 'The previous competition has concluded. Configure the details below to start a new one.' : 'Manage the active competition banner, notify writers, and pick a winner.' }}
           </p>
         </div>
-        <button
-          class="btn-primary"
-          (click)="notifyWriters()"
-          [disabled]="isNotifying || !config.isActive"
-        >
-          {{ isNotifying ? 'Notifying...' : 'Broadcast Invite to Writers' }}
-        </button>
+        @if (!isCompetitionClosed) {
+          <button
+            class="btn-primary"
+            (click)="notifyWriters()"
+            [disabled]="isNotifying || !config.isActive"
+          >
+            {{ isNotifying ? 'Notifying...' : 'Broadcast Invite to Writers' }}
+          </button>
+        }
       </div>
 
       <div class="card">
@@ -111,22 +112,6 @@ import { ConfirmService } from '../../../core/services/confirm.service';
                   placeholder="e.g. Submit your story"
                 />
               </div>
-
-              <div class="form-group" style="grid-column: 1 / -1;">
-                <label>Button Destination URL</label>
-                <input
-                  type="text"
-                  name="buttonLink"
-                  [(ngModel)]="config.buttonLink"
-                  required
-                  placeholder="e.g. /write/new?competition=TwelveTongues2026 or https://google.com"
-                />
-                <small
-                  style="color: var(--ink-soft); display: block; margin-top: 6px;"
-                  >Use an internal path like /write/new or a full external URL
-                  like https://...</small
-                >
-              </div>
             </div>
 
             <div class="form-actions">
@@ -135,7 +120,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
                 class="btn-primary"
                 [disabled]="!configForm.valid || isSaving"
               >
-                {{ isSaving ? 'Saving...' : 'Save Configuration' }}
+                {{ isSaving ? (isCompetitionClosed ? 'Creating...' : 'Saving...') : (isCompetitionClosed ? 'Create New Competition' : 'Save Configuration') }}
               </button>
             </div>
 
@@ -151,81 +136,80 @@ import { ConfirmService } from '../../../core/services/confirm.service';
 
       <div class="card" style="margin-top: 24px;">
         <h2>Submitted Entries</h2>
-        <p
-          style="color: var(--ink-soft); font-size: 14px; margin-bottom: 24px;"
-        >
-          All books published with a competition tag. The currently active tag
-          is: <strong>{{ config.tag || 'None' }}</strong>
-        </p>
-
-        @if (isLoadingEntries) {
-          <div class="loading">Loading entries...</div>
-        } @else if (entries.length === 0) {
-          <div class="empty-state">
-            No entries found for this competition tag yet.
+        
+        @if (isCompetitionClosed) {
+          <div class="alert" style="background: var(--forest-tint); border: 1px solid var(--forest); color: var(--forest-deep); border-radius: var(--radius-s); padding: 16px;">
+            <strong>This competition has concluded!</strong> Please configure and start a new competition above to begin accepting new entries.
           </div>
         } @else {
-          <div class="table-container">
-            <div class="entries-grid">
-              <div *ngFor="let entry of entries" class="entry-card">
-                <div
-                  class="entry-cover-wrapper"
-                  [routerLink]="['/admin/books', entry._id]"
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 24px;">
+            All books published with a competition tag. The currently active tag
+            is: <strong>{{ config.tag || 'None' }}</strong>
+          </p>
+
+          @if (isLoadingEntries) {
+            <div class="loading">Loading entries...</div>
+          } @else if (entries.length === 0) {
+            <div class="empty-state">
+              No entries found for this competition tag yet.
+            </div>
+          } @else {
+            <div class="table-container">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>User Name</th>
+                    <th>Book Name</th>
+                    <th>Submitted Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let entry of entries">
+                    <td>
+                      <strong>{{ entry.author.username }}</strong>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 12px;">
+                        <img 
+                          [src]="entry.cover || api.getFallbackCover()" 
+                          alt="Book cover"
+                          (error)="onCoverError($event)"
+                          style="width: 32px; height: 48px; object-fit: cover; border-radius: var(--radius-s);"
+                        />
+                        <span>{{ entry.title }}</span>
+                      </div>
+                    </td>
+                    <td>{{ entry.submittedAt | date: 'mediumDate' }}</td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 16px;">
+                        <a [routerLink]="['/admin/books', entry._id]" class="btn-outline btn-small" style="text-decoration: none;">View Book</a>
+                        <label class="checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                          <input 
+                            type="checkbox" 
+                            [checked]="selectedEntries.includes(entry._id)"
+                            (change)="toggleSelection(entry._id)"
+                            [disabled]="isAnnouncing"
+                          />
+                          Pick Winner
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="form-actions" style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 24px;">
+                <button
+                  class="btn-primary"
+                  (click)="announceWinners()"
+                  [disabled]="isAnnouncing || selectedEntries.length === 0"
                 >
-                  <img
-                    [src]="entry.cover || api.getFallbackCover()"
-                    alt="Book cover"
-                    class="entry-cover"
-                    (error)="onCoverError($event)"
-                  />
-                  <div class="entry-badges">
-                    <span class="badge tag-badge">{{
-                      entry.competitionTag || 'Unknown'
-                    }}</span>
-                    <span class="badge genre-badge">{{ entry.genre }}</span>
-                  </div>
-                </div>
-
-                <div class="entry-details">
-                  <h3 class="entry-title">{{ entry.title }}</h3>
-                  <p class="entry-author">
-                    By <strong>{{ entry.author.username }}</strong>
-                  </p>
-                  <p class="entry-date">
-                    Submitted: {{ entry.submittedAt | date: 'mediumDate' }}
-                  </p>
-
-                  <div class="entry-actions">
-                    <button
-                      class="btn-outline btn-small"
-                      [routerLink]="['/admin/books', entry._id]"
-                    >
-                      View
-                    </button>
-                    <label class="checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                      <input 
-                        type="checkbox" 
-                        [checked]="selectedEntries.includes(entry._id)"
-                        (change)="toggleSelection(entry._id)"
-                        [disabled]="isAnnouncing"
-                      />
-                      Select
-                    </label>
-                  </div>
-                </div>
+                  Announce Winners ({{ selectedEntries.length }} selected)
+                </button>
               </div>
             </div>
-            
-            <div class="form-actions" style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 24px;">
-              <button
-                class="btn-primary"
-                (click)="announceWinners()"
-                [disabled]="isAnnouncing || selectedEntries.length === 0"
-              >
-                Announce Winners ({{ selectedEntries.length }} selected)
-              </button>
-            </div>
-          </div>
+          }
         }
       </div>
       <div class="card" style="margin-top: 24px;">
@@ -238,7 +222,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
           <div class="empty-state">No past competitions found.</div>
         } @else {
           <div class="table-container">
-            <table class="table">
+            <table class="admin-table">
               <thead>
                 <tr>
                   <th>Date</th>
@@ -250,7 +234,7 @@ import { ConfirmService } from '../../../core/services/confirm.service';
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let comp of history">
+                <tr *ngFor="let comp of paginatedHistory">
                   <td>{{ comp.createdAt | date: 'mediumDate' }}</td>
                   <td>{{ comp.createdAt | date: 'EEEE' }}</td>
                   <td><strong>{{ comp.title }}</strong></td>
@@ -266,6 +250,24 @@ import { ConfirmService } from '../../../core/services/confirm.service';
                 </tr>
               </tbody>
             </table>
+            
+            <div class="pagination" *ngIf="history.length > historyPageSize">
+              <button 
+                class="btn-outline btn-small" 
+                [disabled]="historyPage === 1"
+                (click)="historyPage = historyPage - 1">
+                Previous
+              </button>
+              <span style="font-size: 14px; color: var(--ink-soft);">
+                Page {{ historyPage }} of {{ Math.ceil(history.length / historyPageSize) }}
+              </span>
+              <button 
+                class="btn-outline btn-small" 
+                [disabled]="historyPage * historyPageSize >= history.length"
+                (click)="historyPage = historyPage + 1">
+                Next
+              </button>
+            </div>
           </div>
         }
       </div>
@@ -277,6 +279,10 @@ export class AdminCompetitionComponent implements OnInit {
   private adminService = inject(AdminService);
   api = inject(ApiService);
   private confirmService = inject(ConfirmService);
+
+  get isCompetitionClosed(): boolean {
+    return this.config?.winnerBookIds?.length > 0;
+  }
 
   isLoading = true;
   isLoadingEntries = false;
@@ -298,10 +304,18 @@ export class AdminCompetitionComponent implements OnInit {
     buttonText: '',
   };
   history: any[] = [];
+  
+  historyPage = 1;
+  historyPageSize = 10;
+  Math = Math;
+
+  get paginatedHistory() {
+    const startIndex = (this.historyPage - 1) * this.historyPageSize;
+    return this.history.slice(startIndex, startIndex + this.historyPageSize);
+  }
 
   ngOnInit() {
     this.loadConfig();
-    this.loadEntries();
   }
 
   loadEntries() {
@@ -331,6 +345,18 @@ export class AdminCompetitionComponent implements OnInit {
             .toISOString()
             .slice(0, 16);
         }
+
+        // If the latest competition is closed, clear the form to start fresh
+        if (this.isCompetitionClosed) {
+           this.config.tag = '';
+           this.config.title = '';
+           this.config.description = '';
+           this.config.endDate = '';
+        } else {
+           // Only load entries if the competition is still active
+           this.loadEntries();
+        }
+
         this.isLoading = false;
         this.loadHistory();
       },

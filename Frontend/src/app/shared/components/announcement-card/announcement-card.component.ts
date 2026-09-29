@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, Output, EventEmitter, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 
@@ -17,10 +17,13 @@ export interface Announcement {
   template: `
     <div class="announcement-card">
       <div class="card-header">
-        <span class="type-badge" [ngClass]="announcement.type">{{
-          "announcements.type." + announcement.type | translate
-        }}</span>
-        <span class="date">{{ announcement.date }}</span>
+        <div>
+          <span class="type-badge" [ngClass]="announcement.type">{{
+            "announcements.type." + announcement.type | translate
+          }}</span>
+          <span class="date">{{ announcement.date }}</span>
+        </div>
+        <button class="dismiss-btn" (click)="onDismiss($event)" title="Dismiss">✖</button>
       </div>
       <h4 class="title">{{ announcement.title | translate }}</h4>
       <div class="content-wrapper">
@@ -71,8 +74,31 @@ export interface Announcement {
       .card-header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 16px;
+      }
+      .card-header > div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .dismiss-btn {
+        background: transparent;
+        border: none;
+        color: var(--ink-faint);
+        font-size: 14px;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s, background 0.2s;
+      }
+      .dismiss-btn:hover {
+        color: var(--rose);
+        background: var(--rose-tint);
       }
       .type-badge {
         font-size: 11px;
@@ -222,6 +248,7 @@ export interface Announcement {
 })
 export class AnnouncementCardComponent {
   @Input() announcement!: Announcement;
+  @Output() dismiss = new EventEmitter<string>();
   isModalOpen = signal(false);
 
   openModal() {
@@ -232,5 +259,10 @@ export class AnnouncementCardComponent {
   closeModal() {
     this.isModalOpen.set(false);
     document.body.style.overflow = '';
+  }
+
+  onDismiss(event: Event) {
+    event.stopPropagation();
+    this.dismiss.emit(this.announcement.id);
   }
 }

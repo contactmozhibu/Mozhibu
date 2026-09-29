@@ -42,6 +42,7 @@ const UserSchema = new mongoose.Schema(
     savedBooks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Book" }],
     favoriteBooks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Book" }],
     following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    dismissedAnnouncements: [{ type: mongoose.Schema.Types.ObjectId, ref: "Broadcast" }],
     dob: { type: Date },
     monetization: {
       accountName: { type: String, default: "" }, // Will store encrypted string
@@ -56,5 +57,9 @@ const UserSchema = new mongoose.Schema(
     timestamps: true,
   },
 );
+
+// Performance Indexes
+UserSchema.index({ role: 1 });
+UserSchema.index({ createdAt: -1 });
 
 module.exports = mongoose.model("User", UserSchema);

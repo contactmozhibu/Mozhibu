@@ -22,6 +22,7 @@ import {
           <input
             type="text"
             [(ngModel)]="searchQuery"
+            (ngModelChange)="currentPage.set(1)"
             placeholder="Search authors by name or email..."
             class="search-input"
           />
@@ -29,7 +30,35 @@ import {
       </header>
 
       @if (loading()) {
-        <div class="loading-state">Loading authors...</div>
+        <div class="table-container">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Author</th>
+                <th>Published Books</th>
+                <th>Total Reads</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (i of [1,2,3,4,5,6]; track i) {
+                <tr class="skeleton-row">
+                  <td>
+                    <div class="skeleton-text skeleton-title"></div>
+                    <div class="skeleton-text skeleton-sub"></div>
+                  </td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-badge"></div></td>
+                  <td><div class="skeleton-text skeleton-sub"></div></td>
+                  <td><div class="skeleton-actions"></div></td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
       } @else if (authors().length === 0) {
         <div class="empty-state">No authors found on the platform.</div>
       } @else {
@@ -46,7 +75,7 @@ import {
               </tr>
             </thead>
             <tbody>
-              @for (author of filteredAuthors(); track author._id) {
+              @for (author of paginatedAuthors(); track author._id) {
                 <tr>
                   <td>
                     <div class="title-cell">
@@ -87,6 +116,14 @@ import {
             </tbody>
           </table>
         </div>
+
+        @if (totalPages() > 1) {
+          <div class="pagination">
+            <button [disabled]="currentPage() === 1" (click)="currentPage.set(currentPage() - 1)">Previous</button>
+            <span>Page {{ currentPage() }} of {{ totalPages() }}</span>
+            <button [disabled]="currentPage() === totalPages()" (click)="currentPage.set(currentPage() + 1)">Next</button>
+          </div>
+        }
       }
     </div>
   `,
@@ -253,6 +290,28 @@ import {
       .btn-delete:hover {
         background: #b91c1c;
       }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        background: var(--card);
+        border-top: 1px solid var(--border-soft);
+      }
+      .pagination button {
+        padding: 6px 12px;
+        border-radius: var(--radius-s);
+        border: 1px solid var(--border-soft);
+        background: var(--card);
+        cursor: pointer;
+        font-family: var(--body);
+        font-size: 14px;
+      }
+      .pagination button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     `,
   ],
 })
@@ -272,12 +331,23 @@ export class AuthorsComponent implements OnInit {
     );
   });
 
+  currentPage = signal(1);
+  itemsPerPage = 30;
+
+  paginatedAuthors = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.filteredAuthors().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.filteredAuthors().length / this.itemsPerPage)));
+
   ngOnInit() {
     this.loadAuthors();
   }
 
   loadAuthors() {
     this.loading.set(true);
+    this.currentPage.set(1);
     this.adminService.getAuthors().subscribe({
       next: (data) => {
         this.authors.set(data);

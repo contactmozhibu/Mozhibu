@@ -283,6 +283,7 @@ input:checked + .slider:before {
   color: var(--ink);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: fit-content;
+  white-space: nowrap;
 }
 
 .tag-badge {
@@ -327,3 +328,9 @@ input:checked + .slider:before {
   width: 100%;
 }
 
+/* Table Styles */  
+.admin-table { width: 100%%; border-collapse: collapse; }  
+.admin-table th { text-align: left; padding: 16px; border-bottom: 2px solid var(--border-soft); color: var(--ink-soft); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }  
+.admin-table td { padding: 16px; vertical-align: middle; border-bottom: 1px solid var(--border-soft); color: var(--ink); font-size: 14px; }  
+.admin-table tr:last-child td { border-bottom: none; } 
+.pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding: 0 16px 16px 16px; } 

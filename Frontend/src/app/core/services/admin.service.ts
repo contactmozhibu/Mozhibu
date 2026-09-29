@@ -121,8 +121,8 @@ export class AdminService {
     return { ...book, cover: this.api.getImageUrl(book.cover) };
   }
 
-  getStats(): Observable<AdminStats> {
-    return this.api.get('/admin/stats');
+  getStats(filter: string = 'This Year'): Observable<AdminStats> {
+    return this.api.get(`/admin/stats?filter=${encodeURIComponent(filter)}`);
   }
 
   getBooks(status?: string): Observable<AdminBook[]> {

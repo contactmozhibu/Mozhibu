@@ -11,6 +11,7 @@ const User = require("../models/User");
 const Notification = require("../models/Notification");
 const { protect, protectOptional, author } = require("../middleware/auth");
 const xss = require("xss");
+const rateLimit = require("express-rate-limit");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const {
   translateBooks,
@@ -999,9 +1000,16 @@ router.delete("/:id/chapters/:chapterId", protect, author, async (req, res) => {
   }
 });
 
+// Translation Rate Limiter: max 5 requests per minute
+const translationLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 5,
+  message: { msg: "Too many translation requests from this IP, please try again later." },
+});
+
 // @route POST /api/books/translate-html
 // @desc Translate raw HTML to target language (for UI demo)
-router.post("/translate-html", async (req, res) => {
+router.post("/translate-html", protect, translationLimiter, async (req, res) => {
   const { html, targetLang } = req.body;
   if (!html || !targetLang)
     return res.status(400).json({ msg: "html and targetLang required" });
@@ -1056,7 +1064,7 @@ ${html}`;
 
 // @route POST /api/books/:id/chapters/:chapterId/translate
 // @desc Translate a chapter to a target language using Gemini
-router.post("/:id/chapters/:chapterId/translate", async (req, res) => {
+router.post("/:id/chapters/:chapterId/translate", protect, translationLimiter, async (req, res) => {
   try {
     const { targetLang } = req.body;
     if (!targetLang)

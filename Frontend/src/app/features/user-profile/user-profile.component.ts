@@ -80,7 +80,7 @@ import { environment } from '../../../environments/environment';
           <button
             class="tab-btn"
             [class.active]="activeTab() === 'published'"
-            (click)="activeTab.set('published')"
+            (click)="onPublishedTabClick()"
           >
             {{ 'profile.publishedContents' | translate }} ({{ publishedStories().length }})
           </button>
@@ -278,6 +278,28 @@ import { environment } from '../../../environments/environment';
               class="avatar-large"
               (error)="onAvatarError($event, user()?.username)"
             />
+          </div>
+        </div>
+      }
+      <!-- Upgrade to Author Modal -->
+      @if (showCompetitionUpgrade()) {
+        <div class="avatar-modal-overlay" (click)="closeUpgradeModal()" style="display: flex; align-items: center; justify-content: center; z-index: 1000; position: fixed; inset: 0; background: rgba(0,0,0,0.5);">
+          <div class="modal-content" (click)="$event.stopPropagation()" style="background: white; border-radius: 12px; padding: 24px; max-width: 400px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;">
+            <button class="close-btn" (click)="closeUpgradeModal()" style="position: absolute; right: 16px; top: 16px; border: none; background: transparent; font-size: 24px; cursor: pointer; color: var(--ink);">×</button>
+            <div class="modal-header">
+              <h2 class="modal-title" style="color: var(--ink); margin-bottom: 12px; font-size: 20px;">
+                Become an Author
+              </h2>
+            </div>
+            <div class="modal-body" style="color: var(--ink-soft); margin-bottom: 24px; line-height: 1.5;">
+              <p>
+                You need to be an Author to participate. Would you like to upgrade your account now? It's completely free!
+              </p>
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 16px; justify-content: flex-end;">
+              <button class="btn btn-outline" style="border: 1px solid var(--border); background: transparent; padding: 10px 20px; border-radius: 8px; cursor: pointer; color: var(--ink);" (click)="closeUpgradeModal()">Cancel</button>
+              <button class="btn btn-primary" style="background: var(--forest); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;" (click)="upgradeToAuthor()" [disabled]="isUpgrading()">{{ isUpgrading() ? "Upgrading..." : "Upgrade Now" }}</button>
+            </div>
           </div>
         </div>
       }
@@ -963,7 +985,11 @@ export class UserProfileComponent implements OnInit {
   followersCount = signal<number>(0);
   following = signal<any[]>([]);
   followers = signal<any[]>([]);
+  private route = inject(ActivatedRoute);
   showBigAvatar = signal<boolean>(false);
+  
+  showCompetitionUpgrade = signal<boolean>(false);
+  isUpgrading = signal<boolean>(false);
   
   reviewsList = signal<any[]>([]);
   isLoadingReviews = signal<boolean>(false);
@@ -972,9 +998,56 @@ export class UserProfileComponent implements OnInit {
     this.showBigAvatar.set(!this.showBigAvatar());
   }
 
+  closeUpgradeModal() {
+    this.showCompetitionUpgrade.set(false);
+    document.body.style.overflow = '';
+  }
+
+  onPublishedTabClick() {
+    const role = this.user()?.role;
+    if (role !== 'writer' && role !== 'superadmin') {
+      this.showCompetitionUpgrade.set(true);
+      document.body.style.overflow = 'hidden';
+    } else {
+      this.activeTab.set('published');
+    }
+  }
+
+  upgradeToAuthor() {
+    this.isUpgrading.set(true);
+    this.http.put('/api/users/upgrade-role', {}).subscribe({
+      next: (res: any) => {
+        if (res.user) {
+          this.authService.user.set({
+            ...this.authService.user()!,
+            ...res.user,
+          });
+          this.closeUpgradeModal();
+          this.activeTab.set('published');
+        }
+        this.isUpgrading.set(false);
+      },
+      error: (err) => {
+        console.error(err);
+        this.isUpgrading.set(false);
+        alert('Failed to upgrade. Please try again.');
+      },
+    });
+  }
+
   ngOnInit() {
     this.authorStatus.set(this.user()?.authorStatus || '');
     this.loadAllData();
+    
+    this.route.queryParams.subscribe(params => {
+      if (params['upgrade'] === 'competition') {
+        const role = this.user()?.role;
+        if (role !== 'writer' && role !== 'superadmin') {
+          this.showCompetitionUpgrade.set(true);
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    });
   }
 
   loadAllData() {

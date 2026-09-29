@@ -21,6 +21,7 @@ import { OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GoogleAdComponent } from '../../shared/components/ad/google-ad.component';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
+import { ConfirmService } from '../../core/services/confirm.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -103,19 +104,22 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
           <app-continue-reading></app-continue-reading>
 
           <!-- Announcements -->
-          <section class="announcement-section">
-            <div class="section-header">
-              <h2 class="section-title">{{ "notifications.announcements" | translate }}</h2>
-            </div>
-            <div class="scroll-container">
-              <div class="announcements-track">
-                <app-announcement-card
-                  *ngFor="let ann of announcements"
-                  [announcement]="ann"
-                ></app-announcement-card>
+          @if (announcements.length > 0) {
+            <section class="announcement-section">
+              <div class="section-header">
+                <h2 class="section-title">{{ "notifications.announcements" | translate }}</h2>
               </div>
-            </div>
-          </section>
+              <div class="scroll-container">
+                <div class="announcements-track">
+                  <app-announcement-card
+                    *ngFor="let ann of announcements.slice(0, 4)"
+                    [announcement]="ann"
+                    (dismiss)="onDismissAnnouncement($event)"
+                  ></app-announcement-card>
+                </div>
+              </div>
+            </section>
+          }
 
           <app-story-section
             [title]="'home.recommended' | translate"
@@ -273,6 +277,7 @@ export class HomeComponent implements OnInit {
   bookService = inject(BookService);
   private apiService = inject(ApiService);
   private languageService = inject(LanguageService);
+  private confirmService = inject(ConfirmService);
 
   recommendedStories: any[] = [];
   trendingStories: any[] = [];
@@ -366,6 +371,39 @@ export class HomeComponent implements OnInit {
       error: () => {
         this.announcements = [];
       },
+    });
+  }
+
+  onDismissAnnouncement(id: string) {
+    this.confirmService.confirm(
+      'Remove Announcement',
+      'Are you sure you want to dismiss this announcement? It will be removed from your feed permanently.',
+      true,
+      'Remove',
+      'Cancel'
+    ).subscribe(confirmed => {
+      if (confirmed) {
+        // Optimistically remove from UI
+        this.announcements = this.announcements.filter(a => a.id !== id);
+        
+        // Show success popup in the next tick so the previous modal finishes closing
+        setTimeout(() => {
+          this.confirmService.confirm(
+            'Success',
+            'Announcement successfully removed.',
+            false,
+            'OK',
+            ''
+          ).subscribe();
+        }, 0);
+        
+        // Call backend to persist dismissal
+        if (this.authService.user()) {
+          this.apiService.post(`/notifications/broadcasts/${id}/dismiss`, {}).subscribe({
+            error: (err) => console.error('Failed to dismiss announcement', err)
+          });
+        }
+      }
     });
   }
 

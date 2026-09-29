@@ -36,57 +36,110 @@ router.get("/stats", async (req, res) => {
       role: { $in: ["writer", "superadmin"] },
     });
 
-    // Time-series aggregations for the past 12 months
-    const twelveMonthsAgo = new Date();
-    twelveMonthsAgo.setMonth(twelveMonthsAgo.getMonth() - 11);
-    twelveMonthsAgo.setDate(1);
-    twelveMonthsAgo.setHours(0, 0, 0, 0);
+    const filter = req.query.filter || 'This Year';
+    let startDate = new Date();
+    let formatData;
+    let booksAggregation;
+    let usersAggregation;
 
-    const booksAggregation = await Book.aggregate([
-      { $match: { createdAt: { $gte: twelveMonthsAgo } } },
-      {
-        $group: {
-          _id: {
-            month: { $month: "$createdAt" },
-            year: { $year: "$createdAt" },
-          },
-          count: { $sum: 1 },
-        },
-      },
-    ]);
+    if (filter === 'Today') {
+      startDate.setHours(0, 0, 0, 0);
+      
+      const pipeline = [
+        { $match: { createdAt: { $gte: startDate } } },
+        { $group: { _id: { hour: { $hour: "$createdAt" } }, count: { $sum: 1 } } }
+      ];
+      booksAggregation = await Book.aggregate(pipeline);
+      usersAggregation = await User.aggregate(pipeline);
 
-    const usersAggregation = await User.aggregate([
-      { $match: { createdAt: { $gte: twelveMonthsAgo } } },
-      {
-        $group: {
-          _id: {
-            month: { $month: "$createdAt" },
-            year: { $year: "$createdAt" },
-          },
-          count: { $sum: 1 },
-        },
-      },
-    ]);
+      formatData = (aggData) => {
+        const labels = ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'];
+        const data = new Array(8).fill(0);
+        aggData.forEach(item => {
+          const hour = item._id.hour;
+          const index = Math.floor(hour / 3);
+          if (index >= 0 && index < 8) data[index] += item.count;
+        });
+        return { data, labels };
+      };
 
-    const format12Months = (aggData) => {
-      const data = new Array(12).fill(0);
-      const labels = new Array(12).fill("");
-      const now = new Date();
-      for (let i = 11; i >= 0; i--) {
-        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-        labels[11 - i] = d.toLocaleString("default", { month: "short" });
-        const found = aggData.find(
-          (item) =>
-            item._id.month === d.getMonth() + 1 &&
-            item._id.year === d.getFullYear(),
-        );
-        if (found) data[11 - i] = found.count;
-      }
-      return { data, labels };
-    };
+    } else if (filter === 'This Week') {
+      const day = startDate.getDay();
+      const diff = startDate.getDate() - day + (day == 0 ? -6 : 1);
+      startDate = new Date(startDate.setDate(diff));
+      startDate.setHours(0, 0, 0, 0);
 
-    const monthlyBooks = format12Months(booksAggregation);
-    const monthlyUsers = format12Months(usersAggregation);
+      const pipeline = [
+        { $match: { createdAt: { $gte: startDate } } },
+        { $group: { _id: { dayOfWeek: { $dayOfWeek: "$createdAt" } }, count: { $sum: 1 } } }
+      ];
+      booksAggregation = await Book.aggregate(pipeline);
+      usersAggregation = await User.aggregate(pipeline);
+
+      formatData = (aggData) => {
+        const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+        const data = new Array(7).fill(0);
+        aggData.forEach(item => {
+          let dayIndex = item._id.dayOfWeek - 2; // Sunday is 1 in MongoDB, we want Mon=0
+          if (dayIndex === -1) dayIndex = 6;
+          if (dayIndex >= 0 && dayIndex < 7) data[dayIndex] += item.count;
+        });
+        return { data, labels };
+      };
+
+    } else if (filter === 'This Month') {
+      startDate.setDate(1);
+      startDate.setHours(0, 0, 0, 0);
+
+      const pipeline = [
+        { $match: { createdAt: { $gte: startDate } } },
+        { $group: { _id: { week: { $week: "$createdAt" } }, count: { $sum: 1 } } }
+      ];
+      booksAggregation = await Book.aggregate(pipeline);
+      usersAggregation = await User.aggregate(pipeline);
+
+      formatData = (aggData) => {
+        const labels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+        const data = new Array(4).fill(0);
+        if (aggData.length > 0) {
+          const minWeek = Math.min(...aggData.map(a => a._id.week));
+          aggData.forEach(item => {
+            let index = item._id.week - minWeek;
+            if (index > 3) index = 3;
+            if (index >= 0) data[index] += item.count;
+          });
+        }
+        return { data, labels };
+      };
+
+    } else { // 'This Year' default
+      startDate.setMonth(startDate.getMonth() - 11);
+      startDate.setDate(1);
+      startDate.setHours(0, 0, 0, 0);
+
+      const pipeline = [
+        { $match: { createdAt: { $gte: startDate } } },
+        { $group: { _id: { month: { $month: "$createdAt" }, year: { $year: "$createdAt" } }, count: { $sum: 1 } } }
+      ];
+      booksAggregation = await Book.aggregate(pipeline);
+      usersAggregation = await User.aggregate(pipeline);
+
+      formatData = (aggData) => {
+        const data = new Array(12).fill(0);
+        const labels = new Array(12).fill("");
+        const now = new Date();
+        for (let i = 11; i >= 0; i--) {
+          const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+          labels[11 - i] = d.toLocaleString("default", { month: "short" });
+          const found = aggData.find(item => item._id.month === d.getMonth() + 1 && item._id.year === d.getFullYear());
+          if (found) data[11 - i] = found.count;
+        }
+        return { data, labels };
+      };
+    }
+
+    const monthlyBooks = formatData(booksAggregation);
+    const monthlyUsers = formatData(usersAggregation);
 
     res.json({
       totalPublishedBooks,
@@ -365,38 +418,35 @@ router.delete("/users/:id", async (req, res) => {
 // @desc Get authors with their published book count
 router.get("/authors", async (req, res) => {
   try {
-    const authors = await User.find({
-      role: { $in: ["writer", "superadmin"] },
-    }).select("username email createdAt status");
-
-    // In a real production app, use MongoDB aggregation for performance
-    const authorStats = await Promise.all(
-      authors.map(async (author) => {
-        const publishedCount = await Book.countDocuments({
-          author: author._id,
-          status: "published",
-        });
-        // Total reads is tricky if views are not tracked accurately, we sum up views of books
-        const authorBooks = await Book.find({
-          author: author._id,
-          status: "published",
-        });
-        const totalReads = authorBooks.reduce(
-          (sum, book) => sum + book.views,
-          0,
-        );
-
-        return {
-          _id: author._id,
-          username: author.username,
-          email: author.email,
-          status: author.status,
-          joinedAt: author.createdAt,
-          publishedCount,
-          totalReads,
-        };
-      }),
-    );
+    const authorStats = await User.aggregate([
+      { $match: { role: { $in: ["writer", "superadmin"] } } },
+      {
+        $lookup: {
+          from: "books",
+          let: { authorId: "$_id" },
+          pipeline: [
+            { $match: { 
+                $expr: { $eq: ["$author", "$$authorId"] },
+                status: "published"
+              }
+            }
+          ],
+          as: "publishedBooks"
+        }
+      },
+      {
+        $project: {
+          _id: 1,
+          username: 1,
+          email: 1,
+          status: 1,
+          joinedAt: "$createdAt",
+          publishedCount: { $size: "$publishedBooks" },
+          totalReads: { $sum: "$publishedBooks.views" }
+        }
+      },
+      { $sort: { joinedAt: -1 } }
+    ]);
 
     res.json(authorStats);
   } catch (err) {
@@ -638,9 +688,9 @@ router.get("/competition/entries", async (req, res) => {
       return res.json([]);
     }
 
-    // Find all published books that have this competition tag
+    // Find all published books that have THIS competition tag (case-insensitive)
     const entries = await Book.find({
-      competitionTag: { $exists: true, $ne: "" },
+      competitionTag: { $regex: new RegExp(`^${competition.tag}$`, "i") },
       status: "published",
     })
       .populate("author", "username email")
@@ -736,7 +786,7 @@ router.post("/competition/announce-winner", async (req, res) => {
       type: "announcement",
       title: broadcast.title,
       message: broadcast.message,
-      link: `/book/${bookId}`, // Link straight to the winning book
+      link: `/book/${bookIds[0]}`, // Link straight to the first winning book
     }));
     await Notification.insertMany(notifications);
 

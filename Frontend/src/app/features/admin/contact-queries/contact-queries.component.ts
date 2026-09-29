@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../../core/services/api.service';
@@ -39,7 +39,7 @@ interface ContactQuery {
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let query of queries()" [class.unread]="query.status === 'new'">
+              <tr *ngFor="let query of paginatedQueries()" [class.unread]="query.status === 'new'">
                 <td class="text-nowrap">{{ query.createdAt | date:'mediumDate' }}</td>
                 <td class="font-medium">
                   {{ query.name }}
@@ -81,11 +81,16 @@ interface ContactQuery {
               </tr>
             </tbody>
           </table>
-          
           <div *ngIf="isLoading()" class="loading-state">
             <div class="loader"></div>
             <p>Loading queries...</p>
           </div>
+        </div>
+        
+        <div *ngIf="totalPages() > 1" class="pagination">
+          <button [disabled]="currentPage() === 1" (click)="currentPage.set(currentPage() - 1)">Previous</button>
+          <span>Page {{ currentPage() }} of {{ totalPages() }}</span>
+          <button [disabled]="currentPage() === totalPages()" (click)="currentPage.set(currentPage() + 1)">Next</button>
         </div>
       </div>
 
@@ -447,6 +452,27 @@ interface ContactQuery {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
+    .pagination button {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   `]
 })
 export class ContactQueriesComponent implements OnInit {
@@ -459,12 +485,23 @@ export class ContactQueriesComponent implements OnInit {
   replyMessage = '';
   isReplying = signal<boolean>(false);
 
+  currentPage = signal(1);
+  itemsPerPage = 30;
+
+  paginatedQueries = computed(() => {
+    const startIndex = (this.currentPage() - 1) * this.itemsPerPage;
+    return this.queries().slice(startIndex, startIndex + this.itemsPerPage);
+  });
+
+  totalPages = computed(() => Math.max(1, Math.ceil(this.queries().length / this.itemsPerPage)));
+
   ngOnInit() {
     this.loadQueries();
   }
 
   loadQueries() {
     this.isLoading.set(true);
+    this.currentPage.set(1);
     this.apiService.get<ContactQuery[]>('/contact').subscribe({
       next: (data) => {
         this.queries.set(data);

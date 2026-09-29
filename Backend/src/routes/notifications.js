@@ -106,6 +106,7 @@ const { protectOptional } = require("../middleware/auth");
 router.get("/broadcasts", protectOptional, async (req, res) => {
   try {
     let audienceFilter = ["all"];
+    let dismissedIds = [];
 
     if (req.user) {
       if (req.user.role === "reader") {
@@ -113,10 +114,17 @@ router.get("/broadcasts", protectOptional, async (req, res) => {
       } else if (req.user.role === "writer" || req.user.role === "superadmin") {
         audienceFilter.push("writers");
       }
+      
+      const User = require("../models/User");
+      const dbUser = await User.findById(req.user.id).select("dismissedAnnouncements");
+      if (dbUser && dbUser.dismissedAnnouncements) {
+        dismissedIds = dbUser.dismissedAnnouncements;
+      }
     }
 
     const broadcasts = await Broadcast.find({
       audience: { $in: audienceFilter },
+      _id: { $nin: dismissedIds }
     })
       .sort({ createdAt: -1 })
       .limit(10)
@@ -133,6 +141,33 @@ router.get("/broadcasts", protectOptional, async (req, res) => {
     });
 
     res.json(translatedBroadcasts);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ msg: "Server Error" });
+  }
+});
+
+// @route POST /api/notifications/broadcasts/:id/dismiss
+// @desc Dismiss an announcement so it no longer shows for the user
+router.post("/broadcasts/:id/dismiss", protect, async (req, res) => {
+  try {
+    const User = require("../models/User");
+    const user = await User.findById(req.user.id);
+    
+    if (!user) {
+      return res.status(404).json({ msg: "User not found" });
+    }
+    
+    if (!user.dismissedAnnouncements) {
+      user.dismissedAnnouncements = [];
+    }
+    
+    if (!user.dismissedAnnouncements.includes(req.params.id)) {
+      user.dismissedAnnouncements.push(req.params.id);
+      await user.save();
+    }
+    
+    res.json({ msg: "Announcement dismissed" });
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ msg: "Server Error" });

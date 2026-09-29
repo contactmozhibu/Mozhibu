@@ -550,3 +550,11 @@ body.dark-mode {
   to { transform: rotate(360deg); }
 }
 
+/* Skeleton Loaders */  
+.skeleton-row td { padding: 16px; vertical-align: middle; }  
+.skeleton-text { height: 14px; background: var(--sd-muted, #94a3b8); border-radius: 4px; opacity: 0.2; animation: pulse 1.5s infinite; }  
+.skeleton-title { width: 60%; margin-bottom: 6px; height: 16px; }
+.skeleton-sub { width: 40%; }
+.skeleton-badge { width: 70px; height: 24px; background: var(--sd-muted, #94a3b8); border-radius: 12px; opacity: 0.2; animation: pulse 1.5s infinite; }  
+.skeleton-actions { width: 80px; height: 32px; background: var(--sd-muted, #94a3b8); border-radius: 6px; opacity: 0.2; animation: pulse 1.5s infinite; }  
+@keyframes pulse { 0% { opacity: 0.2; } 50% { opacity: 0.4; } 100% { opacity: 0.2; } }
