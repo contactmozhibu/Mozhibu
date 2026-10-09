@@ -1,66 +1,63 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `
     <div class="page-layout">
       <!-- Hero Section -->
       <div class="hero">
         <div class="hero-content wrap">
-          <h1>Welcome to Mozhibu!</h1>
-          <p>
-            “Mozhibu” is a Tamil word which means “Narrative” or “Story,” representing storytelling through prose. The term originates from the Tamil word “Mozhi,” meaning “speech” or “expression.”
-          </p>
-          <p style="margin-top: 24px;">
-            We are a platform built for readers, writers, and creators who believe in the power of stories. From fiction that sparks imagination to non-fiction that informs, from poetry that moves the soul to cookbooks that inspire kitchens, and from children’s tales to academic insight — we celebrate every voice and every genre.
-          </p>
+          <h1>{{ 'about.hero.title' | translate }}</h1>
+          <p>{{ 'about.hero.p1' | translate }}</p>
+          <p style="margin-top: 24px;">{{ 'about.hero.p2' | translate }}</p>
         </div>
         <div class="hero-bg"></div>
       </div>
 
       <!-- Mission Statement -->
       <div class="mission-banner wrap">
-        <h2>Our mission is simple:</h2>
-        <p>to make storytelling accessible, diverse, and beautifully inclusive.</p>
+        <h2>{{ 'about.mission.title' | translate }}</h2>
+        <p>{{ 'about.mission.desc' | translate }}</p>
       </div>
 
       <!-- Genres Section -->
       <div class="genres-section alt-bg">
         <div class="wrap">
-          <h2 class="section-title">A Platform for Every Kind of Story</h2>
-          <p class="section-subtitle">Stories come in many forms, so we embrace them all.</p>
+          <h2 class="section-title">{{ 'about.genres.title' | translate }}</h2>
+          <p class="section-subtitle">{{ 'about.genres.subtitle' | translate }}</p>
           <div class="values-grid">
             <div class="value-card">
-              <h4>Fiction</h4>
-              <p>Adventures, drama, thrillers, romance, and everything imagined.</p>
+              <h4>{{ 'about.genres.fiction.title' | translate }}</h4>
+              <p>{{ 'about.genres.fiction.desc' | translate }}</p>
             </div>
             <div class="value-card">
-              <h4>Non-Fiction</h4>
-              <p>Real stories, reflections, biographies, insights, and lived experiences.</p>
+              <h4>{{ 'about.genres.nonFiction.title' | translate }}</h4>
+              <p>{{ 'about.genres.nonFiction.desc' | translate }}</p>
             </div>
             <div class="value-card">
-              <h4>Academic</h4>
-              <p>Research-driven writing, educational content, and learning resources.</p>
+              <h4>{{ 'about.genres.academic.title' | translate }}</h4>
+              <p>{{ 'about.genres.academic.desc' | translate }}</p>
             </div>
             <div class="value-card">
-              <h4>Poetry</h4>
-              <p>Verses, emotions, ghazals, haiku, reflections, and lyrical expressions.</p>
+              <h4>{{ 'about.genres.poetry.title' | translate }}</h4>
+              <p>{{ 'about.genres.poetry.desc' | translate }}</p>
             </div>
             <div class="value-card">
-              <h4>Cookbooks</h4>
-              <p>Recipes, food memories, kitchen traditions, and culinary explorations.</p>
+              <h4>{{ 'about.genres.cookbooks.title' | translate }}</h4>
+              <p>{{ 'about.genres.cookbooks.desc' | translate }}</p>
             </div>
             <div class="value-card">
-              <h4>Children’s Books</h4>
-              <p>Imaginative tales, early readers, picture books, and learning stories.</p>
+              <h4>{{ 'about.genres.childrens.title' | translate }}</h4>
+              <p>{{ 'about.genres.childrens.desc' | translate }}</p>
             </div>
           </div>
           <div class="value-card others-card" style="margin-top: 32px;">
-            <h4>Others</h4>
-            <p>Comics, graphic stories, plays, essays, journals, spiritual texts, and mixed formats.</p>
+            <h4>{{ 'about.genres.others.title' | translate }}</h4>
+            <p>{{ 'about.genres.others.desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -68,16 +65,12 @@ import { CommonModule } from '@angular/common';
       <!-- Bottom Details -->
       <div class="details-section wrap">
         <div class="details-text">
-          <h2>Languages Available</h2>
-          <p>
-            Currently Mozhibu is available for reading and writing in <strong>12 languages</strong>. We will also expand in other Indian languages soon.
-          </p>
+          <h2>{{ 'about.details.languagesTitle' | translate }}</h2>
+          <p [innerHTML]="'about.details.languagesDesc' | translate"></p>
         </div>
         <div class="details-text">
-          <h2>Wondering who we are?</h2>
-          <p>
-            At Mozhibu, passionate engineers, intellectual writers, and community managers come together with one shared mission — to constantly evolve the platform and craft a meaningful, inspiring experience for every author and reader.
-          </p>
+          <h2>{{ 'about.details.whoWeAreTitle' | translate }}</h2>
+          <p>{{ 'about.details.whoWeAreDesc' | translate }}</p>
         </div>
       </div>
     </div>

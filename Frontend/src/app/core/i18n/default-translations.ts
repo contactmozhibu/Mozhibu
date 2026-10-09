@@ -283,5 +283,33 @@ export const DEFAULT_EN_TRANSLATIONS: Record<string, any> = {
     }
   },
   "Competition Winners Announced!": "Competition Winners Announced!",
-  "The competition \"The Twelve Tongues Prize 882\" has concluded. Congratulations to Adhi for \"winnerwillbeme\", varun for \"contest\"!": "The competition \"The Twelve Tongues Prize 882\" has concluded. Congratulations to Adhi for \"winnerwillbeme\", varun for \"contest\"!"
+  "The competition \"The Twelve Tongues Prize 882\" has concluded. Congratulations to Adhi for \"winnerwillbeme\", varun for \"contest\"!": "The competition \"The Twelve Tongues Prize 882\" has concluded. Congratulations to Adhi for \"winnerwillbeme\", varun for \"contest\"!",
+  about: {
+    hero: {
+      title: "Welcome to Mozhibu!",
+      p1: "“Mozhibu” is a Tamil word which means “Narrative” or “Story,” representing storytelling through prose. The term originates from the Tamil word “Mozhi,” meaning “speech” or “expression.”",
+      p2: "We are a platform built for readers, writers, and creators who believe in the power of stories. From fiction that sparks imagination to non-fiction that informs, from poetry that moves the soul to cookbooks that inspire kitchens, and from children’s tales to academic insight — we celebrate every voice and every genre."
+    },
+    mission: {
+      title: "Our mission is simple:",
+      desc: "to make storytelling accessible, diverse, and beautifully inclusive."
+    },
+    genres: {
+      title: "A Platform for Every Kind of Story",
+      subtitle: "Stories come in many forms, so we embrace them all.",
+      fiction: { title: "Fiction", desc: "Adventures, drama, thrillers, romance, and everything imagined." },
+      nonFiction: { title: "Non-Fiction", desc: "Real stories, reflections, biographies, insights, and lived experiences." },
+      academic: { title: "Academic", desc: "Research-driven writing, educational content, and learning resources." },
+      poetry: { title: "Poetry", desc: "Verses, emotions, ghazals, haiku, reflections, and lyrical expressions." },
+      cookbooks: { title: "Cookbooks", desc: "Recipes, food memories, kitchen traditions, and culinary explorations." },
+      childrens: { title: "Children’s Books", desc: "Imaginative tales, early readers, picture books, and learning stories." },
+      others: { title: "Others", desc: "Comics, graphic stories, plays, essays, journals, spiritual texts, and mixed formats." }
+    },
+    details: {
+      languagesTitle: "Languages Available",
+      languagesDesc: "Currently Mozhibu is available for reading and writing in <strong>12 languages</strong>. We will also expand in other Indian languages soon.",
+      whoWeAreTitle: "Wondering who we are?",
+      whoWeAreDesc: "At Mozhibu, passionate engineers, intellectual writers, and community managers come together with one shared mission — to constantly evolve the platform and craft a meaningful, inspiring experience for every author and reader."
+    }
+  }
 };
