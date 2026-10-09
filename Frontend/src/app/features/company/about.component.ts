@@ -93,7 +93,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('assets/about_hero_bg.jpg');
+        background-image: url('/assets/about_hero_bg.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
