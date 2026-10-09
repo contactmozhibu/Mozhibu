@@ -561,6 +561,7 @@ import { RouterModule } from '@angular/router';
         line-height: 1.7;
         color: var(--ink-soft);
         margin-bottom: 16px;
+        text-align: justify;
       }
       
       /* Lists */
@@ -744,6 +745,7 @@ import { RouterModule } from '@angular/router';
         position: relative;
         margin-bottom: 8px;
         color: var(--ink-soft);
+        text-align: justify;
       }
       .main-heading {
         font-family: var(--display);
