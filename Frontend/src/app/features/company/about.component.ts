@@ -19,9 +19,11 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       </div>
 
       <!-- Mission Statement -->
-      <div class="mission-banner wrap">
-        <h2>{{ 'about.mission.title' | translate }}</h2>
-        <p>{{ 'about.mission.desc' | translate }}</p>
+      <div class="mission-section">
+        <div class="wrap">
+          <h2>{{ 'about.mission.title' | translate }}</h2>
+          <p>{{ 'about.mission.desc' | translate }}</p>
+        </div>
       </div>
 
       <!-- Genres Section -->
@@ -83,7 +85,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
       .hero {
         position: relative;
-        padding: 160px 0 100px 0;
+        padding: 220px 0 100px 0;
         overflow: hidden;
         background: var(--forest-deep);
         color: white;
@@ -122,32 +124,26 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         margin: 0 auto;
       }
 
-      .mission-banner {
+      .mission-section {
+        background: var(--paper);
+        padding: 100px 32px;
         text-align: center;
-        padding: 64px 40px;
-        background: linear-gradient(145deg, #ffffff, #f8fafc);
-        border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0,0,0,0.05);
-        margin-top: -60px;
-        position: relative;
-        z-index: 10;
-        border: 1px solid rgba(255,255,255,0.8);
-        margin-bottom: 80px;
-        max-width: 800px;
       }
-      .mission-banner h2 {
-        font-size: 24px;
+      .mission-section h2 {
+        font-size: 20px;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.15em;
         color: var(--gold);
-        margin-bottom: 16px;
+        margin-bottom: 24px;
         font-weight: 700;
       }
-      .mission-banner p {
-        font-size: 28px;
+      .mission-section p {
+        font-size: 36px;
         font-weight: 500;
         color: var(--forest-deep);
         line-height: 1.4;
+        max-width: 800px;
+        margin: 0 auto;
       }
 
       .alt-bg {
@@ -225,16 +221,15 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
     
       @media (max-width: 768px) {
-        .hero { padding: 120px 16px 80px 16px !important; }
+        .hero { padding: 180px 16px 80px 16px !important; }
         .hero h1 { font-size: 32px !important; line-height: 1.2 !important; }
         .hero p { font-size: 18px !important; }
         
-        .mission-banner {
-          margin-top: -30px;
-          padding: 40px 24px;
+        .mission-section {
+          padding: 60px 24px;
         }
-        .mission-banner h2 { font-size: 20px; margin-bottom: 8px; }
-        .mission-banner p { font-size: 22px; line-height: 1.3; }
+        .mission-section h2 { font-size: 16px; margin-bottom: 16px; }
+        .mission-section p { font-size: 24px; line-height: 1.4; }
 
         .values-grid { 
           grid-template-columns: 1fr !important; 
