@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@luytbq43/md-to-docx": "^0.5.6",
+    "docx": "^9.9.0",
+    "md-to-pdf": "^5.2.5"
+  }
+}

@@ -1,0 +1,3384 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="mozhibu_files/filelist.xml">
+<link rel=Edit-Time-Data href="mozhibu_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>VARUN KUMAR</o:Author>
+  <o:LastAuthor>VARUN KUMAR</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>11</o:TotalTime>
+  <o:Created>2026-10-08T10:07:00Z</o:Created>
+  <o:LastSaved>2026-10-08T10:18:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>10</o:Words>
+  <o:Characters>60</o:Characters>
+  <o:Lines>1</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>69</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="mozhibu_files/item0001.xml"
+target="mozhibu_files/props002.xml">
+<link rel=themeData href="mozhibu_files/themedata.thmx">
+<link rel=colorSchemeMapping href="mozhibu_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>TA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Latha;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1048579 0 0 0 1 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1040178053 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:20.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;}
+h2
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;}
+h4
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-style-next:Normal;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;
+	font-style:italic;}
+h5
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 5 Char";
+	mso-style-next:Normal;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;}
+h6
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 6 Char";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 7 Char";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 8 Char";
+	mso-style-next:Normal;
+	margin:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#272727;
+	mso-themecolor:text1;
+	mso-themetint:216;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 9 Char";
+	mso-style-next:Normal;
+	margin:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#272727;
+	mso-themecolor:text1;
+	mso-themetint:216;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Subtitle Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;
+	letter-spacing:.75pt;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-priority:29;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Quote Char";
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-priority:30;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Intense Quote Char";
+	mso-style-next:Normal;
+	margin-top:18.0pt;
+	margin-right:43.2pt;
+	margin-bottom:18.0pt;
+	margin-left:43.2pt;
+	text-align:center;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-top-alt:solid #2F5496 .5pt;
+	mso-border-top-themecolor:accent1;
+	mso-border-top-themeshade:191;
+	mso-border-bottom-alt:solid #2F5496 .5pt;
+	mso-border-bottom-themecolor:accent1;
+	mso-border-bottom-themeshade:191;
+	padding:0cm;
+	mso-padding-alt:10.0pt 0cm 10.0pt 0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{mso-style-priority:21;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-style:italic;}
+span.MsoIntenseReference
+	{mso-style-priority:32;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	font-variant:small-caps;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:20.0pt;
+	mso-bidi-font-size:20.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 6";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 7";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 8";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#272727;
+	mso-themecolor:text1;
+	mso-themetint:216;
+	font-style:italic;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 9";
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#272727;
+	mso-themecolor:text1;
+	mso-themetint:216;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:28.0pt;
+	mso-bidi-font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	letter-spacing:-.5pt;
+	mso-font-kerning:14.0pt;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Subtitle;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:major-bidi;
+	color:#595959;
+	mso-themecolor:text1;
+	mso-themetint:166;
+	letter-spacing:.75pt;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-priority:29;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Quote;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-priority:30;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Intense Quote";
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("mozhibu_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("mozhibu_files/header.htm") fcs;
+	mso-endnote-separator:url("mozhibu_files/header.htm") es;
+	mso-endnote-continuation-separator:url("mozhibu_files/header.htm") ecs;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-header:url("mozhibu_files/header.htm") h1;
+	mso-footer:url("mozhibu_files/header.htm") f1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Latha;
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:36.0pt;word-wrap:break-word'>
+
+<div class=WordSection1>
+<div>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">Mozhibu - Story Platform</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">Comprehensive Technical Documentation</h2>
+<p><strong>Version:</strong> 2.0<br><strong>Date:</strong> September 2026<br><strong>Classification:</strong> Technical Reference Document<br><strong>Prepared For:</strong> Client Stakeholders &amp; Development Teams</p>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">Table of Contents</h1>
+<ol>
+<li><a href="#1-executive-project-overview">Executive Project Overview</a></li>
+<li><a href="#2-technologies-used">Technologies Used</a></li>
+<li><a href="#3-system-architecture-diagram">System Architecture Diagram</a></li>
+<li><a href="#4-frontend-application-architecture">Frontend Application Architecture</a></li>
+<li><a href="#5-backend--middleware-architecture">Backend &amp; Middleware Architecture</a></li>
+<li><a href="#6-database-schema--data-models">Database Schema &amp; Data Models</a></li>
+<li><a href="#7-entity-relationship-diagram">Entity Relationship Diagram (ER Diagram)</a></li>
+<li><a href="#8-api-architecture--routing">API Architecture &amp; Routing</a></li>
+<li><a href="#9-test-case-documentation">Test Case Documentation</a></li>
+</ol>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">1. Executive Project Overview</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">1.1 Introduction</h2>
+<p><strong>Mozhibu - Story</strong> is a multilingual, full-stack digital storytelling and literary platform designed to bridge the gap between independent authors and readers across diverse linguistic communities. The name <em>Mozhibu</em> is derived from the Tamil word for <em>language</em>, reflecting the platform&#39;s foundational mission: celebrating linguistic diversity through original literature.</p>
+<p>The platform is not a simple blog or content aggregator. It is a comprehensive literary economy — a sophisticated, real-time system where authors write, publish, and earn revenue directly from their readership; where readers discover, follow, and immerse themselves in serialised fiction; and where competitions drive engagement and accelerate discoverability for talented new voices.</p>
+<h2 style="color:#2F5496;font-family:Calibri Light;">1.2 Mission Statement</h2>
+<blockquote>
+<p><em>To democratise global storytelling by providing a robust, equitable, and technologically superior platform where linguistic diversity is celebrated, raw creativity is financially rewarded, and the act of reading is elevated through seamless technology.</em></p>
+</blockquote>
+<h2 style="color:#2F5496;font-family:Calibri Light;">1.3 Platform Scope &amp; Core Capabilities</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Module</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Primary Actors</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><strong>Author Studio</strong></td>
+<td style="border:1px solid #ddd;">A full-featured writing interface for creating, editing, and publishing serialised books and chapters with cover uploads, genre tagging, and analytics.</td>
+<td style="border:1px solid #ddd;">Writers</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Reader Interface</strong></td>
+<td style="border:1px solid #ddd;">An immersive, distraction-free reading UI with customisable typography, dark/light themes, offline caching, and cross-device progress synchronisation.</td>
+<td style="border:1px solid #ddd;">Readers</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Subscription Engine</strong></td>
+<td style="border:1px solid #ddd;">A Stripe-integrated dual-tier monetisation system where readers subscribe for premium access and authors earn proportional revenue based on Qualified Reads.</td>
+<td style="border:1px solid #ddd;">Readers, Writers</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Competitions Module</strong></td>
+<td style="border:1px solid #ddd;">Time-bound, admin-configured writing contests with eligibility checking, real-time leaderboards, and winner selection.</td>
+<td style="border:1px solid #ddd;">Admins, Writers</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Monetisation &amp; Payouts</strong></td>
+<td style="border:1px solid #ddd;">An end-of-month automated Cron Job that calculates each author&#39;s revenue share from the subscription pool and transfers earnings via Stripe Connect.</td>
+<td style="border:1px solid #ddd;">Writers, Admins</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Admin Control Panel</strong></td>
+<td style="border:1px solid #ddd;">A secure moderation dashboard for managing user accounts, reviewing reported books, approving author applications, and configuring system-wide parameters.</td>
+<td style="border:1px solid #ddd;">Superadmins</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Notification System</strong></td>
+<td style="border:1px solid #ddd;">A push-notification and in-app alert engine via Firebase Cloud Messaging (FCM) for chapter releases, competition results, and moderation events.</td>
+<td style="border:1px solid #ddd;">All Users</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">1.4 User Roles &amp; Permissions</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>┌─────────────────────────────────────────────────────────────────┐
+│                        ROLE HIERARCHY                           │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│   [SUPERADMIN]  ──── Full system access, manage all users       │
+│         │             and platform config                        │
+│         │                                                        │
+│   [WRITER]      ──── All Reader permissions + Author Studio     │
+│         │             publish books, earn payouts                │
+│         │                                                        │
+│   [READER]      ──── Browse books, read chapters, subscribe     │
+│                       follow authors, leave reviews             │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3>Role Progression</h3>
+<ul>
+<li>A user registers as a <strong>Reader</strong> by default.</li>
+<li>A Reader submits an <strong>Author Request</strong> (with pen name and bio).</li>
+<li>A <strong>Superadmin</strong> approves the request, upgrading their role to <strong>Writer</strong>.</li>
+<li>Writers can receive payouts once their <strong>KYC (bank details)</strong> are submitted and verified.</li>
+</ul>
+<h2 style="color:#2F5496;font-family:Calibri Light;">1.5 User Journey Maps</h2>
+<h3>Journey A — Reader Lifecycle</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>1. LANDING        User discovers the platform via SEO link or social share
+        │
+2. ONBOARDING     User signs up via email/password or OAuth (Google/Facebook)
+        │         Selects preferred language and favourite genres
+        │
+3. DISCOVERY      Personalised feed shows books matching genres
+        │         User follows authors, bookmarks books
+        │
+4. READING        Opens chapters, progress is tracked every 60 seconds
+        │         Heartbeat API updates ReadingProgress document
+        │
+5. PAYWALL        Chapter 10 is Premium — upgrade modal appears
+        │         User inputs card → Stripe processes → webhook fires
+        │
+6. PREMIUM        isPremium = true, all locked chapters unlock instantly
+</code></pre>
+<h3>Journey B — Writer Earning Pipeline</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>1. APPLICATION    Reader submits AuthorRequest → Admin approves
+        │
+2. CREATION       Writer creates Book with cover art and genre tags
+        │         Drafts Chapter 1 in the rich text editor
+        │
+3. PUBLICATION    Publishes chapter → FCM notification sent to all followers
+        │
+4. KYC SETUP      Writer submits encrypted bank details (accountNumber, IFSC)
+        │
+5. MONTH END      Cron Job aggregates all QualifiedReads for the author&#39;s books
+        │         Calculates revenue share from total subscription pool
+        │
+6. PAYOUT         AuthorEarnings record created → Stripe Connect transfer initiated
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">2. Technologies Used</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">2.1 Full Technology Stack Overview</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>┌────────────────────────────────────────────────────────────────────┐
+│                    TECHNOLOGY STACK SUMMARY                        │
+├─────────────────┬──────────────────────────────────────────────────┤
+│ LAYER           │ TECHNOLOGIES                                      │
+├─────────────────┼──────────────────────────────────────────────────┤
+│ Frontend        │ Angular 15+, TypeScript, RxJS, SCSS              │
+│ Backend         │ Node.js 18 LTS, Express.js 4.x                   │
+│ Database        │ MongoDB (NoSQL, Replica Set), Mongoose ODM        │
+│ Cache           │ Redis (ElastiCache)                               │
+│ Authentication  │ JWT (RS256), bcrypt, OAuth 2.0                    │
+│ Payments        │ Stripe API + Stripe Connect + Webhooks            │
+│ Notifications   │ Firebase Cloud Messaging (FCM)                    │
+│ File Storage    │ AWS S3 / Cloudinary CDN                           │
+│ Email           │ Nodemailer / SendGrid                             │
+│ Dev Tools       │ Jest, Supertest, ESLint, Prettier                 │
+└─────────────────┴──────────────────────────────────────────────────┘
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">2.2 Frontend Technologies — Deep Dive</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Technology</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Version</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Justification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><strong>Angular</strong></td>
+<td style="border:1px solid #ddd;">15+</td>
+<td style="border:1px solid #ddd;">Enterprise-grade SPA framework with built-in DI, AOT compilation, lazy-loading, and strict TypeScript integration. Ideal for a large, multi-role application.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>TypeScript</strong></td>
+<td style="border:1px solid #ddd;">Strict Mode</td>
+<td style="border:1px solid #ddd;">Compile-time type safety across hundreds of components. Shared interfaces (IBook, IUser) prevent API contract drift.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>RxJS</strong></td>
+<td style="border:1px solid #ddd;">7.x</td>
+<td style="border:1px solid #ddd;">Manages all async state — debounced search queries, cross-component state via BehaviorSubjects, real-time progress tracking heartbeats.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>SCSS</strong></td>
+<td style="border:1px solid #ddd;">Preprocessor</td>
+<td style="border:1px solid #ddd;">CSS Variables + SCSS variables enable runtime theme switching (Light/Dark/Sepia) without page reload.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Angular Router</strong></td>
+<td style="border:1px solid #ddd;">Built-in</td>
+<td style="border:1px solid #ddd;">Lazy-loads Feature Modules. A Reader never downloads the Admin or Author Studio JS bundles.</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">2.3 Backend Technologies — Deep Dive</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Technology</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Version</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Justification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><strong>Node.js</strong></td>
+<td style="border:1px solid #ddd;">18 LTS</td>
+<td style="border:1px solid #ddd;">Non-blocking, event-driven I/O handles tens of thousands of concurrent readers on a single instance without thread starvation.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Express.js</strong></td>
+<td style="border:1px solid #ddd;">4.x</td>
+<td style="border:1px solid #ddd;">Minimalist routing + middleware pipeline. Ideal for injecting Auth, Rate Limiting, and File Upload handling globally.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Mongoose ODM</strong></td>
+<td style="border:1px solid #ddd;">8.x</td>
+<td style="border:1px solid #ddd;">Schema validation, lifecycle hooks (pre-save bcrypt hashing), and <code>.populate()</code> for reference resolution — all at the application layer.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>JWT</strong></td>
+<td style="border:1px solid #ddd;">RS256</td>
+<td style="border:1px solid #ddd;">Stateless authentication. Tokens carry user ID and role, removing per-request database lookups and enabling horizontal scaling.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>bcrypt</strong></td>
+<td style="border:1px solid #ddd;">10 Salt Rounds</td>
+<td style="border:1px solid #ddd;">One-way password hashing. Even database administrators cannot read user passwords.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Multer</strong></td>
+<td style="border:1px solid #ddd;">1.x</td>
+<td style="border:1px solid #ddd;">Intercepts multipart/form-data file uploads, validates MIME types by inspecting magic bytes, and streams directly to S3.</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">2.4 Third-Party SaaS Integrations</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Service</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Purpose</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Integration Method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><strong>Stripe</strong></td>
+<td style="border:1px solid #ddd;">Reader subscriptions, Author payouts via Connect</td>
+<td style="border:1px solid #ddd;">REST API + Webhooks</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>AWS S3 / Cloudinary</strong></td>
+<td style="border:1px solid #ddd;">Book cover and avatar storage with global CDN</td>
+<td style="border:1px solid #ddd;">SDK — streams file buffer directly</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Firebase FCM</strong></td>
+<td style="border:1px solid #ddd;">Push notifications (new chapters, competition alerts)</td>
+<td style="border:1px solid #ddd;">Server SDK</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>SendGrid / Nodemailer</strong></td>
+<td style="border:1px solid #ddd;">Transactional emails (verify, reset password, payout reports)</td>
+<td style="border:1px solid #ddd;">SMTP / REST API</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Redis</strong></td>
+<td style="border:1px solid #ddd;">Rate limiting, JWT blacklisting, session caching</td>
+<td style="border:1px solid #ddd;"><code>ioredis</code> client</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">3. System Architecture Diagram</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">3.1 High-Level Platform Topology</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">graph TD
+    subgraph CLIENT[&quot;CLIENT TIER&quot;]
+        A[Angular SPA - Browser]
+        B[Mobile App - Future]
+        SEO[GoogleBot / SEO Crawlers]
+    end
+
+    subgraph EDGE[&quot;EDGE &amp; GATEWAY TIER&quot;]
+        C[Cloudflare CDN &amp; WAF]
+        D[AWS Application Load Balancer]
+    end
+
+    subgraph APP[&quot;APPLICATION TIER - Node.js Cluster&quot;]
+        E[Node.js Instance 1]
+        F[Node.js Instance 2]
+        G[Node.js Instance N]
+        H[Cron Worker - Monthly Payouts]
+    end
+
+    subgraph DATA[&quot;DATA PERSISTENCE TIER&quot;]
+        I[(MongoDB Primary - Writes)]
+        J[(MongoDB Secondary A - Reads)]
+        K[(MongoDB Secondary B - Analytics)]
+        L[(Redis Cache - Sessions/Rate Limits)]
+    end
+
+    subgraph CLOUD[&quot;EXTERNAL CLOUD SERVICES&quot;]
+        M[AWS S3 - Media Storage]
+        N[Stripe - Payments]
+        O[Firebase FCM - Push Notifications]
+        P[SendGrid - Emails]
+    end
+
+    A --&gt;|HTTPS REST| C
+    B --&gt;|HTTPS REST| C
+    SEO --&gt;|HTTPS GET| C
+    C --&gt;|Proxy| D
+    D --&gt;|Round Robin| E
+    D --&gt;|Round Robin| F
+    D --&gt;|Round Robin| G
+
+    E &amp; F &amp; G --&gt;|All Writes| I
+    E &amp; F &amp; G --&gt;|All Reads| J
+    H --&gt;|Heavy Aggregations| K
+    H --&gt;|Write Results| I
+
+    E &amp; F &amp; G &lt;--&gt;|Cache Layer| L
+
+    E &amp; F &amp; G --&gt;|Upload Buffer| M
+    E &amp; F &amp; G &lt;--&gt;|API Calls| N
+    H --&gt;|Trigger Notifications| O
+    H --&gt;|Trigger Emails| P
+
+    style CLIENT fill:#f0f0f0,stroke:#333
+    style EDGE fill:#e8f4f8,stroke:#0056b3
+    style APP fill:#e8f8e8,stroke:#28a745
+    style DATA fill:#fff8e8,stroke:#ffc107
+    style CLOUD fill:#f8e8ff,stroke:#6c757d
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">3.2 Request Lifecycle Flow</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">sequenceDiagram
+    participant Browser as Angular (Browser)
+    participant CDN as Cloudflare CDN
+    participant ALB as Load Balancer
+    participant Node as Node.js Instance
+    participant Redis as Redis Cache
+    participant Mongo as MongoDB
+    participant Stripe as Stripe API
+
+    Browser-&gt;&gt;CDN: GET /api/v1/books?genre=Fiction
+    CDN-&gt;&gt;ALB: Forward (cache miss for API)
+    ALB-&gt;&gt;Node: Route to available instance
+    Node-&gt;&gt;Redis: Check rate limit for IP
+    Redis--&gt;&gt;Node: OK (under limit)
+    Node-&gt;&gt;Node: Verify JWT Token
+    Node-&gt;&gt;Mongo: db.books.find({ genre, status: published })
+    Mongo--&gt;&gt;Node: Book documents array
+    Node--&gt;&gt;Browser: 200 OK { success: true, data: [...] }
+
+    Note over Browser,Stripe: Premium Chapter Unlock Flow
+    Browser-&gt;&gt;Node: POST /api/v1/subscriptions/create
+    Node-&gt;&gt;Stripe: Create PaymentIntent
+    Stripe--&gt;&gt;Node: Payment Intent { clientSecret }
+    Node--&gt;&gt;Browser: clientSecret
+    Browser-&gt;&gt;Stripe: Confirm payment on client
+    Stripe-&gt;&gt;Node: POST /webhooks/stripe (payment_intent.succeeded)
+    Node-&gt;&gt;Mongo: User.updateOne({ isPremium: true })
+    Node--&gt;&gt;Stripe: 200 OK
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">4. Frontend Application Architecture</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">4.1 Angular Module Strategy</h2>
+<p>The Angular application uses a strict <strong>three-tier module architecture</strong> to keep the initial bundle lean and load feature code on-demand.</p>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>┌──────────────────────────────────────────────────────────┐
+│                   ANGULAR APP MODULE                     │
+│                                                          │
+│  ┌─────────────┐  ┌──────────────┐  ┌────────────────┐  │
+│  │ CoreModule  │  │ SharedModule │  │ FeatureModules │  │
+│  │             │  │              │  │ (Lazy Loaded)  │  │
+│  │ - AuthSvc   │  │ - BookCard   │  │                │  │
+│  │ - JWT Intcp │  │ - Modal      │  │ - /auth        │  │
+│  │ - ErrorHndl │  │ - Spinner    │  │ - /home        │  │
+│  │ - ThemeSvc  │  │ - Pagination │  │ - /story       │  │
+│  │             │  │ - TruncPipe  │  │ - /reader      │  │
+│  └─────────────┘  └──────────────┘  │ - /write       │  │
+│  (Eager, 1x only)  (Imported by     │ - /library     │  │
+│                     Features)       │ - /earnings    │  │
+│                                     │ - /admin       │  │
+│                                     │ - /competition │  │
+│                                     │ - /search      │  │
+│                                     │ - /subscription│  │
+│                                     └────────────────┘  │
+└──────────────────────────────────────────────────────────┘
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">4.2 Frontend Folder Structure</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>Frontend/
+├── src/
+│   ├── app/
+│   │   ├── app.component.ts          # Root component (RouterOutlet host)
+│   │   ├── app.config.ts             # Global providers (HttpClient, Router)
+│   │   ├── app.routes.ts             # Master routing with lazy-load definitions
+│   │   │
+│   │   ├── core/                     # SINGLETON ENGINE (loaded once at startup)
+│   │   │   ├── guards/
+│   │   │   │   ├── auth.guard.ts     # Blocks unauthenticated users
+│   │   │   │   └── role.guard.ts     # Checks JWT role (writer/superadmin)
+│   │   │   ├── interceptors/
+│   │   │   │   ├── jwt.interceptor.ts      # Auto-attaches Bearer token
+│   │   │   │   └── error.interceptor.ts    # Catches 401 → forces logout
+│   │   │   └── services/
+│   │   │       ├── auth.service.ts         # Login/Register/Profile state
+│   │   │       └── theme.service.ts        # Manages Light/Dark/Sepia mode
+│   │   │
+│   │   ├── shared/                   # REUSABLE UI COMPONENTS
+│   │   │   ├── components/
+│   │   │   │   ├── book-card/        # Standard book thumbnail display
+│   │   │   │   ├── modal/            # Generic popup dialog component
+│   │   │   │   ├── confirm-modal/    # Confirmation dialog (delete/suspend)
+│   │   │   │   └── toast-alert/      # Notification snackbar
+│   │   │   ├── directives/
+│   │   │   │   └── click-outside.directive.ts
+│   │   │   └── pipes/
+│   │   │       └── truncate.pipe.ts  # Ellipses long book descriptions
+│   │   │
+│   │   ├── features/                 # LAZY-LOADED FEATURE DOMAINS
+│   │   │   ├── auth/                 # Login, Register, Forgot Password
+│   │   │   ├── home/                 # Landing page, featured books
+│   │   │   ├── story/                # Book detail view, chapter list
+│   │   │   ├── reader/               # In-book reading experience
+│   │   │   ├── write/                # Author Studio, chapter editor
+│   │   │   │   └── story-editor.component.ts
+│   │   │   ├── library/              # Saved books, favourites
+│   │   │   ├── my-reading/           # Reading history, progress
+│   │   │   ├── search/               # Global book/author search
+│   │   │   ├── categories/           # Genre browsing
+│   │   │   ├── earnings/             # Author earnings dashboard
+│   │   │   ├── subscription/         # Plans &amp; payment flow
+│   │   │   ├── rewards/              # Reader reward badges
+│   │   │   ├── community/            # Author following and social
+│   │   │   ├── user/                 # Profile management
+│   │   │   ├── user-profile/         # Public author profile view
+│   │   │   ├── author-profile/       # Author&#39;s own profile
+│   │   │   └── admin/                # Superadmin dashboard
+│   │   │       ├── users/            # User management, suspension
+│   │   │       └── competition/      # Contest configuration
+│   │   │
+│   │   ├── layout/                   # App shell components
+│   │   └── styles/
+│   │       ├── _variables.scss       # Color tokens, spacing
+│   │       ├── _mixins.scss          # Responsive breakpoints
+│   │       └── _typography.scss      # Font definitions
+│   │
+│   ├── assets/
+│   │   └── i18n/                     # Translation files (en.json, ta.json)
+│   └── environments/
+│       ├── environment.ts            # Dev: http://localhost:3000
+│       └── environment.prod.ts       # Prod: https://api.mozhibu.com
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">4.3 Routing Architecture &amp; Guard Strategy</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">flowchart TD
+    A[User navigates to URL] --&gt; B{AuthGuard}
+    B --&gt;|No JWT token| C[Redirect → /login]
+    B --&gt;|Valid JWT| D{RoleGuard}
+    D --&gt;|role = &#39;reader&#39;| E[Load ReaderModule]
+    D --&gt;|role = &#39;writer&#39;| F[Load AuthorModule]
+    D --&gt;|role = &#39;superadmin&#39;| G[Load AdminModule]
+    D --&gt;|Wrong role| H[Redirect → 403 Page]
+    E &amp; F &amp; G --&gt;|Module already cached| I[Angular Router loads component]
+    I --&gt; J[Component renders]
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">4.4 State Management via RxJS</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">graph LR
+    A[User Action&lt;br/&gt;e.g. Click Like] --&gt;|Calls method| B[BookService]
+    B --&gt;|Optimistic update| C[BehaviorSubject&lt;br/&gt;books$]
+    C --&gt;|async pipe| D[Component Template]
+    B --&gt;|HTTP POST| E[Node.js API]
+    E --&gt;|200 OK| B
+    E --&gt;|Error 4xx| F[Rollback BehaviorSubject]
+    F --&gt; C
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">5. Backend &amp; Middleware Architecture</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">5.1 The Layered Architecture Pattern</h2>
+<p>Every HTTP request passing through the Express API travels through a strict, ordered middleware pipeline before reaching any business logic.</p>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>┌──────────────────────────────────────────────────────────┐
+│                   HTTP REQUEST PIPELINE                  │
+│                                                          │
+│  Incoming Request                                        │
+│         │                                                │
+│         ▼                                                │
+│  ┌─────────────────┐                                     │
+│  │  CORS Handler   │ Validates origin headers            │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │ Rate Limiter    │ Redis: 100 req / 15 min per IP      │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │ Body Parser     │ JSON / multipart-form-data          │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │ Auth Middleware │ Decodes JWT → sets req.user         │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │ Route Handler   │ Matches URL → Controller method     │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │   Controller    │ Extracts params, calls Service      │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │    Service      │ Business logic, external API calls  │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │  Mongoose Model │ DB query, validation, hooks         │
+│  └────────┬────────┘                                     │
+│           │                                              │
+│  ┌────────▼────────┐                                     │
+│  │ Error Handler   │ Catches all next(err) calls         │
+│  └─────────────────┘                                     │
+└──────────────────────────────────────────────────────────┘
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">5.2 Backend Folder Structure</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>Backend/
+├── src/
+│   ├── config/
+│   │   ├── db.js                  # Mongoose connection &amp; replica set config
+│   │   ├── redis.js               # Redis client (ioredis) instantiation
+│   │   └── stripe.js              # Stripe SDK with secret key
+│   │
+│   ├── middleware/
+│   │   ├── auth.js                # JWT verify → sets req.user
+│   │   ├── authorizeRoles.js      # Role-based access control wrapper
+│   │   ├── errorHandler.js        # Global error catcher (prevents crash)
+│   │   ├── rateLimiter.js         # Redis-based IP rate limiter
+│   │   ├── sanitize.js            # XSS / NoSQL injection prevention
+│   │   └── upload.js              # Multer: MIME validation + S3 stream
+│   │
+│   ├── models/                    # 25 Mongoose Schema Definitions
+│   │   ├── User.js
+│   │   ├── Book.js
+│   │   ├── Chapter.js
+│   │   ├── Competition.js
+│   │   ├── QualifiedRead.js
+│   │   ├── AuthorEarnings.js
+│   │   ├── SubscriptionPlan.js
+│   │   ├── SubscriptionPlanHistory.js
+│   │   ├── UserSubscription.js
+│   │   ├── ReadingProgress.js
+│   │   ├── Review.js
+│   │   ├── Report.js
+│   │   ├── EngagementScore.js
+│   │   ├── EngagementScoreConfig.js
+│   │   ├── MonthlyAdRevenue.js
+│   │   ├── RevenueSplitConfig.js
+│   │   ├── Notification.js
+│   │   ├── ReaderReward.js
+│   │   ├── Coupon.js
+│   │   ├── AuthorRequest.js
+│   │   ├── PublicationRequest.js
+│   │   ├── Broadcast.js
+│   │   ├── Feedback.js
+│   │   ├── ContactQuery.js
+│   │   └── Settings.js
+│   │
+│   ├── controllers/
+│   │   ├── authController.js      # register, login, verifyEmail, forgotPassword
+│   │   ├── bookController.js      # CRUD, like, bookmark, report
+│   │   ├── chapterController.js   # create, update, publish, delete chapters
+│   │   ├── userController.js      # profile management, follow/unfollow
+│   │   ├── adminController.js     # user mgmt, content moderation
+│   │   ├── subscriptionController.js  # plan management, purchase
+│   │   ├── earningsController.js  # payout records, monthly aggregation
+│   │   ├── revenueController.js   # ad revenue, revenue config
+│   │   └── webhookController.js   # Stripe signature verification
+│   │
+│   ├── services/
+│   │   ├── emailService.js        # SendGrid / Nodemailer wrapper
+│   │   ├── paymentService.js      # Stripe charge, subscribe, transfer
+│   │   ├── s3Service.js           # Buffer compression + S3 upload
+│   │   ├── readingService.js      # QualifiedRead calculation algorithm
+│   │   └── notificationService.js # Firebase FCM push notifications
+│   │
+│   ├── routes/
+│   │   ├── auth.js                # /api/v1/auth/*
+│   │   ├── books.js               # /api/v1/books/*
+│   │   ├── users.js               # /api/v1/users/*
+│   │   ├── admin.js               # /api/v1/admin/*
+│   │   ├── subscriptions.js       # /api/v1/subscriptions/*
+│   │   ├── earnings.js            # /api/v1/earnings/*
+│   │   ├── revenue.js             # /api/v1/revenue/*
+│   │   ├── competitions.js        # /api/v1/competitions/*
+│   │   ├── notifications.js       # /api/v1/notifications/*
+│   │   ├── search.js              # /api/v1/search/*
+│   │   ├── contact.js             # /api/v1/contact/*
+│   │   └── feedback.js            # /api/v1/feedback/*
+│   │
+│   ├── utils/
+│   │   ├── hashers.js             # bcrypt hashing helpers
+│   │   ├── logger.js              # Winston logging
+│   │   └── dateHelpers.js         # UTC date manipulation
+│   │
+│   └── server.js                  # Express app entry point
+│
+├── tests/                         # Jest + Supertest test suites
+└── .env                           # Environment secrets (git-ignored)
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">5.3 Middleware Deep Dive</h2>
+<h3>Auth Middleware Flow</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">flowchart TD
+    A[Request arrives] --&gt; B{Authorization header present?}
+    B --&gt;|No| C[Return 401 Unauthorized]
+    B --&gt;|Yes| D[Extract Bearer token]
+    D --&gt; E{JWT.verify signature valid?}
+    E --&gt;|Invalid / Expired| F[Return 401 Unauthorized]
+    E --&gt;|Valid| G[Decode payload: id + role]
+    G --&gt; H{Check Redis blacklist for token?}
+    H --&gt;|Blacklisted - user logged out| I[Return 401 Token Revoked]
+    H --&gt;|Not blacklisted| J[Set req.user = decoded payload]
+    J --&gt; K[call next - proceed to route handler]
+</code></pre>
+<h3>Global Error Handler</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">flowchart TD
+    A[Controller throws error] --&gt; B[next err called]
+    B --&gt; C[errorHandler middleware intercepts]
+    C --&gt; D{Error type?}
+    D --&gt;|Mongoose ValidationError| E[400 Bad Request + field errors]
+    D --&gt;|JWT Error| F[401 Unauthorized]
+    D --&gt;|CastError invalid ObjectId| G[404 Not Found]
+    D --&gt;|Stripe Error| H[402 Payment Required]
+    D --&gt;|Default| I[500 Internal Server Error]
+    E &amp; F &amp; G &amp; H &amp; I --&gt; J[Log full stack trace to Winston]
+    J --&gt; K[Return sanitised JSON - no stack trace in prod]
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">6. Database Schema &amp; Data Models</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">6.1 Database Configuration</h2>
+<ul>
+<li><strong>Database Type:</strong> MongoDB (NoSQL, Document Store)</li>
+<li><strong>Deployment:</strong> 3-Node Replica Set (1 Primary + 2 Secondaries)</li>
+<li><strong>ODM:</strong> Mongoose 8.x</li>
+<li><strong>Database Name:</strong> <code>mozhibu</code></li>
+<li><strong>Total Collections:</strong> 25</li>
+</ul>
+<h2 style="color:#2F5496;font-family:Calibri Light;">6.2 Core Collection Schemas</h2>
+<h3>User Collection</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: users
+{
+  _id:               ObjectId (auto-generated primary key),
+  username:          String   (required),
+  email:             String   (required, unique index),
+  mobile:            String   (required),
+  password:          String   (hashed, select: false — never returned by default),
+  preferredLanguage: String   (required),
+  favoriteGenres:    [String] (required),
+  penName:           String   (unique sparse index — only for writers),
+  legalName:         String,
+  isOnboarded:       Boolean  (default: false),
+  authProvider:      Enum     [&quot;normal&quot;, &quot;google&quot;, &quot;facebook&quot;],
+  role:              Enum     [&quot;reader&quot;, &quot;writer&quot;, &quot;superadmin&quot;],
+  status:            Enum     [&quot;active&quot;, &quot;suspended&quot;, &quot;deactivated&quot;],
+  suspendedUntil:    Date,
+  authorStatus:      Enum     [&quot;none&quot;, &quot;pending&quot;, &quot;approved&quot;, &quot;rejected&quot;],
+  followersCount:    Number   (denormalised for performance),
+  isPremium:         Boolean  (default: false),
+  avatar:            String   (CDN URL),
+  bio:               String,
+  savedBooks:        [ObjectId → Book],
+  favoriteBooks:     [ObjectId → Book],
+  following:         [ObjectId → User],
+  dob:               Date,
+  monetization: {
+    accountName:     String   (AES-256 encrypted),
+    bankName:        String   (AES-256 encrypted),
+    accountNumber:   String   (AES-256 encrypted),
+    ifscCode:        String   (AES-256 encrypted)
+  },
+  resetPasswordToken: String  (select: false),
+  resetPasswordExpire: Date   (select: false),
+  timestamps:        { createdAt, updatedAt }
+}
+</code></pre>
+<h3>Book Collection</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: books
+{
+  _id:              ObjectId,
+  title:            String   (required),
+  author:           ObjectId → User (required),
+  cover:            String   (S3/CDN URL),
+  genre:            String   (required),
+  competitionTag:   String   (links book to Competition),
+  description:      String,
+  views:            Number   (default: 0),
+  rating:           Number   (average rating 0-5),
+  isAudio:          Boolean  (default: false),
+  status:           Enum     [&quot;draft&quot;,&quot;pending&quot;,&quot;published&quot;,&quot;rejected&quot;,&quot;suspended&quot;],
+  rejectionReason:  String,
+  submittedAt:      Date,
+  reviewedAt:       Date,
+  reviewedBy:       ObjectId → User (admin who reviewed),
+  likes:            [ObjectId → User],
+  likesCount:       Number,
+  bookmarksCount:   Number,
+  favoritesCount:   Number,
+  reportCount:      Number,
+  reports: [{
+    user:           ObjectId → User,
+    reason:         String,
+    comment:        String,
+    createdAt:      Date
+  }],
+  titleTranslations: Map&lt;language, String&gt;,
+  tags:             [String],
+  series:           String,
+  completionStatus: Enum     [&quot;ongoing&quot;, &quot;completed&quot;],
+  originalLanguage: String   (default: &quot;English&quot;),
+  accessType:       Enum     [&quot;free&quot;, &quot;premium&quot;],
+  isMature:         Boolean,
+  timestamps:       { createdAt, updatedAt }
+}
+
+// Indexes:
+BookSchema.index({ author: 1 });
+BookSchema.index({ genre: 1, status: 1 });      // Compound: filter by genre+status
+BookSchema.index({ status: 1, createdAt: -1 }); // Sort newest published
+BookSchema.index({ views: -1 });                 // Top viewed books
+BookSchema.index({ likesCount: -1 });            // Most liked books
+BookSchema.index({ competitionTag: 1 });         // Competition filtering
+</code></pre>
+<h3>Chapter Collection</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: chapters
+{
+  _id:               ObjectId,
+  book:              ObjectId → Book (required),
+  season:            Number   (default: 1),
+  title:             String   (required),
+  content:           String   (actual story text — large field),
+  cover:             String   (chapter cover image URL),
+  order:             Number   (required — defines reading sequence),
+  status:            Enum     [&quot;draft&quot;, &quot;published&quot;, &quot;scheduled&quot;],
+  scheduledAt:       Date     (future publish date),
+  translations:      Map&lt;language, content&gt;,
+  titleTranslations: Map&lt;language, title&gt;,
+  accessType:        Enum     [&quot;inherit&quot;, &quot;free&quot;, &quot;premium&quot;],
+  viewers:           [String] (anonymised viewer IDs),
+  rating:            Number,
+  reviewCount:       Number,
+  timestamps:        { createdAt, updatedAt }
+}
+
+// Indexes:
+ChapterSchema.index({ book: 1, order: 1 });   // Fetch chapters in order
+ChapterSchema.index({ book: 1, status: 1 });  // Published chapters only
+</code></pre>
+<h3>QualifiedRead Collection (Core Analytics)</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: qualifiedreads
+// Written to every time a reader crosses the qualification threshold on a chapter
+{
+  _id:               ObjectId,
+  user:              ObjectId → User (required),
+  book:              ObjectId → Book (required),
+  chapter:           ObjectId → Chapter (required),
+  month:             Number   (1-12),
+  year:              Number,
+  completionPercent: Number   (0-100),
+  timeOnPageSeconds: Number,
+  isFraudFlag:       Boolean  (anti-fraud detection),
+  fraudReason:       String,
+  isQualified:       Boolean  (final qualification result),
+  readAt:            Date,
+  timestamps:        { createdAt, updatedAt }
+}
+
+// Indexes optimised for monthly payout aggregation:
+QualifiedReadSchema.index({ book: 1, month: 1, year: 1 });
+QualifiedReadSchema.index({ user: 1, month: 1, year: 1 });
+QualifiedReadSchema.index({ isQualified: 1, month: 1, year: 1 });
+</code></pre>
+<h3>SubscriptionPlan Collection</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: subscriptionplans
+{
+  _id:              ObjectId,
+  name:             String   (e.g. &quot;Premium Monthly&quot;),
+  description:      String,
+  priceInPaise:     Number   (e.g. 9900 = ₹99.00 — integer to avoid float errors),
+  currency:         String   (default: &quot;INR&quot;),
+  durationDays:     Number,
+  marketingBenefits:[String] (UI bullet points),
+  structuredBenefits: {
+    unlimited_premium_access: Boolean,
+    ad_free:                  Boolean,
+    early_access_days:        Number,
+    offline_downloads:        Boolean,
+    max_offline_downloads:    Number,
+    multi_language_access:    Boolean,
+    priority_support:         Boolean
+  },
+  terms:            String,
+  isActive:         Boolean,
+  displayOrder:     Number,
+  createdBy:        ObjectId → User,
+  timestamps:       { createdAt, updatedAt }
+}
+</code></pre>
+<h3>Competition Collection</h3>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Collection: competitions
+{
+  _id:          ObjectId,
+  isActive:     Boolean  (default: true),
+  tag:          String   (required — matches Book.competitionTag),
+  title:        String   (required — e.g. &quot;The Twelve Tongues Prize 2026&quot;),
+  description:  String   (required),
+  endDate:      Date     (required — deadline for submissions),
+  buttonText:   String   (CTA text on frontend),
+  buttonLink:   String   (route to submission form),
+  winnerBookIds:[ObjectId → Book],
+  timestamps:   { createdAt, updatedAt }
+}
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">7. Entity Relationship Diagram</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">7.1 Master ER Diagram — All 25 Collections</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">erDiagram
+    USERS {
+        ObjectId _id PK
+        string username
+        string email
+        string role
+        boolean isPremium
+        string status
+        object monetization
+    }
+    BOOKS {
+        ObjectId _id PK
+        ObjectId author FK
+        string title
+        string genre
+        string status
+        string accessType
+        number likesCount
+        string competitionTag
+    }
+    CHAPTERS {
+        ObjectId _id PK
+        ObjectId book FK
+        number order
+        string content
+        string accessType
+        string status
+    }
+    COMPETITIONS {
+        ObjectId _id PK
+        string tag
+        string title
+        date endDate
+        boolean isActive
+    }
+    QUALIFIED_READS {
+        ObjectId _id PK
+        ObjectId user FK
+        ObjectId book FK
+        ObjectId chapter FK
+        number month
+        number year
+        boolean isQualified
+    }
+    AUTHOR_EARNINGS {
+        ObjectId _id PK
+        ObjectId author FK
+        number amount
+        string month
+        string status
+    }
+    SUBSCRIPTION_PLANS {
+        ObjectId _id PK
+        string name
+        number priceInPaise
+        number durationDays
+        boolean isActive
+    }
+    USER_SUBSCRIPTIONS {
+        ObjectId _id PK
+        ObjectId user FK
+        ObjectId plan FK
+        date startDate
+        date endDate
+        string status
+    }
+    READING_PROGRESS {
+        ObjectId _id PK
+        ObjectId user FK
+        ObjectId book FK
+        ObjectId lastChapter FK
+        number percentage
+    }
+    REVIEWS {
+        ObjectId _id PK
+        ObjectId user FK
+        ObjectId book FK
+        number rating
+        string comment
+    }
+    REPORTS {
+        ObjectId _id PK
+        ObjectId reporter FK
+        ObjectId book FK
+        string reason
+        string status
+    }
+    NOTIFICATIONS {
+        ObjectId _id PK
+        ObjectId recipient FK
+        string type
+        boolean isRead
+    }
+    ENGAGEMENT_SCORE {
+        ObjectId _id PK
+        ObjectId book FK
+        number score
+        string month
+    }
+
+    USERS ||--o{ BOOKS : &quot;writes&quot;
+    USERS ||--o{ CHAPTERS : &quot;reads&quot;
+    USERS ||--o{ REVIEWS : &quot;submits&quot;
+    USERS ||--o{ QUALIFIED_READS : &quot;generates&quot;
+    USERS ||--o{ READING_PROGRESS : &quot;has&quot;
+    USERS ||--o{ USER_SUBSCRIPTIONS : &quot;purchases&quot;
+    USERS ||--o{ AUTHOR_EARNINGS : &quot;receives&quot;
+    USERS ||--o{ NOTIFICATIONS : &quot;receives&quot;
+    USERS ||--o{ REPORTS : &quot;files&quot;
+    USERS }o--o{ USERS : &quot;follows&quot;
+    BOOKS ||--o{ CHAPTERS : &quot;contains&quot;
+    BOOKS ||--o{ REVIEWS : &quot;has&quot;
+    BOOKS ||--o{ QUALIFIED_READS : &quot;tracked in&quot;
+    BOOKS ||--o{ READING_PROGRESS : &quot;tracked by&quot;
+    BOOKS ||--o{ ENGAGEMENT_SCORE : &quot;scored by&quot;
+    BOOKS }o--|| COMPETITIONS : &quot;entered in&quot;
+    CHAPTERS ||--o{ QUALIFIED_READS : &quot;qualifies&quot;
+    SUBSCRIPTION_PLANS ||--o{ USER_SUBSCRIPTIONS : &quot;defines&quot;
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">7.2 Revenue &amp; Monetisation Data Flow</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-mermaid">flowchart TD
+    A[Reader subscribes - Stripe charges ₹99/month] --&gt; B[UserSubscription created]
+    B --&gt; C[User.isPremium = true]
+    C --&gt; D[Reader reads chapters across platform]
+    D --&gt; E{Time on page &gt; threshold?}
+    E --&gt;|Yes| F[QualifiedRead document created]
+    E --&gt;|No| G[QualifiedRead isFraudFlag = true]
+    F --&gt; H[Month-End Cron Job fires]
+    H --&gt; I[Aggregate all QualifiedReads for month]
+    I --&gt; J[Calculate each author&#39;s share %]
+    J --&gt; K{RevenueSplitConfig}
+    K --&gt; L[Platform takes 30%, Authors pool 70%]
+    L --&gt; M[AuthorEarnings document created per author]
+    M --&gt; N{Author KYC complete?}
+    N --&gt;|Yes| O[Stripe Connect Transfer initiated]
+    N --&gt;|No| P[status = pending_setup, email sent]
+</code></pre>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">8. API Architecture &amp; Routing</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">8.1 API Overview</h2>
+<ul>
+<li><strong>Base URL (Dev):</strong> <code>http://localhost:3000/api/v1</code></li>
+<li><strong>Base URL (Prod):</strong> <code>https://api.mozhibu.com/api/v1</code></li>
+<li><strong>Request Format:</strong> <code>application/json</code> (or <code>multipart/form-data</code> for uploads)</li>
+<li><strong>Response Format:</strong> Standard Envelope: <code>{ success, data, message, error }</code></li>
+<li><strong>Authentication:</strong> <code>Authorization: Bearer &lt;JWT&gt;</code></li>
+</ul>
+<h2 style="color:#2F5496;font-family:Calibri Light;">8.2 Complete Route Map</h2>
+<h3>Authentication Routes — <code>/api/v1/auth</code></h3>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Method</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Endpoint</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Auth</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/register</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Create account, hash password, return JWT</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/login</code></td>
+<td style="border:1px solid #ddd;">Public (Rate Limited)</td>
+<td style="border:1px solid #ddd;">Authenticate, return JWT + user profile</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/google</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">OAuth 2.0 Google login</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/facebook</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">OAuth 2.0 Facebook login</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/auth/verify-email/:token</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Verify email address</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/forgot-password</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Send reset email</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/auth/reset-password/:token</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Reset password with token</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/auth/logout</code></td>
+<td style="border:1px solid #ddd;">Bearer Token</td>
+<td style="border:1px solid #ddd;">Blacklist JWT in Redis</td>
+</tr>
+</tbody></table>
+<h3>Book Routes — <code>/api/v1/books</code></h3>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Method</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Endpoint</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Auth</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/books</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Paginated book list with filters</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/books/:id</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">Single book detail</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books</code></td>
+<td style="border:1px solid #ddd;">Writer + Multer</td>
+<td style="border:1px solid #ddd;">Create new book with cover upload</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/books/:id</code></td>
+<td style="border:1px solid #ddd;">Writer (owner)</td>
+<td style="border:1px solid #ddd;">Update book metadata</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">DELETE</td>
+<td style="border:1px solid #ddd;"><code>/books/:id</code></td>
+<td style="border:1px solid #ddd;">Writer (owner)</td>
+<td style="border:1px solid #ddd;">Delete book and all chapters</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/like</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Toggle like (atomic $addToSet)</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/bookmark</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Toggle bookmark</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/favorite</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Toggle favourite</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/report</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Submit content report</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/chapters</code></td>
+<td style="border:1px solid #ddd;">Public/Premium check</td>
+<td style="border:1px solid #ddd;">Get chapter list</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/books/:id/chapters</code></td>
+<td style="border:1px solid #ddd;">Writer (owner)</td>
+<td style="border:1px solid #ddd;">Add chapter</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/books/:bookId/chapters/:chapterId</code></td>
+<td style="border:1px solid #ddd;">Writer</td>
+<td style="border:1px solid #ddd;">Update chapter</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">DELETE</td>
+<td style="border:1px solid #ddd;"><code>/books/:bookId/chapters/:chapterId</code></td>
+<td style="border:1px solid #ddd;">Writer</td>
+<td style="border:1px solid #ddd;">Delete chapter</td>
+</tr>
+</tbody></table>
+<h3>User Routes — <code>/api/v1/users</code></h3>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Method</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Endpoint</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Auth</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/users/me</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Own profile + saved books</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/users/me</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Update profile, avatar</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/users/me/monetization</code></td>
+<td style="border:1px solid #ddd;">Writer</td>
+<td style="border:1px solid #ddd;">Update encrypted bank details</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/users/me/follow/:id</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Follow an author</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">DELETE</td>
+<td style="border:1px solid #ddd;"><code>/users/me/follow/:id</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Unfollow an author</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/users/:id/profile</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">View author&#39;s public profile</td>
+</tr>
+</tbody></table>
+<h3>Subscription Routes — <code>/api/v1/subscriptions</code></h3>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Method</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Endpoint</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Auth</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/subscriptions/plans</code></td>
+<td style="border:1px solid #ddd;">Public</td>
+<td style="border:1px solid #ddd;">List all active plans</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/subscriptions/purchase</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Create Stripe PaymentIntent</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/subscriptions/apply-coupon</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Validate and apply coupon</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/subscriptions/my-subscription</code></td>
+<td style="border:1px solid #ddd;">Bearer</td>
+<td style="border:1px solid #ddd;">Active subscription details</td>
+</tr>
+</tbody></table>
+<h3>Admin Routes — <code>/api/v1/admin</code></h3>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Method</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Endpoint</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Auth</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/admin/users</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">List all users with filters</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/admin/users/:id/suspend</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">Suspend user account</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/admin/users/:id/role</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">Change user role</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">GET</td>
+<td style="border:1px solid #ddd;"><code>/admin/reports</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">List all content reports</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/admin/reports/:id/resolve</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">Resolve/dismiss a report</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">POST</td>
+<td style="border:1px solid #ddd;"><code>/admin/competitions</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">Create a new competition</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">PUT</td>
+<td style="border:1px solid #ddd;"><code>/admin/competitions/:id</code></td>
+<td style="border:1px solid #ddd;">Superadmin</td>
+<td style="border:1px solid #ddd;">Update competition details</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">8.3 Standard Response Envelope</h2>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code class="language-javascript">// Success Response
+{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Books retrieved successfully&quot;,
+  &quot;data&quot;: { ... },
+  &quot;pagination&quot;: {
+    &quot;total&quot;: 250,
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 20,
+    &quot;pages&quot;: 13
+  }
+}
+
+// Error Response
+{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;You do not have permission to access this resource.&quot;,
+  &quot;code&quot;: 403
+}
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">8.4 HTTP Status Code Standards</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Code</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Meaning</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">When Used</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><code>200 OK</code></td>
+<td style="border:1px solid #ddd;">Success</td>
+<td style="border:1px solid #ddd;">Successful GET, PUT</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>201 Created</code></td>
+<td style="border:1px solid #ddd;">Created</td>
+<td style="border:1px solid #ddd;">Successful POST creating new document</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>400 Bad Request</code></td>
+<td style="border:1px solid #ddd;">Validation error</td>
+<td style="border:1px solid #ddd;">Missing fields, invalid format</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>401 Unauthorized</code></td>
+<td style="border:1px solid #ddd;">Auth failed</td>
+<td style="border:1px solid #ddd;">Missing/expired JWT</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>402 Payment Required</code></td>
+<td style="border:1px solid #ddd;">Payment error</td>
+<td style="border:1px solid #ddd;">Stripe card declined</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>403 Forbidden</code></td>
+<td style="border:1px solid #ddd;">Insufficient role</td>
+<td style="border:1px solid #ddd;">Reader accessing Writer endpoint</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>404 Not Found</code></td>
+<td style="border:1px solid #ddd;">Resource missing</td>
+<td style="border:1px solid #ddd;">Invalid ObjectId or deleted document</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>415 Unsupported Media Type</code></td>
+<td style="border:1px solid #ddd;">Wrong file type</td>
+<td style="border:1px solid #ddd;">Uploading .exe as .png</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>429 Too Many Requests</code></td>
+<td style="border:1px solid #ddd;">Rate limited</td>
+<td style="border:1px solid #ddd;">Redis limit exceeded</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>500 Internal Server Error</code></td>
+<td style="border:1px solid #ddd;">Server crash</td>
+<td style="border:1px solid #ddd;">Unhandled exception</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">9. Test Case Documentation</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">9.1 Testing Strategy Overview</h2>
+<p>The platform employs three levels of testing executed automatically in the CI/CD pipeline:</p>
+<pre style="background:#f8f9fa;padding:10px;font-family:Consolas,monospace;"><code>┌───────────────────────────────────────────────────────┐
+│                  TESTING PYRAMID                      │
+│                                                       │
+│            ┌─────────────────┐                        │
+│            │   E2E Tests     │  Cypress (Angular)     │
+│            │    (Fewest)     │                        │
+│          ┌─┴─────────────────┴─┐                      │
+│          │ Integration Tests   │  Supertest (Routes)  │
+│          │    (Medium)         │                      │
+│        ┌─┴─────────────────────┴─┐                    │
+│        │     Unit Tests          │  Jest (Services)   │
+│        │      (Most)             │                    │
+│        └─────────────────────────┘                    │
+└───────────────────────────────────────────────────────┘
+</code></pre>
+<h2 style="color:#2F5496;font-family:Calibri Light;">9.2 Authentication &amp; Security Test Cases</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Test ID</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Scenario</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Expected Result</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">TC-AUTH-001</td>
+<td style="border:1px solid #ddd;">Valid email + password login</td>
+<td style="border:1px solid #ddd;">200 OK + signed JWT returned</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-002</td>
+<td style="border:1px solid #ddd;">Login with incorrect password</td>
+<td style="border:1px solid #ddd;">401 Unauthorized</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-003</td>
+<td style="border:1px solid #ddd;">6th login attempt within 15 minutes</td>
+<td style="border:1px solid #ddd;">429 Too Many Requests (Redis limit)</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-004</td>
+<td style="border:1px solid #ddd;">Access protected route with no JWT</td>
+<td style="border:1px solid #ddd;">401 Unauthorized — redirect to /login</td>
+<td style="border:1px solid #ddd;">E2E</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-005</td>
+<td style="border:1px solid #ddd;">Reader role accesses <code>/admin</code> route</td>
+<td style="border:1px solid #ddd;">403 Forbidden — AdminModule never loaded</td>
+<td style="border:1px solid #ddd;">E2E</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-006</td>
+<td style="border:1px solid #ddd;">JWT token expired (24hrs old)</td>
+<td style="border:1px solid #ddd;">401 Unauthorized — frontend clears localStorage</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-007</td>
+<td style="border:1px solid #ddd;">Logout — use same token again</td>
+<td style="border:1px solid #ddd;">401 Token Revoked (Redis blacklist check)</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-AUTH-008</td>
+<td style="border:1px solid #ddd;">Register with duplicate email</td>
+<td style="border:1px solid #ddd;">400 Bad Request — Mongo unique index error</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">9.3 Content Publishing Test Cases</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Test ID</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Scenario</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Expected Result</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">TC-PUB-001</td>
+<td style="border:1px solid #ddd;">Create book missing required <code>genre</code> field</td>
+<td style="border:1px solid #ddd;">400 Bad Request + validation error array</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-002</td>
+<td style="border:1px solid #ddd;">Upload cover image that is a disguised .exe</td>
+<td style="border:1px solid #ddd;">415 Unsupported Media Type (magic byte check)</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-003</td>
+<td style="border:1px solid #ddd;">Upload cover image larger than 5MB</td>
+<td style="border:1px solid #ddd;">400 Bad Request — Multer file size limit</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-004</td>
+<td style="border:1px solid #ddd;">Publish chapter to non-owned book</td>
+<td style="border:1px solid #ddd;">403 Forbidden — ownership check fails</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-005</td>
+<td style="border:1px solid #ddd;">Publish chapter with empty content</td>
+<td style="border:1px solid #ddd;">400 Bad Request — Mongoose validation</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-006</td>
+<td style="border:1px solid #ddd;">Publish chapter successfully</td>
+<td style="border:1px solid #ddd;">201 Created + FCM push to followers triggered</td>
+<td style="border:1px solid #ddd;">E2E</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-PUB-007</td>
+<td style="border:1px solid #ddd;">Two authors publish simultaneously</td>
+<td style="border:1px solid #ddd;">Both succeed — no race condition</td>
+<td style="border:1px solid #ddd;">Unit</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">9.4 Reading, Progress &amp; Monetisation Test Cases</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Test ID</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Scenario</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Expected Result</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">TC-READ-001</td>
+<td style="border:1px solid #ddd;">Free reader accesses free chapter</td>
+<td style="border:1px solid #ddd;">200 OK — full content returned</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-002</td>
+<td style="border:1px solid #ddd;">Free reader accesses premium chapter</td>
+<td style="border:1px solid #ddd;">403 + content field stripped from response</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-003</td>
+<td style="border:1px solid #ddd;">Reader reads chapter for 90 seconds</td>
+<td style="border:1px solid #ddd;">QualifiedRead document created: isQualified=true</td>
+<td style="border:1px solid #ddd;">Unit</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-004</td>
+<td style="border:1px solid #ddd;">Reader reads chapter for 10 seconds</td>
+<td style="border:1px solid #ddd;">QualifiedRead: isFraudFlag=true, isQualified=false</td>
+<td style="border:1px solid #ddd;">Unit</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-005</td>
+<td style="border:1px solid #ddd;">Valid Stripe webhook fires (payment succeeded)</td>
+<td style="border:1px solid #ddd;">User.isPremium=true, UserSubscription created</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-006</td>
+<td style="border:1px solid #ddd;">Stripe webhook with invalid signature</td>
+<td style="border:1px solid #ddd;">400 Bad Request — signature verification fails</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-007</td>
+<td style="border:1px solid #ddd;">Month-end Cron runs with zero qualified reads</td>
+<td style="border:1px solid #ddd;">AuthorEarnings: amount=0, no Stripe transfer</td>
+<td style="border:1px solid #ddd;">Unit</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-READ-008</td>
+<td style="border:1px solid #ddd;">Author has no KYC, Cron runs</td>
+<td style="border:1px solid #ddd;">AuthorEarnings: status=&#39;pending_setup&#39;, email sent</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">9.5 Competition Module Test Cases</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Test ID</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Scenario</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Expected Result</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;">TC-CMP-001</td>
+<td style="border:1px solid #ddd;">Submit book with correct competition tag</td>
+<td style="border:1px solid #ddd;">Book linked to competition, appears on leaderboard</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-CMP-002</td>
+<td style="border:1px solid #ddd;">Submit book 1 second after competition <code>endDate</code></td>
+<td style="border:1px solid #ddd;">400 Bad Request — server UTC time used, not client</td>
+<td style="border:1px solid #ddd;">Integration</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-CMP-003</td>
+<td style="border:1px solid #ddd;">Two users like a competition entry simultaneously</td>
+<td style="border:1px solid #ddd;">Both IDs added correctly ($addToSet, atomic)</td>
+<td style="border:1px solid #ddd;">Unit</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;">TC-CMP-004</td>
+<td style="border:1px solid #ddd;">Admin sets winnerBookIds on a competition</td>
+<td style="border:1px solid #ddd;">Winners displayed on homepage, competition marked closed</td>
+<td style="border:1px solid #ddd;">E2E</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 style="color:#2F5496;font-family:Calibri Light;page-break-before:always;">Appendix</h1>
+<h2 style="color:#2F5496;font-family:Calibri Light;">A. Environment Variables</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Variable</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Description</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><code>MONGO_URI</code></td>
+<td style="border:1px solid #ddd;">MongoDB connection string</td>
+<td style="border:1px solid #ddd;"><code>mongodb+srv://...</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>JWT_SECRET</code></td>
+<td style="border:1px solid #ddd;">JWT signing secret</td>
+<td style="border:1px solid #ddd;">256-bit random string</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>STRIPE_SECRET_KEY</code></td>
+<td style="border:1px solid #ddd;">Stripe API secret</td>
+<td style="border:1px solid #ddd;"><code>sk_live_...</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>STRIPE_WEBHOOK_SECRET</code></td>
+<td style="border:1px solid #ddd;">Webhook signature</td>
+<td style="border:1px solid #ddd;"><code>whsec_...</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>AWS_S3_BUCKET</code></td>
+<td style="border:1px solid #ddd;">S3 bucket name</td>
+<td style="border:1px solid #ddd;"><code>mozhibu-media</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>REDIS_URL</code></td>
+<td style="border:1px solid #ddd;">Redis connection</td>
+<td style="border:1px solid #ddd;"><code>redis://localhost:6379</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>FCM_SERVER_KEY</code></td>
+<td style="border:1px solid #ddd;">Firebase server key</td>
+<td style="border:1px solid #ddd;"><code>AAAA...</code></td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><code>SENDGRID_API_KEY</code></td>
+<td style="border:1px solid #ddd;">Email service key</td>
+<td style="border:1px solid #ddd;"><code>SG....</code></td>
+</tr>
+</tbody></table>
+<h2 style="color:#2F5496;font-family:Calibri Light;">B. Glossary</h2>
+<table border="1" cellpadding="5" style="border-collapse:collapse;width:100%;font-family:Calibri,sans-serif;">
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;"ead>
+<tr>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Term</th>
+<th style="background:#f2f2f2;font-weight:bold;text-align:left;">Definition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td style="border:1px solid #ddd;"><strong>QualifiedRead</strong></td>
+<td style="border:1px solid #ddd;">A reading session where the user spent enough time on a chapter to count toward the author&#39;s payout (anti-fraud threshold applied).</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Engagement Score</strong></td>
+<td style="border:1px solid #ddd;">A calculated metric combining views, likes, qualified reads, and bookmarks used for leaderboard ranking.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>isPremium</strong></td>
+<td style="border:1px solid #ddd;">A boolean flag on the User model indicating they have an active subscription with access to locked chapters.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>competitionTag</strong></td>
+<td style="border:1px solid #ddd;">A string on the Book model matching a Competition&#39;s <code>tag</code> field, linking the book to that competition.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>RevenueSplitConfig</strong></td>
+<td style="border:1px solid #ddd;">A configurable system document defining the platform&#39;s cut percentage vs. the author pool percentage.</td>
+</tr>
+<tr>
+<td style="border:1px solid #ddd;"><strong>Oplog</strong></td>
+<td style="border:1px solid #ddd;">MongoDB&#39;s operations log used to replicate write operations from Primary to Secondary nodes in real time.</td>
+</tr>
+</tbody></table>
+
+</div>
+
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:340.3pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
