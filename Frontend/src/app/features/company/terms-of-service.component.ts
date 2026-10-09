@@ -383,7 +383,7 @@ import { RouterModule } from '@angular/router';
             <h3>1. Grievance Officer</h3>
             <p>In accordance with applicable provisions of the Information Technology Act, 2000 and the rules framed thereunder, the contact details of the Grievance Officer are as follows:</p>
             <p>Designation: Grievance Officer</p>
-            <p>Email: support@mozhibu.com</p>
+            <p>Email: support&#64;mozhibu.com</p>
             <p>The Company may update the designation, contact details, or grievance mechanism from time to time by publishing the revised details on the Platform.</p>
           </div>
 
@@ -411,7 +411,7 @@ import { RouterModule } from '@angular/router';
             <h3>4. Consumer Complaints and Transaction-Related Grievances</h3>
             <p>In accordance with the Consumer Protection Act, 2019 and applicable rules thereunder, Users may also contact the following designated contact point regarding transactions, payments, subscriptions, purchases, refunds, or other consumer-related grievances arising from the use of the Platform:</p>
             <p>Designation: Grievance Officer</p>
-            <p>Email: contact@mozhibu.com</p>
+            <p>Email: contact&#64;mozhibu.com</p>
             <p>The Company shall make reasonable efforts to address such complaints in accordance with applicable law and its internal grievance handling procedures.</p>
           </div>
 
