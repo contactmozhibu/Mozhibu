@@ -83,7 +83,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
       .hero {
         position: relative;
-        padding: 120px 0;
+        padding: 160px 0 100px 0;
         overflow: hidden;
         background: var(--forest-deep);
         color: white;
@@ -112,7 +112,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         font-size: 56px;
         font-weight: 800;
         color: white;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
         line-height: 1.1;
       }
       .hero p {
@@ -124,25 +124,30 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
       .mission-banner {
         text-align: center;
-        padding: 80px 32px;
-        background: var(--card);
-        border-radius: var(--radius-l);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
-        margin-top: -40px;
+        padding: 64px 40px;
+        background: linear-gradient(145deg, #ffffff, #f8fafc);
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0,0,0,0.05);
+        margin-top: -60px;
         position: relative;
         z-index: 10;
-        border: 1px solid var(--border-soft);
+        border: 1px solid rgba(255,255,255,0.8);
         margin-bottom: 80px;
+        max-width: 800px;
       }
       .mission-banner h2 {
-        font-size: 36px;
-        color: var(--forest);
-        margin-bottom: 12px;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold);
+        margin-bottom: 16px;
+        font-weight: 700;
       }
       .mission-banner p {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 500;
-        color: var(--ink);
+        color: var(--forest-deep);
+        line-height: 1.4;
       }
 
       .alt-bg {
@@ -220,16 +225,16 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
     
       @media (max-width: 768px) {
-        .hero { padding: 60px 16px !important; }
+        .hero { padding: 120px 16px 80px 16px !important; }
         .hero h1 { font-size: 32px !important; line-height: 1.2 !important; }
         .hero p { font-size: 18px !important; }
         
         .mission-banner {
-          margin-top: -20px;
+          margin-top: -30px;
           padding: 40px 24px;
         }
-        .mission-banner h2 { font-size: 28px; }
-        .mission-banner p { font-size: 20px; }
+        .mission-banner h2 { font-size: 20px; margin-bottom: 8px; }
+        .mission-banner p { font-size: 22px; line-height: 1.3; }
 
         .values-grid { 
           grid-template-columns: 1fr !important; 
