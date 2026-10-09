@@ -603,16 +603,14 @@ import { RouterModule } from '@angular/router';
       /* Highlight boxes */
       .highlight-box {
         background: var(--forest-tint);
-        border-left: 4px solid var(--forest);
         padding: 16px 20px;
-        border-radius: 0 8px 8px 0;
+        border-radius: 8px;
         color: var(--forest-deep) !important;
         font-weight: 500;
         margin: 24px 0 !important;
       }
       .highlight-box.warning {
         background: #fffbeb;
-        border-left-color: #f59e0b;
         color: #b45309 !important;
       }
       
