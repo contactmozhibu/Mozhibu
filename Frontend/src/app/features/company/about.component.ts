@@ -85,7 +85,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
       .hero {
         position: relative;
-        padding: 220px 0 100px 0;
+        padding: 140px 0 80px 0;
         overflow: hidden;
         background: var(--forest-deep);
         color: white;
@@ -221,7 +221,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
     
       @media (max-width: 768px) {
-        .hero { padding: 180px 16px 80px 16px !important; }
+        .hero { padding: 100px 16px 60px 16px !important; }
         .hero h1 { font-size: 32px !important; line-height: 1.2 !important; }
         .hero p { font-size: 18px !important; }
         
