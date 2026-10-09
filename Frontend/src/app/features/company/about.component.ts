@@ -10,18 +10,29 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     <div class="page-layout">
       <!-- Hero Section -->
       <div class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content wrap">
           <h1>{{ 'about.hero.title' | translate }}</h1>
           <p>{{ 'about.hero.p1' | translate }}</p>
-          <p style="margin-top: 24px;">{{ 'about.hero.p2' | translate }}</p>
+          <p style="margin-top: 16px;">{{ 'about.hero.p2' | translate }}</p>
         </div>
-        <div class="hero-bg"></div>
       </div>
 
-      <!-- Mission Statement -->
-      <div class="mission-banner wrap">
-        <h2>{{ 'about.mission.title' | translate }}</h2>
-        <p>{{ 'about.mission.desc' | translate }}</p>
+      <!-- Story / Mission Section -->
+      <div class="story-section wrap">
+        <h2 class="section-title">{{ 'about.mission.title' | translate }}</h2>
+        <p class="section-subtitle">{{ 'about.mission.desc' | translate }}</p>
+
+        <div class="details-section">
+          <div class="detail-block">
+            <h3>{{ 'about.details.languagesTitle' | translate }}</h3>
+            <p [innerHTML]="'about.details.languagesDesc' | translate"></p>
+          </div>
+          <div class="detail-block">
+            <h3>{{ 'about.details.whoWeAreTitle' | translate }}</h3>
+            <p>{{ 'about.details.whoWeAreDesc' | translate }}</p>
+          </div>
+        </div>
       </div>
 
       <!-- Genres Section -->
@@ -61,33 +72,20 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
           </div>
         </div>
       </div>
-
-      <!-- Bottom Details -->
-      <div class="details-section wrap">
-        <div class="details-text">
-          <h2>{{ 'about.details.languagesTitle' | translate }}</h2>
-          <p [innerHTML]="'about.details.languagesDesc' | translate"></p>
-        </div>
-        <div class="details-text">
-          <h2>{{ 'about.details.whoWeAreTitle' | translate }}</h2>
-          <p>{{ 'about.details.whoWeAreDesc' | translate }}</p>
-        </div>
-      </div>
     </div>
   `,
   styles: [
     `
       .page-layout {
         min-height: calc(100vh - 73px);
-        background: var(--paper);
+        background: #ffffff;
       }
       .hero {
         position: relative;
-        padding: 160px 0 100px 0;
-        overflow: hidden;
-        background: var(--forest-deep);
-        color: white;
-        text-align: center;
+        padding: 200px 0 160px 0;
+        background-color: #f8fafc;
+        display: flex;
+        align-items: center;
       }
       .hero-bg {
         position: absolute;
@@ -95,76 +93,84 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         left: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(
-          circle at center,
-          rgba(174, 98, 116, 0.2) 0%,
-          transparent 70%
-        );
-        pointer-events: none;
+        background-image: url('assets/about_hero_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .hero-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0) 100%);
       }
       .hero-content {
         position: relative;
         z-index: 2;
-        max-width: 900px;
-        margin: 0 auto;
+        max-width: 600px;
+        margin-left: 0; /* Align left based on wrap */
+        padding-right: 24px;
       }
       .hero h1 {
         font-size: 56px;
         font-weight: 800;
-        color: white;
-        margin-bottom: 32px;
+        color: #0f172a;
+        margin-bottom: 24px;
         line-height: 1.1;
       }
       .hero p {
-        font-size: 20px;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        color: #334155;
         line-height: 1.6;
-        margin: 0 auto;
+        font-weight: 500;
       }
 
-      .mission-banner {
+      .story-section {
+        padding: 100px 32px;
         text-align: center;
-        padding: 64px 40px;
-        background: linear-gradient(145deg, #ffffff, #f8fafc);
-        border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0,0,0,0.05);
-        margin-top: -60px;
-        position: relative;
-        z-index: 10;
-        border: 1px solid rgba(255,255,255,0.8);
-        margin-bottom: 80px;
-        max-width: 800px;
+        background: #ffffff;
       }
-      .mission-banner h2 {
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--gold);
-        margin-bottom: 16px;
+      
+      .details-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        text-align: left;
+        margin-top: 80px;
+        padding-top: 64px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .detail-block h3 {
+        font-size: 20px;
         font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 16px;
       }
-      .mission-banner p {
-        font-size: 28px;
-        font-weight: 500;
-        color: var(--forest-deep);
-        line-height: 1.4;
+      .detail-block p {
+        font-size: 15px;
+        color: #64748b;
+        line-height: 1.7;
       }
 
       .alt-bg {
-        background: var(--paper-warm);
-        padding: 80px 0;
+        background: #f8fafc;
+        padding: 100px 0;
       }
       .section-title {
         text-align: center;
-        font-size: 36px;
-        color: var(--ink);
+        font-size: 40px;
+        font-weight: 800;
+        color: #0f172a;
         margin-bottom: 16px;
       }
       .section-subtitle {
         text-align: center;
         font-size: 18px;
-        color: var(--ink-soft);
-        margin-bottom: 48px;
+        color: #64748b;
+        margin-bottom: 64px;
       }
       .values-grid {
         display: grid;
@@ -172,43 +178,36 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         gap: 32px;
       }
       .value-card {
-        background: var(--card);
+        background: #ffffff;
         padding: 32px;
-        border-radius: var(--radius-l);
-        text-align: center;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.03);
-        border: 1px solid var(--border-light);
+        text-align: left;
+        border-left: 2px solid #e2e8f0;
+        transition: border-color 0.2s ease;
       }
-      .value-card h4 {
-        font-size: 22px;
-        margin-bottom: 12px;
-        color: var(--forest-deep);
-      }
-      .value-card p {
-        font-size: 16px;
-        color: var(--ink-soft);
-        line-height: 1.6;
+      .value-card:hover {
+        border-left-color: var(--gold);
       }
       .others-card {
         max-width: 600px;
         margin: 32px auto 0 auto;
+        border-left: none;
+        border-top: 2px solid #e2e8f0;
+        text-align: center;
       }
-
-      .details-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        padding: 80px 32px;
+      .others-card:hover {
+        border-top-color: var(--gold);
+        border-left-color: transparent;
       }
-      .details-text h2 {
-        font-size: 32px;
-        margin-bottom: 24px;
-        color: var(--ink);
-      }
-      .details-text p {
+      .value-card h4 {
         font-size: 18px;
+        margin-bottom: 12px;
+        color: #0f172a;
+        font-weight: 700;
+      }
+      .value-card p {
+        font-size: 15px;
+        color: #64748b;
         line-height: 1.6;
-        color: var(--ink-soft);
       }
 
       @media (max-width: 900px) {
@@ -219,22 +218,18 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
           grid-template-columns: 1fr;
           gap: 48px;
         }
-        .hero h1 {
-          font-size: 40px;
-        }
       }
     
       @media (max-width: 768px) {
         .hero { padding: 120px 16px 80px 16px !important; }
-        .hero h1 { font-size: 32px !important; line-height: 1.2 !important; }
-        .hero p { font-size: 18px !important; }
-        
-        .mission-banner {
-          margin-top: -30px;
-          padding: 40px 24px;
+        .hero-bg::after {
+          background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0.4) 100%);
         }
-        .mission-banner h2 { font-size: 20px; margin-bottom: 8px; }
-        .mission-banner p { font-size: 22px; line-height: 1.3; }
+        .hero h1 { font-size: 40px !important; }
+        .hero p { font-size: 16px !important; }
+        
+        .story-section { padding: 60px 16px; }
+        .section-title { font-size: 32px; }
 
         .values-grid { 
           grid-template-columns: 1fr !important; 
@@ -243,9 +238,12 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         
         .value-card {
           padding: 24px !important;
+          border-left: none;
+          border-top: 2px solid #e2e8f0;
         }
-        .others-card {
-           margin-top: 16px;
+        .value-card:hover {
+          border-top-color: var(--gold);
+          border-left-color: transparent;
         }
       }
     `,
