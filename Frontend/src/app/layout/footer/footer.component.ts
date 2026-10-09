@@ -38,7 +38,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
                 ></path>
               </svg>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/contactmozhibu/" target="_blank" aria-label="Instagram">
               <svg
                 width="20"
                 height="20"
@@ -56,7 +56,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/people/Mozhibu/61590620288523/" target="_blank" aria-label="Facebook">
               <svg
                 width="20"
                 height="20"

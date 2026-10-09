@@ -10,135 +10,74 @@ import { CommonModule } from '@angular/common';
       <!-- Hero Section -->
       <div class="hero">
         <div class="hero-content wrap">
-          <h1>Stories worth staying up for.</h1>
+          <h1>Welcome to Mozhibu!</h1>
           <p>
-            We're on a mission to connect readers and writers across the globe
-            through the power of serialization. Read, write, and share your
-            imagination.
+            “Mozhibu” is a Tamil word which means “Narrative” or “Story,” representing storytelling through prose. The term originates from the Tamil word “Mozhi,” meaning “speech” or “expression.”
+          </p>
+          <p style="margin-top: 24px;">
+            We are a platform built for readers, writers, and creators who believe in the power of stories. From fiction that sparks imagination to non-fiction that informs, from poetry that moves the soul to cookbooks that inspire kitchens, and from children’s tales to academic insight — we celebrate every voice and every genre.
           </p>
         </div>
         <div class="hero-bg"></div>
       </div>
 
-      <!-- Stats -->
-      <div class="stats-section wrap">
-        <div class="stat-card">
-          <h3>2.5M+</h3>
-          <p>Active Readers</p>
-        </div>
-        <div class="stat-card">
-          <h3>150K+</h3>
-          <p>Original Stories</p>
-        </div>
-        <div class="stat-card">
-          <h3>12+</h3>
-          <p>Languages Supported</p>
-        </div>
-        <div class="stat-card">
-          <h3>$5M+</h3>
-          <p>Paid to Authors</p>
-        </div>
+      <!-- Mission Statement -->
+      <div class="mission-banner wrap">
+        <h2>Our mission is simple:</h2>
+        <p>to make storytelling accessible, diverse, and beautifully inclusive.</p>
       </div>
 
-      <!-- Story/Mission -->
-      <div class="mission-section wrap">
-        <div class="mission-text">
-          <h2>Our Story</h2>
-          <p>
-            Mozhibu started in 2026 with a simple idea: great stories shouldn't
-            be hidden behind publishers. We built a platform where anyone with
-            an imagination can find an audience.
-          </p>
-          <p>
-            Today, we're a global community of dreamers, readers, and creators.
-            We believe in fair compensation for artists and an uninterrupted,
-            immersive reading experience for fans.
-          </p>
-        </div>
-        <div class="mission-image">
-          <img
-            src="https://placehold.co/600x400/3F6259/FFFFFF?text=Team+Mozhibu"
-            alt="Team Mozhibu"
-          />
-        </div>
-      </div>
-
-      <!-- Core Values -->
-      <div class="values-section alt-bg">
+      <!-- Genres Section -->
+      <div class="genres-section alt-bg">
         <div class="wrap">
-          <h2 class="section-title">Our Core Values</h2>
+          <h2 class="section-title">A Platform for Every Kind of Story</h2>
+          <p class="section-subtitle">Stories come in many forms, so we embrace them all.</p>
           <div class="values-grid">
             <div class="value-card">
-              <div class="value-icon">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  ></path>
-                </svg>
-              </div>
-              <h4>Global First</h4>
-              <p>
-                We build tools that break down language barriers, allowing
-                stories to reach readers worldwide.
-              </p>
+              <h4>Fiction</h4>
+              <p>Adventures, drama, thrillers, romance, and everything imagined.</p>
             </div>
             <div class="value-card">
-              <div class="value-icon">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 20h9"></path>
-                  <path
-                    d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
-                  ></path>
-                </svg>
-              </div>
-              <h4>Creator Centric</h4>
-              <p>
-                Authors are the lifeblood of Mozhibu. We prioritize their
-                monetization and creative control.
-              </p>
+              <h4>Non-Fiction</h4>
+              <p>Real stories, reflections, biographies, insights, and lived experiences.</p>
             </div>
             <div class="value-card">
-              <div class="value-icon">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <h4>Safe Space</h4>
-              <p>
-                We enforce strict community guidelines to ensure a welcoming
-                environment for all genres and readers.
-              </p>
+              <h4>Academic</h4>
+              <p>Research-driven writing, educational content, and learning resources.</p>
+            </div>
+            <div class="value-card">
+              <h4>Poetry</h4>
+              <p>Verses, emotions, ghazals, haiku, reflections, and lyrical expressions.</p>
+            </div>
+            <div class="value-card">
+              <h4>Cookbooks</h4>
+              <p>Recipes, food memories, kitchen traditions, and culinary explorations.</p>
+            </div>
+            <div class="value-card">
+              <h4>Children’s Books</h4>
+              <p>Imaginative tales, early readers, picture books, and learning stories.</p>
             </div>
           </div>
+          <div class="value-card others-card" style="margin-top: 32px;">
+            <h4>Others</h4>
+            <p>Comics, graphic stories, plays, essays, journals, spiritual texts, and mixed formats.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Details -->
+      <div class="details-section wrap">
+        <div class="details-text">
+          <h2>Languages Available</h2>
+          <p>
+            Currently Mozhibu is available for reading and writing in <strong>12 languages</strong>. We will also expand in other Indian languages soon.
+          </p>
+        </div>
+        <div class="details-text">
+          <h2>Wondering who we are?</h2>
+          <p>
+            At Mozhibu, passionate engineers, intellectual writers, and community managers come together with one shared mission — to constantly evolve the platform and craft a meaningful, inspiring experience for every author and reader.
+          </p>
         </div>
       </div>
     </div>
@@ -173,7 +112,8 @@ import { CommonModule } from '@angular/common';
       .hero-content {
         position: relative;
         z-index: 2;
-        max-width: 800px;
+        max-width: 900px;
+        margin: 0 auto;
       }
       .hero h1 {
         font-size: 56px;
@@ -184,63 +124,32 @@ import { CommonModule } from '@angular/common';
       }
       .hero p {
         font-size: 20px;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 600px;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
         margin: 0 auto;
       }
 
-      .stats-section {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
+      .mission-banner {
+        text-align: center;
+        padding: 80px 32px;
+        background: var(--card);
+        border-radius: var(--radius-l);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
         margin-top: -40px;
         position: relative;
         z-index: 10;
+        border: 1px solid var(--border-soft);
         margin-bottom: 80px;
       }
-      .stat-card {
-        background: var(--card);
-        padding: 32px 24px;
-        border-radius: var(--radius-m);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
-        text-align: center;
-        border: 1px solid var(--border-soft);
-      }
-      .stat-card h3 {
+      .mission-banner h2 {
         font-size: 36px;
         color: var(--forest);
-        margin-bottom: 8px;
+        margin-bottom: 12px;
       }
-      .stat-card p {
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--ink-soft);
-        margin: 0;
-      }
-
-      .mission-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        align-items: center;
-        padding: 64px 32px;
-        margin-bottom: 64px;
-      }
-      .mission-text h2 {
-        font-size: 36px;
-        margin-bottom: 24px;
+      .mission-banner p {
+        font-size: 24px;
+        font-weight: 500;
         color: var(--ink);
-      }
-      .mission-text p {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-      .mission-image img {
-        width: 100%;
-        border-radius: var(--radius-l);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
 
       .alt-bg {
@@ -249,7 +158,14 @@ import { CommonModule } from '@angular/common';
       }
       .section-title {
         text-align: center;
-        font-size: 32px;
+        font-size: 36px;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+      .section-subtitle {
+        text-align: center;
+        font-size: 18px;
+        color: var(--ink-soft);
         margin-bottom: 48px;
       }
       .values-grid {
@@ -259,87 +175,82 @@ import { CommonModule } from '@angular/common';
       }
       .value-card {
         background: var(--card);
-        padding: 40px;
+        padding: 32px;
         border-radius: var(--radius-l);
         text-align: center;
-      }
-      .value-icon {
-        margin-bottom: 24px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        background: var(--forest-tint);
-        color: var(--forest-deep);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        border: 1px solid var(--border-light);
       }
       .value-card h4 {
         font-size: 22px;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
+        color: var(--forest-deep);
+      }
+      .value-card p {
+        font-size: 16px;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+      .others-card {
+        max-width: 600px;
+        margin: 32px auto 0 auto;
+      }
+
+      .details-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        padding: 80px 32px;
+      }
+      .details-text h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+        color: var(--ink);
+      }
+      .details-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--ink-soft);
       }
 
       @media (max-width: 900px) {
-        .stats-section {
+        .values-grid {
           grid-template-columns: repeat(2, 1fr);
         }
-        .mission-section {
+        .details-section {
           grid-template-columns: 1fr;
-          gap: 40px;
-        }
-        .values-grid {
-          grid-template-columns: 1fr;
+          gap: 48px;
         }
         .hero h1 {
           font-size: 40px;
         }
       }
     
-      /* Universal Mobile Fixes injected automatically */
       @media (max-width: 768px) {
-        .hero { padding: 40px 16px !important; }
-        .hero h1 { font-size: 28px !important; line-height: 1.2 !important; }
-        .hero p { font-size: 16px !important; }
+        .hero { padding: 60px 16px !important; }
+        .hero h1 { font-size: 32px !important; line-height: 1.2 !important; }
+        .hero p { font-size: 18px !important; }
         
-        .content-section, .wrap { padding: 24px 16px !important; }
-        
-        .policy-block h2, .section h2 { font-size: 22px !important; margin-top: 24px !important; margin-bottom: 16px !important; }
-        .policy-block h3, .section h3 { font-size: 18px !important; }
-        
-        p, li, .right-item, .contact-details div { font-size: 15px !important; line-height: 1.6 !important; }
-        
-        .partner-grid, .rights-grid, .values-grid, .features-grid, .grid { 
+        .mission-banner {
+          margin-top: -20px;
+          padding: 40px 24px;
+        }
+        .mission-banner h2 { font-size: 28px; }
+        .mission-banner p { font-size: 20px; }
+
+        .values-grid { 
           grid-template-columns: 1fr !important; 
           gap: 16px !important; 
         }
         
-        .icon, .feature-icon, .value-icon {
-          width: 40px !important;
-          height: 40px !important;
+        .value-card {
+          padding: 24px !important;
         }
-        .icon svg, .feature-icon svg, .value-icon svg {
-          width: 20px !important;
-          height: 20px !important;
-        }
-        
-        .partner-card, .value-card, .feature-card {
-          padding: 20px !important;
-        }
-        
-        .table-row {
-          flex-direction: column !important;
-        }
-        .col-type, .col-desc {
-          width: 100% !important;
-          padding: 12px !important;
-        }
-        .col-type {
-          border-right: none !important;
-          border-bottom: 1px dashed var(--border-soft) !important;
-          background: var(--paper-warm) !important;
+        .others-card {
+           margin-top: 16px;
         }
       }
-`,
+    `,
   ],
 })
 export class AboutComponent {}
