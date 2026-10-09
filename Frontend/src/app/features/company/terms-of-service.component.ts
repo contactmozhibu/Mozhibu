@@ -46,9 +46,8 @@ import { RouterModule } from '@angular/router';
 
           <div class="policy-block main-section">
             <h2 class="main-heading">USER OBLIGATIONS</h2>
-          </div>
-
             <p>By accessing or using the Services, each User agrees to comply with the following obligations at all times:</p>
+          </div>
           <div class="policy-block">
             <h3>1. Accuracy of Information</h3>
             <p>Users shall provide complete, accurate, and up-to-date information while registering for and using the Platform. Users shall promptly notify the Company in writing, including by email, of any changes to such information. Users shall not impersonate, misrepresent their identity as, or falsely claim affiliation with any individual, entity, or organization.</p>
@@ -169,9 +168,8 @@ import { RouterModule } from '@angular/router';
 
           <div class="policy-block main-section">
             <h2 class="main-heading">RIGHTS OF THE COMPANY</h2>
-          </div>
-
             <p>The User acknowledges and agrees that the Company shall have the following rights in connection with the operation, management, administration, protection, and improvement of the Platform and Services:</p>
+          </div>
           <div class="policy-block">
             <h3>1. Content Review and Removal</h3>
             <p>The Company reserves the right, but not the obligation, to review, monitor, restrict, remove, edit, disable access to, or refuse publication of any Published Work, User Input, communication, account information, or other content that the Company reasonably believes:</p>
@@ -244,9 +242,8 @@ import { RouterModule } from '@angular/router';
 
           <div class="policy-block main-section">
             <h2 class="main-heading">CONTENT GUIDELINES</h2>
-          </div>
-
             <p>Users shall ensure that all Published Works, User Inputs, communications, profile information, images, comments, reviews, messages, and other content uploaded, posted, published, transmitted, or otherwise made available through the Platform comply with the following Content Guidelines.</p>
+          </div>
           <div class="policy-block">
             <h3>1. Prohibited, Objectionable, or Unlawful Content</h3>
             <p>Users shall not publish, upload, distribute, transmit, or otherwise make available any Published Work or User Input that is unlawful, harmful, defamatory, libelous, obscene, pornographic, sexually exploitative, paedophilic, invasive of privacy, abusive, harassing, threatening, hateful, discriminatory, racially or ethnically offensive, blasphemous, fraudulent, misleading, or otherwise objectionable in nature.</p>
@@ -376,9 +373,8 @@ import { RouterModule } from '@angular/router';
 
           <div class="policy-block main-section">
             <h2 class="main-heading">GRIEVANCE REDRESSAL</h2>
-          </div>
-
             <p>The Company is committed to addressing user concerns, complaints, and grievances in a fair, timely, and transparent manner.</p>
+          </div>
           <div class="policy-block">
             <h3>1. Grievance Officer</h3>
             <p>In accordance with applicable provisions of the Information Technology Act, 2000 and the rules framed thereunder, the contact details of the Grievance Officer are as follows:</p>
