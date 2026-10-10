@@ -164,7 +164,7 @@ function passwordMatchValidator(
           <button
             type="submit"
             class="btn btn-primary"
-            [disabled]="isLoading || resetForm.invalid || !token"
+            [disabled]="isLoading || resetForm.invalid || !email || !code"
           >
             {{ isLoading ? 'Resetting...' : 'Reset Password' }}
           </button>
@@ -282,6 +282,21 @@ function passwordMatchValidator(
         opacity: 0.6;
         cursor: not-allowed;
       }
+      
+      /* Mobile Responsiveness */
+      @media (max-width: 600px) {
+        .auth-wrap {
+          padding: 20px 15px;
+          min-height: calc(100vh - 100px);
+        }
+        .auth-card {
+          padding: 30px 24px;
+          border-radius: var(--radius-m);
+        }
+        .auth-card h2 {
+          font-size: 22px;
+        }
+      }
     `,
   ],
 })
@@ -304,7 +319,8 @@ export class ResetPasswordComponent implements OnInit {
     { validators: passwordMatchValidator },
   );
 
-  token: string | null = null;
+  email: string | null = null;
+  code: string | null = null;
   isLoading = false;
   errorMessage = '';
   successMessage = '';
@@ -312,9 +328,10 @@ export class ResetPasswordComponent implements OnInit {
   showConfirmPassword = false;
 
   ngOnInit() {
-    this.token = this.route.snapshot.queryParamMap.get('token');
-    if (!this.token) {
-      this.errorMessage = 'Invalid or missing reset token.';
+    this.email = this.route.snapshot.queryParamMap.get('email');
+    this.code = this.route.snapshot.queryParamMap.get('code');
+    if (!this.email || !this.code) {
+      this.errorMessage = 'Invalid or missing reset code/email.';
     }
   }
 
@@ -327,13 +344,13 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.resetForm.invalid || !this.token) return;
+    if (this.resetForm.invalid || !this.email || !this.code) return;
 
     this.isLoading = true;
     this.errorMessage = '';
 
     this.auth
-      .resetPassword(this.token, this.resetForm.value.password)
+      .resetPassword(this.email, this.code, this.resetForm.value.password)
       .subscribe({
         next: (res) => {
           this.isLoading = false;

@@ -572,7 +572,7 @@ router.post("/facebook", async (req, res) => {
 });
 
 // @route   POST /api/auth/forgot-password
-// @desc    Generate reset token and print link
+// @desc    Generate 6-digit reset code and send email
 // @access  Public
 router.post("/forgot-password", async (req, res) => {
   try {
@@ -591,13 +591,13 @@ router.post("/forgot-password", async (req, res) => {
         });
     }
 
-    // Generate token
-    const resetToken = crypto.randomBytes(20).toString("hex");
+    // Generate 6-digit code
+    const resetCode = Math.floor(100000 + Math.random() * 900000).toString();
 
-    // Hash token and set to resetPasswordToken field
+    // Hash code and set to resetPasswordToken field
     user.resetPasswordToken = crypto
       .createHash("sha256")
-      .update(resetToken)
+      .update(resetCode)
       .digest("hex");
 
     // Set expire (1 hour)
@@ -605,23 +605,21 @@ router.post("/forgot-password", async (req, res) => {
 
     await user.save();
 
-    // Create reset URL
-    const frontendUrl = process.env.FRONTEND_URL || "http://localhost:4200";
-    const resetUrl = `${frontendUrl}/reset-password?token=${resetToken}`;
-
     // Send email using Resend
     try {
       const { data, error } = await resend.emails.send({
         from: process.env.EMAIL_FROM || "Mozhibu <support@mozhibu.com>",
         to: [user.email],
-        subject: "Mozhibu - Password Reset Request",
+        subject: "Mozhibu - Password Reset Code",
         html: `
-          <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto;">
-            <h2>Password Reset Request</h2>
+          <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px;">
+            <h2 style="color: #2F4F4F;">Password Reset Request</h2>
             <p>Hello ${user.username},</p>
-            <p>You requested to reset your password. Click the button below to set a new password:</p>
-            <a href="${resetUrl}" style="display: inline-block; padding: 10px 20px; color: white; background-color: #2F4F4F; text-decoration: none; border-radius: 5px; margin-top: 10px;">Reset Password</a>
-            <p style="margin-top: 20px; font-size: 12px; color: #666;">This link is valid for 1 hour. If you didn't request this, you can safely ignore this email.</p>
+            <p>You requested to reset your password. Please use the following 6-digit code to verify your request:</p>
+            <div style="background-color: #f4f4f4; padding: 15px; text-align: center; border-radius: 5px; margin: 20px 0;">
+              <span style="font-size: 28px; font-weight: bold; letter-spacing: 4px; color: #333;">${resetCode}</span>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px; color: #666;">This code is valid for 1 hour. If you didn't request this, you can safely ignore this email.</p>
           </div>
         `,
       });
@@ -630,7 +628,7 @@ router.post("/forgot-password", async (req, res) => {
         throw error;
       }
 
-      res.json({ msg: "Password reset link has been sent to your email." });
+      res.json({ msg: "Password reset code has been sent to your email." });
     } catch (emailErr) {
       console.error("Email sending failed:", emailErr);
 
@@ -638,16 +636,15 @@ router.post("/forgot-password", async (req, res) => {
       user.resetPasswordToken = undefined;
       user.resetPasswordExpire = undefined;
       await user.save();
-
-      // If email fails, still print to console for development
-      console.log("\n--- EMAIL FAILED. PASSWORD RESET LINK ---");
-      console.log(resetUrl);
-      console.log("-----------------------------------------\n");
+      
+      console.log("\n--- EMAIL FAILED. RESET CODE ---");
+      console.log(resetCode);
+      console.log("----------------------------------\n");
 
       return res
         .status(500)
         .json({
-          msg: "Email could not be sent. Please check backend console for the link.",
+          msg: "Email could not be sent. Please check backend console for the code.",
         });
     }
   } catch (err) {
@@ -656,31 +653,69 @@ router.post("/forgot-password", async (req, res) => {
   }
 });
 
-// @route   POST /api/auth/reset-password
-// @desc    Reset password using token
+// @route   POST /api/auth/verify-reset-code
+// @desc    Verify 6-digit reset code
 // @access  Public
-router.post("/reset-password", async (req, res) => {
+router.post("/verify-reset-code", async (req, res) => {
   try {
-    const { token, password } = req.body;
+    const { email, code } = req.body;
+    if (!email || !code) {
+      return res.status(400).json({ msg: "Please provide email and code" });
+    }
 
-    // Get hashed token
     const resetPasswordToken = crypto
       .createHash("sha256")
-      .update(token)
+      .update(code)
       .digest("hex");
 
     const user = await User.findOne({
+      email,
       resetPasswordToken,
       resetPasswordExpire: { $gt: Date.now() },
     });
 
     if (!user) {
-      return res.status(400).json({ msg: "Invalid or expired reset token" });
+      return res.status(400).json({ msg: "Invalid or expired reset code" });
+    }
+
+    res.json({ msg: "Code verified successfully." });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
+// @route   POST /api/auth/reset-password
+// @desc    Reset password using 6-digit code
+// @access  Public
+router.post("/reset-password", async (req, res) => {
+  try {
+    // Also accept email for better security with 6-digit codes
+    const { email, code, password } = req.body;
+
+    if (!email || !code || !password) {
+      return res.status(400).json({ msg: "Please provide email, code, and new password" });
+    }
+
+    // Get hashed code
+    const resetPasswordToken = crypto
+      .createHash("sha256")
+      .update(code)
+      .digest("hex");
+
+    const user = await User.findOne({
+      email,
+      resetPasswordToken,
+      resetPasswordExpire: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      return res.status(400).json({ msg: "Invalid or expired reset code" });
     }
 
     // Validate new password
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s])[\S]{8,16}$/;
-    if (!password || !passwordRegex.test(password)) {
+    if (!passwordRegex.test(password)) {
       return res
         .status(400)
         .json({

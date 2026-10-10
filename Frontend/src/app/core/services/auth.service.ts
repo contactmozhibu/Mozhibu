@@ -308,8 +308,12 @@ export class AuthService {
     return this.api.post('/auth/forgot-password', { email });
   }
 
-  resetPassword(token: string, password: string): Observable<any> {
-    return this.api.post('/auth/reset-password', { token, password });
+  verifyResetCode(email: string, code: string): Observable<any> {
+    return this.api.post('/auth/verify-reset-code', { email, code });
+  }
+
+  resetPassword(email: string, code: string, password: string): Observable<any> {
+    return this.api.post('/auth/reset-password', { email, code, password });
   }
 
   updateReadingProgress(
