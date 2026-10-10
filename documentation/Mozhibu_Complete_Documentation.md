@@ -1,304 +1,86 @@
-# Mozhibu - Story Platform
-## Comprehensive Technical Documentation
+# Mozhibu - Comprehensive Technical Documentation
 
-**Version:** 2.0  
-**Date:** September 2026  
-**Classification:** Technical Reference Document  
-**Prepared For:** Client Stakeholders & Development Teams
+**Version:** 4.0 (Complete Enterprise Specification)  
+**Classification:** Master Architecture & Implementation Reference  
+**Prepared For:** Senior Developers, DevOps, and Engineering Leadership
 
 ---
 
-# Table of Contents
+## Index (Table of Contents)
+1. [Executive Summary & Platform Vision](#1-executive-summary-platform-vision)
+2. [Global Architecture & Technology Stack](#2-global-architecture-technology-stack)
+3. [Codebase Folder Structure (Frontend & Backend)](#3-codebase-folder-structure-frontend-backend)
+4. [Component & Module Functional Overview](#4-component-module-functional-overview)
+5. [Frontend Architecture: Angular Deep Dive](#5-frontend-architecture-angular-deep-dive)
+6. [Frontend State Management & RxJS](#6-frontend-state-management-rxjs)
+7. [Backend Architecture: Node.js & Express](#7-backend-architecture-nodejs-express)
+8. [Backend Middleware & Security Pipeline](#8-backend-middleware-security-pipeline)
+9. [Database Architecture & Mongoose Schemas](#9-database-architecture-mongoose-schemas)
+10. [Entity Relationship Diagram (ERD)](#10-entity-relationship-diagram-erd)
+11. [API Integration: RESTful Endpoints & Payloads](#11-api-integration-restful-endpoints-payloads)
+12. [Business Logic: Subscriptions & Revenue Pooling](#12-business-logic-subscriptions-revenue-pooling)
+13. [Business Logic: Content Moderation & Admin Actions](#13-business-logic-content-moderation-admin-actions)
+14. [Third-Party Integrations (Stripe, AWS S3, FCM)](#14-thirdparty-integrations-stripe-aws-s3-fcm)
+15. [Deployment, CI/CD, & DevOps Strategy](#15-deployment-cicd-devops-strategy)
+16. [Content Recommendation & Discovery Engine](#16-content-recommendation-discovery-engine)
+17. [Multilingual Architecture & i18n Strategy](#17-multilingual-architecture-i18n-strategy)
+18. [Search Engine Optimization (SEO) & Web Vitals](#18-search-engine-optimization-seo-web-vitals)
+19. [Advanced Caching & CDN Delivery](#19-advanced-caching-cdn-delivery)
+20. [Database Indexing & Query Optimization](#20-database-indexing-query-optimization)
+21. [Data Privacy, GDPR & KYC Compliance](#21-data-privacy-gdpr-kyc-compliance)
+22. [Competitions Module: Leaderboard Algorithm](#22-competitions-module-leaderboard-algorithm)
+23. [Offline Support & Progressive Web App (PWA)](#23-offline-support-progressive-web-app-pwa)
+24. [Error Logging & Application Performance Monitoring](#24-error-logging-application-performance-monitoring)
+25. [Quality Assurance & Automated Testing](#25-quality-assurance-automated-testing)
+26. [Real-Time Telemetry & Admin Dashboards](#26-realtime-telemetry-admin-dashboards)
+27. [User Engagement & Gamification Strategy](#27-user-engagement-gamification-strategy)
+28. [Local Developer Onboarding & Environment](#28-local-developer-onboarding-environment)
+29. [Future Scalability Roadmap & Microservices](#29-future-scalability-roadmap-microservices)
 
-1. [Executive Project Overview](#1-executive-project-overview)
-2. [Technologies Used](#2-technologies-used)
-3. [System Architecture Diagram](#3-system-architecture-diagram)
-4. [Frontend Application Architecture](#4-frontend-application-architecture)
-5. [Backend & Middleware Architecture](#5-backend--middleware-architecture)
-6. [Database Schema & Data Models](#6-database-schema--data-models)
-7. [Entity Relationship Diagram (ER Diagram)](#7-entity-relationship-diagram)
-8. [API Architecture & Routing](#8-api-architecture--routing)
-9. [Test Case Documentation](#9-test-case-documentation)
+30. [Test Case Documentation & Execution Scenarios](#30-test-case-documentation-execution-scenarios)
 
----
+## 1. Executive Summary & Platform Vision
 
-# 1. Executive Project Overview
+The **Mozhibu - Story** platform is a multi-faceted digital ecosystem engineered to bridge the gap between storytellers and readers across diverse languages. It serves as a dynamic repository for original literature, fostering a thriving community through sophisticated monetization opportunities, deep user engagement metrics, and a seamless reading experience. The architecture revolves exclusively around a high-performance Web Application designed using modern Web paradigms.
 
-## 1.1 Introduction
+Mozhibu - Story capitalizes on the shift towards accessible web platforms by providing a highly scalable, full-stack web solution built upon cutting-edge technologies. The platform empowers independent authors to publish their work seamlessly, chapter by chapter, allowing them to build an audience organically.
 
-**Mozhibu - Story** is a multilingual, full-stack digital storytelling and literary platform designed to bridge the gap between independent authors and readers across diverse linguistic communities. The name *Mozhibu* is derived from the Tamil word for *language*, reflecting the platform's foundational mission: celebrating linguistic diversity through original literature.
+For readers, Mozhibu - Story offers a highly personalized, frictionless reading experience. The platform goes beyond static text by enriching the reading experience with deep social features. Readers can follow authors, save books to customized libraries, and interact directly with content. The addition of cutting-edge AI translation capabilities ensures that stories can transcend linguistic boundaries, allowing regional authors to reach global audiences.
 
-The platform is not a simple blog or content aggregator. It is a comprehensive literary economy — a sophisticated, real-time system where authors write, publish, and earn revenue directly from their readership; where readers discover, follow, and immerse themselves in serialised fiction; and where competitions drive engagement and accelerate discoverability for talented new voices.
+## 2. Global Architecture & Technology Stack
 
-## 1.2 Mission Statement
+The platform utilizes a strictly decoupled client-server architecture.
 
-> *To democratise global storytelling by providing a robust, equitable, and technologically superior platform where linguistic diversity is celebrated, raw creativity is financially rewarded, and the act of reading is elevated through seamless technology.*
+### Client-Side (Frontend)
+- **Framework:** Angular 15+ (TypeScript)
+- **Styling:** SCSS, CSS Variables for runtime theming
+- **State Management:** RxJS BehaviorSubjects
+- **Build Tool:** Angular CLI / Webpack
 
-## 1.3 Platform Scope & Core Capabilities
+### Server-Side (Backend)
+- **Runtime:** Node.js 18.x LTS
+- **Framework:** Express.js 4.x
+- **Authentication:** JSON Web Tokens (JWT RS256)
+- **Security:** Helmet, CORS, Express-Rate-Limit
 
-| Module | Description | Primary Actors |
-|--------|-------------|----------------|
-| **Author Studio** | A full-featured writing interface for creating, editing, and publishing serialised books and chapters with cover uploads, genre tagging, and analytics. | Writers |
-| **Reader Interface** | An immersive, distraction-free reading UI with customisable typography, dark/light themes, offline caching, and cross-device progress synchronisation. | Readers |
-| **Subscription Engine** | A Stripe-integrated dual-tier monetisation system where readers subscribe for premium access and authors earn proportional revenue based on Qualified Reads. | Readers, Writers |
-| **Competitions Module** | Time-bound, admin-configured writing contests with eligibility checking, real-time leaderboards, and winner selection. | Admins, Writers |
-| **Monetisation & Payouts** | An end-of-month automated Cron Job that calculates each author's revenue share from the subscription pool and transfers earnings via Stripe Connect. | Writers, Admins |
-| **Admin Control Panel** | A secure moderation dashboard for managing user accounts, reviewing reported books, approving author applications, and configuring system-wide parameters. | Superadmins |
-| **Notification System** | A push-notification and in-app alert engine via Firebase Cloud Messaging (FCM) for chapter releases, competition results, and moderation events. | All Users |
+### Database & Caching
+- **Primary Database:** MongoDB (NoSQL Document Store)
+- **ODM:** Mongoose 8.x
+- **Cache Layer:** Redis (used for session blacklisting and rate limiting)
 
-## 1.4 User Roles & Permissions
+### Cloud Infrastructure & Third-Party
+- **Media Storage:** AWS S3 (Buckets for Covers, Avatars, and Assets)
+- **Payments:** Stripe API (Subscriptions, Connect Payouts)
+- **Push Notifications:** Firebase Cloud Messaging (FCM)
+- **Transactional Emails:** SendGrid
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        ROLE HIERARCHY                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│   [SUPERADMIN]  ──── Full system access, manage all users       │
-│         │             and platform config                        │
-│         │                                                        │
-│   [WRITER]      ──── All Reader permissions + Author Studio     │
-│         │             publish books, earn payouts                │
-│         │                                                        │
-│   [READER]      ──── Browse books, read chapters, subscribe     │
-│                       follow authors, leave reviews             │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+## 3. Codebase Folder Structure (Frontend & Backend)
 
-### Role Progression
-- A user registers as a **Reader** by default.
-- A Reader submits an **Author Request** (with pen name and bio).
-- A **Superadmin** approves the request, upgrading their role to **Writer**.
-- Writers can receive payouts once their **KYC (bank details)** are submitted and verified.
+Understanding the exact location of modules and files is critical for scaling and maintaining the platform.
 
-## 1.5 User Journey Maps
+### Frontend Folder Structure (Angular)
 
-### Journey A — Reader Lifecycle
-```
-1. LANDING        User discovers the platform via SEO link or social share
-        │
-2. ONBOARDING     User signs up via email/password or OAuth (Google/Facebook)
-        │         Selects preferred language and favourite genres
-        │
-3. DISCOVERY      Personalised feed shows books matching genres
-        │         User follows authors, bookmarks books
-        │
-4. READING        Opens chapters, progress is tracked every 60 seconds
-        │         Heartbeat API updates ReadingProgress document
-        │
-5. PAYWALL        Chapter 10 is Premium — upgrade modal appears
-        │         User inputs card → Stripe processes → webhook fires
-        │
-6. PREMIUM        isPremium = true, all locked chapters unlock instantly
-```
-
-### Journey B — Writer Earning Pipeline
-```
-1. APPLICATION    Reader submits AuthorRequest → Admin approves
-        │
-2. CREATION       Writer creates Book with cover art and genre tags
-        │         Drafts Chapter 1 in the rich text editor
-        │
-3. PUBLICATION    Publishes chapter → FCM notification sent to all followers
-        │
-4. KYC SETUP      Writer submits encrypted bank details (accountNumber, IFSC)
-        │
-5. MONTH END      Cron Job aggregates all QualifiedReads for the author's books
-        │         Calculates revenue share from total subscription pool
-        │
-6. PAYOUT         AuthorEarnings record created → Stripe Connect transfer initiated
-```
-
----
-
-# 2. Technologies Used
-
-## 2.1 Full Technology Stack Overview
-
-```
-┌────────────────────────────────────────────────────────────────────┐
-│                    TECHNOLOGY STACK SUMMARY                        │
-├─────────────────┬──────────────────────────────────────────────────┤
-│ LAYER           │ TECHNOLOGIES                                      │
-├─────────────────┼──────────────────────────────────────────────────┤
-│ Frontend        │ Angular 15+, TypeScript, RxJS, SCSS              │
-│ Backend         │ Node.js 18 LTS, Express.js 4.x                   │
-│ Database        │ MongoDB (NoSQL, Replica Set), Mongoose ODM        │
-│ Cache           │ Redis (ElastiCache)                               │
-│ Authentication  │ JWT (RS256), bcrypt, OAuth 2.0                    │
-│ Payments        │ Stripe API + Stripe Connect + Webhooks            │
-│ Notifications   │ Firebase Cloud Messaging (FCM)                    │
-│ File Storage    │ AWS S3 / Cloudinary CDN                           │
-│ Email           │ Nodemailer / SendGrid                             │
-│ Dev Tools       │ Jest, Supertest, ESLint, Prettier                 │
-└─────────────────┴──────────────────────────────────────────────────┘
-```
-
-## 2.2 Frontend Technologies — Deep Dive
-
-| Technology | Version | Justification |
-|------------|---------|---------------|
-| **Angular** | 15+ | Enterprise-grade SPA framework with built-in DI, AOT compilation, lazy-loading, and strict TypeScript integration. Ideal for a large, multi-role application. |
-| **TypeScript** | Strict Mode | Compile-time type safety across hundreds of components. Shared interfaces (IBook, IUser) prevent API contract drift. |
-| **RxJS** | 7.x | Manages all async state — debounced search queries, cross-component state via BehaviorSubjects, real-time progress tracking heartbeats. |
-| **SCSS** | Preprocessor | CSS Variables + SCSS variables enable runtime theme switching (Light/Dark/Sepia) without page reload. |
-| **Angular Router** | Built-in | Lazy-loads Feature Modules. A Reader never downloads the Admin or Author Studio JS bundles. |
-
-## 2.3 Backend Technologies — Deep Dive
-
-| Technology | Version | Justification |
-|------------|---------|---------------|
-| **Node.js** | 18 LTS | Non-blocking, event-driven I/O handles tens of thousands of concurrent readers on a single instance without thread starvation. |
-| **Express.js** | 4.x | Minimalist routing + middleware pipeline. Ideal for injecting Auth, Rate Limiting, and File Upload handling globally. |
-| **Mongoose ODM** | 8.x | Schema validation, lifecycle hooks (pre-save bcrypt hashing), and `.populate()` for reference resolution — all at the application layer. |
-| **JWT** | RS256 | Stateless authentication. Tokens carry user ID and role, removing per-request database lookups and enabling horizontal scaling. |
-| **bcrypt** | 10 Salt Rounds | One-way password hashing. Even database administrators cannot read user passwords. |
-| **Multer** | 1.x | Intercepts multipart/form-data file uploads, validates MIME types by inspecting magic bytes, and streams directly to S3. |
-
-## 2.4 Third-Party SaaS Integrations
-
-| Service | Purpose | Integration Method |
-|---------|---------|-------------------|
-| **Stripe** | Reader subscriptions, Author payouts via Connect | REST API + Webhooks |
-| **AWS S3 / Cloudinary** | Book cover and avatar storage with global CDN | SDK — streams file buffer directly |
-| **Firebase FCM** | Push notifications (new chapters, competition alerts) | Server SDK |
-| **SendGrid / Nodemailer** | Transactional emails (verify, reset password, payout reports) | SMTP / REST API |
-| **Redis** | Rate limiting, JWT blacklisting, session caching | `ioredis` client |
-
----
-
-# 3. System Architecture Diagram
-
-## 3.1 High-Level Platform Topology
-
-```mermaid
-graph TD
-    subgraph CLIENT["CLIENT TIER"]
-        A[Angular SPA - Browser]
-        B[Mobile App - Future]
-        SEO[GoogleBot / SEO Crawlers]
-    end
-
-    subgraph EDGE["EDGE & GATEWAY TIER"]
-        C[Cloudflare CDN & WAF]
-        D[AWS Application Load Balancer]
-    end
-
-    subgraph APP["APPLICATION TIER - Node.js Cluster"]
-        E[Node.js Instance 1]
-        F[Node.js Instance 2]
-        G[Node.js Instance N]
-        H[Cron Worker - Monthly Payouts]
-    end
-
-    subgraph DATA["DATA PERSISTENCE TIER"]
-        I[(MongoDB Primary - Writes)]
-        J[(MongoDB Secondary A - Reads)]
-        K[(MongoDB Secondary B - Analytics)]
-        L[(Redis Cache - Sessions/Rate Limits)]
-    end
-
-    subgraph CLOUD["EXTERNAL CLOUD SERVICES"]
-        M[AWS S3 - Media Storage]
-        N[Stripe - Payments]
-        O[Firebase FCM - Push Notifications]
-        P[SendGrid - Emails]
-    end
-
-    A -->|HTTPS REST| C
-    B -->|HTTPS REST| C
-    SEO -->|HTTPS GET| C
-    C -->|Proxy| D
-    D -->|Round Robin| E
-    D -->|Round Robin| F
-    D -->|Round Robin| G
-
-    E & F & G -->|All Writes| I
-    E & F & G -->|All Reads| J
-    H -->|Heavy Aggregations| K
-    H -->|Write Results| I
-
-    E & F & G <-->|Cache Layer| L
-
-    E & F & G -->|Upload Buffer| M
-    E & F & G <-->|API Calls| N
-    H -->|Trigger Notifications| O
-    H -->|Trigger Emails| P
-
-    style CLIENT fill:#f0f0f0,stroke:#333
-    style EDGE fill:#e8f4f8,stroke:#0056b3
-    style APP fill:#e8f8e8,stroke:#28a745
-    style DATA fill:#fff8e8,stroke:#ffc107
-    style CLOUD fill:#f8e8ff,stroke:#6c757d
-```
-
-## 3.2 Request Lifecycle Flow
-
-```mermaid
-sequenceDiagram
-    participant Browser as Angular (Browser)
-    participant CDN as Cloudflare CDN
-    participant ALB as Load Balancer
-    participant Node as Node.js Instance
-    participant Redis as Redis Cache
-    participant Mongo as MongoDB
-    participant Stripe as Stripe API
-
-    Browser->>CDN: GET /api/v1/books?genre=Fiction
-    CDN->>ALB: Forward (cache miss for API)
-    ALB->>Node: Route to available instance
-    Node->>Redis: Check rate limit for IP
-    Redis-->>Node: OK (under limit)
-    Node->>Node: Verify JWT Token
-    Node->>Mongo: db.books.find({ genre, status: published })
-    Mongo-->>Node: Book documents array
-    Node-->>Browser: 200 OK { success: true, data: [...] }
-
-    Note over Browser,Stripe: Premium Chapter Unlock Flow
-    Browser->>Node: POST /api/v1/subscriptions/create
-    Node->>Stripe: Create PaymentIntent
-    Stripe-->>Node: Payment Intent { clientSecret }
-    Node-->>Browser: clientSecret
-    Browser->>Stripe: Confirm payment on client
-    Stripe->>Node: POST /webhooks/stripe (payment_intent.succeeded)
-    Node->>Mongo: User.updateOne({ isPremium: true })
-    Node-->>Stripe: 200 OK
-```
-
----
-
-# 4. Frontend Application Architecture
-
-## 4.1 Angular Module Strategy
-
-The Angular application uses a strict **three-tier module architecture** to keep the initial bundle lean and load feature code on-demand.
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                   ANGULAR APP MODULE                     │
-│                                                          │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────────┐  │
-│  │ CoreModule  │  │ SharedModule │  │ FeatureModules │  │
-│  │             │  │              │  │ (Lazy Loaded)  │  │
-│  │ - AuthSvc   │  │ - BookCard   │  │                │  │
-│  │ - JWT Intcp │  │ - Modal      │  │ - /auth        │  │
-│  │ - ErrorHndl │  │ - Spinner    │  │ - /home        │  │
-│  │ - ThemeSvc  │  │ - Pagination │  │ - /story       │  │
-│  │             │  │ - TruncPipe  │  │ - /reader      │  │
-│  └─────────────┘  └──────────────┘  │ - /write       │  │
-│  (Eager, 1x only)  (Imported by     │ - /library     │  │
-│                     Features)       │ - /earnings    │  │
-│                                     │ - /admin       │  │
-│                                     │ - /competition │  │
-│                                     │ - /search      │  │
-│                                     │ - /subscription│  │
-│                                     └────────────────┘  │
-└──────────────────────────────────────────────────────────┘
-```
-
-## 4.2 Frontend Folder Structure
-
-```
+```text
 Frontend/
 ├── src/
 │   ├── app/
@@ -307,26 +89,14 @@ Frontend/
 │   │   ├── app.routes.ts             # Master routing with lazy-load definitions
 │   │   │
 │   │   ├── core/                     # SINGLETON ENGINE (loaded once at startup)
-│   │   │   ├── guards/
-│   │   │   │   ├── auth.guard.ts     # Blocks unauthenticated users
-│   │   │   │   └── role.guard.ts     # Checks JWT role (writer/superadmin)
-│   │   │   ├── interceptors/
-│   │   │   │   ├── jwt.interceptor.ts      # Auto-attaches Bearer token
-│   │   │   │   └── error.interceptor.ts    # Catches 401 → forces logout
-│   │   │   └── services/
-│   │   │       ├── auth.service.ts         # Login/Register/Profile state
-│   │   │       └── theme.service.ts        # Manages Light/Dark/Sepia mode
+│   │   │   ├── guards/               # Route guards (auth.guard, role.guard)
+│   │   │   ├── interceptors/         # HTTP interceptors (JWT, Errors)
+│   │   │   └── services/             # Core singletons (auth.service, theme.service)
 │   │   │
 │   │   ├── shared/                   # REUSABLE UI COMPONENTS
-│   │   │   ├── components/
-│   │   │   │   ├── book-card/        # Standard book thumbnail display
-│   │   │   │   ├── modal/            # Generic popup dialog component
-│   │   │   │   ├── confirm-modal/    # Confirmation dialog (delete/suspend)
-│   │   │   │   └── toast-alert/      # Notification snackbar
-│   │   │   ├── directives/
-│   │   │   │   └── click-outside.directive.ts
-│   │   │   └── pipes/
-│   │   │       └── truncate.pipe.ts  # Ellipses long book descriptions
+│   │   │   ├── components/           # (book-card, modal, spinner)
+│   │   │   ├── directives/           # (click-outside, scroll-to)
+│   │   │   └── pipes/                # (truncate, date-format)
 │   │   │
 │   │   ├── features/                 # LAZY-LOADED FEATURE DOMAINS
 │   │   │   ├── auth/                 # Login, Register, Forgot Password
@@ -334,804 +104,407 @@ Frontend/
 │   │   │   ├── story/                # Book detail view, chapter list
 │   │   │   ├── reader/               # In-book reading experience
 │   │   │   ├── write/                # Author Studio, chapter editor
-│   │   │   │   └── story-editor.component.ts
 │   │   │   ├── library/              # Saved books, favourites
-│   │   │   ├── my-reading/           # Reading history, progress
-│   │   │   ├── search/               # Global book/author search
-│   │   │   ├── categories/           # Genre browsing
-│   │   │   ├── earnings/             # Author earnings dashboard
-│   │   │   ├── subscription/         # Plans & payment flow
-│   │   │   ├── rewards/              # Reader reward badges
-│   │   │   ├── community/            # Author following and social
-│   │   │   ├── user/                 # Profile management
-│   │   │   ├── user-profile/         # Public author profile view
-│   │   │   ├── author-profile/       # Author's own profile
+│   │   │   ├── search/               # Global search logic
+│   │   │   ├── subscription/         # Stripe checkout components
 │   │   │   └── admin/                # Superadmin dashboard
-│   │   │       ├── users/            # User management, suspension
-│   │   │       └── competition/      # Contest configuration
 │   │   │
-│   │   ├── layout/                   # App shell components
-│   │   └── styles/
-│   │       ├── _variables.scss       # Color tokens, spacing
-│   │       ├── _mixins.scss          # Responsive breakpoints
-│   │       └── _typography.scss      # Font definitions
+│   │   ├── layout/                   # App shell (Header, Footer, Sidebar)
+│   │   └── styles/                   # Global SCSS (variables, typography)
 │   │
-│   ├── assets/
-│   │   └── i18n/                     # Translation files (en.json, ta.json)
-│   └── environments/
-│       ├── environment.ts            # Dev: http://localhost:3000
-│       └── environment.prod.ts       # Prod: https://api.mozhibu.com
+│   ├── assets/                       # Images, i18n JSON files, fonts
+│   └── environments/                 # environment.ts (dev) & environment.prod.ts (prod)
 ```
 
-## 4.3 Routing Architecture & Guard Strategy
+### Backend Folder Structure (Node.js/Express)
 
-```mermaid
-flowchart TD
-    A[User navigates to URL] --> B{AuthGuard}
-    B -->|No JWT token| C[Redirect → /login]
-    B -->|Valid JWT| D{RoleGuard}
-    D -->|role = 'reader'| E[Load ReaderModule]
-    D -->|role = 'writer'| F[Load AuthorModule]
-    D -->|role = 'superadmin'| G[Load AdminModule]
-    D -->|Wrong role| H[Redirect → 403 Page]
-    E & F & G -->|Module already cached| I[Angular Router loads component]
-    I --> J[Component renders]
-```
-
-## 4.4 State Management via RxJS
-
-```mermaid
-graph LR
-    A[User Action<br/>e.g. Click Like] -->|Calls method| B[BookService]
-    B -->|Optimistic update| C[BehaviorSubject<br/>books$]
-    C -->|async pipe| D[Component Template]
-    B -->|HTTP POST| E[Node.js API]
-    E -->|200 OK| B
-    E -->|Error 4xx| F[Rollback BehaviorSubject]
-    F --> C
-```
-
----
-
-# 5. Backend & Middleware Architecture
-
-## 5.1 The Layered Architecture Pattern
-
-Every HTTP request passing through the Express API travels through a strict, ordered middleware pipeline before reaching any business logic.
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                   HTTP REQUEST PIPELINE                  │
-│                                                          │
-│  Incoming Request                                        │
-│         │                                                │
-│         ▼                                                │
-│  ┌─────────────────┐                                     │
-│  │  CORS Handler   │ Validates origin headers            │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │ Rate Limiter    │ Redis: 100 req / 15 min per IP      │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │ Body Parser     │ JSON / multipart-form-data          │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │ Auth Middleware │ Decodes JWT → sets req.user         │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │ Route Handler   │ Matches URL → Controller method     │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │   Controller    │ Extracts params, calls Service      │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │    Service      │ Business logic, external API calls  │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │  Mongoose Model │ DB query, validation, hooks         │
-│  └────────┬────────┘                                     │
-│           │                                              │
-│  ┌────────▼────────┐                                     │
-│  │ Error Handler   │ Catches all next(err) calls         │
-│  └─────────────────┘                                     │
-└──────────────────────────────────────────────────────────┘
-```
-
-## 5.2 Backend Folder Structure
-
-```
+```text
 Backend/
 ├── src/
-│   ├── config/
-│   │   ├── db.js                  # Mongoose connection & replica set config
-│   │   ├── redis.js               # Redis client (ioredis) instantiation
-│   │   └── stripe.js              # Stripe SDK with secret key
+│   ├── config/                       # Database, Redis, Stripe, AWS initializers
 │   │
-│   ├── middleware/
-│   │   ├── auth.js                # JWT verify → sets req.user
-│   │   ├── authorizeRoles.js      # Role-based access control wrapper
-│   │   ├── errorHandler.js        # Global error catcher (prevents crash)
-│   │   ├── rateLimiter.js         # Redis-based IP rate limiter
-│   │   ├── sanitize.js            # XSS / NoSQL injection prevention
-│   │   └── upload.js              # Multer: MIME validation + S3 stream
+│   ├── middleware/                   # HTTP Interceptors
+│   │   ├── auth.js                   # Verifies JWT
+│   │   ├── errorHandler.js           # Catches throws and formats JSON error
+│   │   ├── rateLimiter.js            # Redis IP-based limiting
+│   │   └── upload.js                 # Multer config for file uploads
 │   │
-│   ├── models/                    # 25 Mongoose Schema Definitions
+│   ├── models/                       # Mongoose Schemas (Database layer)
 │   │   ├── User.js
 │   │   ├── Book.js
 │   │   ├── Chapter.js
-│   │   ├── Competition.js
 │   │   ├── QualifiedRead.js
-│   │   ├── AuthorEarnings.js
-│   │   ├── SubscriptionPlan.js
-│   │   ├── SubscriptionPlanHistory.js
-│   │   ├── UserSubscription.js
-│   │   ├── ReadingProgress.js
-│   │   ├── Review.js
-│   │   ├── Report.js
-│   │   ├── EngagementScore.js
-│   │   ├── EngagementScoreConfig.js
-│   │   ├── MonthlyAdRevenue.js
-│   │   ├── RevenueSplitConfig.js
-│   │   ├── Notification.js
-│   │   ├── ReaderReward.js
-│   │   ├── Coupon.js
-│   │   ├── AuthorRequest.js
-│   │   ├── PublicationRequest.js
-│   │   ├── Broadcast.js
-│   │   ├── Feedback.js
-│   │   ├── ContactQuery.js
-│   │   └── Settings.js
+│   │   └── Subscription.js
 │   │
-│   ├── controllers/
-│   │   ├── authController.js      # register, login, verifyEmail, forgotPassword
-│   │   ├── bookController.js      # CRUD, like, bookmark, report
-│   │   ├── chapterController.js   # create, update, publish, delete chapters
-│   │   ├── userController.js      # profile management, follow/unfollow
-│   │   ├── adminController.js     # user mgmt, content moderation
-│   │   ├── subscriptionController.js  # plan management, purchase
-│   │   ├── earningsController.js  # payout records, monthly aggregation
-│   │   ├── revenueController.js   # ad revenue, revenue config
-│   │   └── webhookController.js   # Stripe signature verification
+│   ├── controllers/                  # Route handlers (Extracts req/res)
+│   │   ├── authController.js
+│   │   ├── bookController.js
+│   │   └── paymentController.js
 │   │
-│   ├── services/
-│   │   ├── emailService.js        # SendGrid / Nodemailer wrapper
-│   │   ├── paymentService.js      # Stripe charge, subscribe, transfer
-│   │   ├── s3Service.js           # Buffer compression + S3 upload
-│   │   ├── readingService.js      # QualifiedRead calculation algorithm
-│   │   └── notificationService.js # Firebase FCM push notifications
+│   ├── services/                     # Pure Business Logic (No req/res knowledge)
+│   │   ├── emailService.js           # SendGrid logic
+│   │   ├── paymentService.js         # Stripe API logic
+│   │   ├── s3Service.js              # AWS S3 upload logic
+│   │   └── notificationService.js    # Firebase FCM logic
 │   │
-│   ├── routes/
-│   │   ├── auth.js                # /api/v1/auth/*
-│   │   ├── books.js               # /api/v1/books/*
-│   │   ├── users.js               # /api/v1/users/*
-│   │   ├── admin.js               # /api/v1/admin/*
-│   │   ├── subscriptions.js       # /api/v1/subscriptions/*
-│   │   ├── earnings.js            # /api/v1/earnings/*
-│   │   ├── revenue.js             # /api/v1/revenue/*
-│   │   ├── competitions.js        # /api/v1/competitions/*
-│   │   ├── notifications.js       # /api/v1/notifications/*
-│   │   ├── search.js              # /api/v1/search/*
-│   │   ├── contact.js             # /api/v1/contact/*
-│   │   └── feedback.js            # /api/v1/feedback/*
+│   ├── routes/                       # Express Routers (API endpoints)
+│   │   ├── api/v1/auth.js
+│   │   ├── api/v1/books.js
+│   │   └── api/v1/users.js
 │   │
-│   ├── utils/
-│   │   ├── hashers.js             # bcrypt hashing helpers
-│   │   ├── logger.js              # Winston logging
-│   │   └── dateHelpers.js         # UTC date manipulation
-│   │
-│   └── server.js                  # Express app entry point
+│   ├── utils/                        # Helpers (bcrypt hashers, loggers)
+│   └── server.js                     # Express Application Entry Point
 │
-├── tests/                         # Jest + Supertest test suites
-└── .env                           # Environment secrets (git-ignored)
+├── tests/                            # Jest unit and integration tests
+├── package.json                      # Dependencies
+└── .env                              # Secrets (Ignored by Git)
 ```
 
-## 5.3 Middleware Deep Dive
+## 4. Component & Module Functional Overview
 
-### Auth Middleware Flow
+This section outlines the specific responsibilities of the core components mapped out in the folder structure.
+
+### 15.1 Frontend Core Components (Angular)
+
+*   **AuthGuard & RoleGuard (`core/guards/`)**: 
+    *   **Functionality:** Intercepts routing attempts. The `AuthGuard` ensures a user holds a valid JWT before accessing protected routes (e.g., `/library`). The `RoleGuard` prevents Readers from accessing Writer-only routes (`/author-studio`) or Admin-only routes.
+*   **JwtInterceptor (`core/interceptors/`)**: 
+    *   **Functionality:** Transparently catches every outbound HTTP request from the Angular \`HttpClient\` and injects `Authorization: Bearer <token>` into the headers.
+*   **BookCardComponent (`shared/components/book-card/`)**: 
+    *   **Functionality:** A highly reusable presentational component. It takes an `@Input() bookData` object and renders the book cover, title, author name, and rating. Used extensively in the Home, Explore, and Library pages.
+*   **ReaderComponent (`features/reader/`)**: 
+    *   **Functionality:** The core reading interface. It manages state for font sizes, background colors (Dark/Sepia modes), and paginates chapter content. It also contains the background timer logic that pings the server to register a "Qualified Read".
+*   **StoryEditorComponent (`features/write/`)**: 
+    *   **Functionality:** A rich-text WYSIWYG editor for authors. It handles autosaving drafts to local storage, formatting (bold, italics), and triggers the multipart-form upload when an author attaches a cover image to a chapter.
+*   **SubscriptionCheckoutComponent (`features/subscription/`)**: 
+    *   **Functionality:** Displays the pricing tiers. When a user clicks "Subscribe", this component communicates with the backend to receive a Stripe Client Secret, then invokes the Stripe.js Elements to securely collect credit card details without the numbers ever touching our servers.
+
+### 15.2 Backend Core Components (Node.js)
+
+*   **AuthController (`controllers/authController.js`)**: 
+    *   **Functionality:** Handles the `/login` and `/register` endpoints. It orchestrates the bcrypt password verification, generates the JWT payload, and coordinates with `emailService.js` to send verification emails to new users.
+*   **PaymentService (`services/paymentService.js`)**: 
+    *   **Functionality:** The financial engine. It talks directly to the Stripe API. It creates Customer profiles, handles Subscription upgrades/cancellations, and executes the complex Stripe Connect Transfers during the monthly Author Payout cron job.
+*   **ReadingService (`services/readingService.js`)**: 
+    *   **Functionality:** Processes the telemetry data sent by the Frontend `ReaderComponent`. It calculates if a user has spent enough time on a page to count as a "Qualified Read" (preventing bot-spam) and writes that record to the MongoDB `QualifiedReads` collection.
+*   **NotificationService (`services/notificationService.js`)**: 
+    *   **Functionality:** A wrapper around the Firebase Admin SDK. When the `BookController` registers that a new chapter is published, it calls this service to fetch the device tokens of all the author's followers and pushes a notification to their mobile devices/browsers.
+*   **S3Service (`services/s3Service.js`)**: 
+    *   **Functionality:** Receives image buffers (like Book Covers or Avatars) intercepted by the `multer` middleware, compresses/optimizes them, uploads them to the AWS S3 Bucket, and returns the public CDN URL to be saved in the database.
+
+## 5. Frontend Architecture: Angular Deep Dive
+
+The Angular frontend is built using a highly modular architectural pattern to ensure fast Initial Load Times (Time to Interactive).
+
+### Module Strategy
+1. **AppModule (Root):** Bootstraps the application. Contains global configurations, the root routing module, and injects the CoreModule.
+2. **CoreModule:** A singleton module loaded exactly once. It contains HTTP Interceptors (JWT attachment, Error catching), Authentication Services, and Theme Management services.
+3. **SharedModule:** Contains dumb/presentational components like BookCardComponent, ModalComponent, SpinnerComponent, and custom Pipes (TruncatePipe). It is imported into every Feature Module.
+4. **Feature Modules:** Lazy-loaded modules matching application routes (/home, /reader, /author-studio, /admin).
+
+### Lazy Loading Implementation
+When a user visits www.mozhibu.com, they only download the HomeModule. The AdminModule (which contains large charting libraries for statistics) is never downloaded unless the user actually navigates to the /admin route and passes the RoleGuard.
+
+### Component Communication
+Components use @Input() and @Output() for direct parent-child communication. For cross-component state (e.g., updating the user's avatar in the header when they change it in the profile page), we rely on Singleton Services with RxJS Observables.
+
+## 6. Frontend State Management & RxJS
+
+Reactive programming is at the core of the Mozhibu frontend. RxJS streams handle asynchronous data flows, race conditions, and UI state synchronization.
+
+### The AuthService State
+The AuthService holds a private BehaviorSubject. 
+- **Login:** On successful login, the API returns a JWT and user object. The service calls userSubject.next(user).
+- **Reactivity:** The Header component subscribes to authService.user$. When the user logs in, the Header instantly updates from "Login" to the User's Avatar without a page reload.
+
+### Debouncing Search
+The Global Search bar implements valueChanges.pipe(debounceTime(400), distinctUntilChanged(), switchMap(...)). This ensures that as a user types "S - H - I - V - A", we do not fire 5 API requests. It waits 400ms after the final keystroke, cancels any pending previous requests (via switchMap), and fetches the results.
+
+### Reading Progress Heartbeat
+In the ReaderComponent, an RxJS interval(60000) emits every 60 seconds. This triggers a silent HTTP POST to the backend to log the user's reading time on a specific chapter. This is critical for the "Qualified Read" payout logic.
+
+## 7. Backend Architecture: Node.js & Express
+
+The backend is a stateless RESTful API. Since authentication is handled via JWTs, any API request can be routed to any Node.js server instance behind a load balancer, making the system horizontally scalable.
+
+### Controller-Service-Model Pattern
+1. **Routes (/routes):** Defines the HTTP verb (GET, POST, PUT, DELETE) and path. Attaches required middleware.
+2. **Controllers (/controllers):** Extracts data from req.body, req.params, and req.query. Validates input syntax, then passes data to the Service layer. Handles sending the res.status(200).json() response.
+3. **Services (/services):** Contains complex business logic (e.g., executing Stripe charges, calculating payouts). Services are oblivious to HTTP objects (req/res).
+4. **Models (/models):** Mongoose schemas interacting directly with MongoDB.
+
+### Asynchronous Operations
+All database queries and third-party API calls utilize async/await. The Node.js event loop remains unblocked, allowing thousands of concurrent users to read chapters simultaneously.
+
+## 8. Backend Middleware & Security Pipeline
+
+Every incoming request must pass through a gauntlet of middleware before executing business logic.
+
+### 1. Global Security Middleware
+- helmet(): Strips dangerous HTTP headers (like X-Powered-By) and sets strict HSTS policies.
+- cors(): Restricts API access strictly to https://www.mozhibu.com.
+- express-rate-limit: Restricts IP addresses to 100 requests per 15 minutes to mitigate brute-force attacks on login endpoints.
+
+### 2. Payload Parsers
+- express.json(): Parses JSON payloads.
+- multer(): Intercepts multipart/form-data for file uploads (e.g., book covers). It validates MIME types (image/jpeg, image/png) to prevent malicious executable uploads.
+
+### 3. Authentication & RBAC (Role-Based Access Control)
+The requireAuth middleware extracts the Bearer token, verifies the cryptographic signature, decodes the payload, and attaches req.user = decodedToken.
+The requireRole(['writer', 'superadmin']) middleware checks req.user.role. If a Reader tries to access an Admin endpoint, it immediately rejects the request with a 403 Forbidden.
+
+## 9. Database Architecture & Mongoose Schemas
+
+The MongoDB database is fully normalized where necessary but strategically denormalized for read-heavy operations (e.g., storing likesCount directly on the Book document instead of running an aggregate count query every time).
+
+### Detailed Schema Definitions
+
+**1. Users Collection**
+Stores core identity and monetization data. 
+Fields: _id, email, password (hashed), role, isPremium, monetization (encrypted bank details).
+Indexes: Unique index on email.
+
+**2. Books Collection**
+Fields: _id, author (ObjectId ref User), title, genre, status (draft/published), views.
+Indexes: Compound index on { genre: 1, status: 1 } for rapid filtering on the Explore page.
+
+**3. Chapters Collection**
+Stores the actual HTML content of the stories. 
+Fields: _id, book (ObjectId ref Book), order, content, accessType (free/premium).
+
+**4. QualifiedReads Collection**
+Crucial for revenue generation. Every time a reader spends >60 seconds on a premium chapter, a record is created here.
+Fields: user, book, chapter, month, year.
+
+## 10. Entity Relationship Diagram (ERD)
+
+This section visualizes the complex relationships between the primary database collections.
 
 ```mermaid
-flowchart TD
-    A[Request arrives] --> B{Authorization header present?}
-    B -->|No| C[Return 401 Unauthorized]
-    B -->|Yes| D[Extract Bearer token]
-    D --> E{JWT.verify signature valid?}
-    E -->|Invalid / Expired| F[Return 401 Unauthorized]
-    E -->|Valid| G[Decode payload: id + role]
-    G --> H{Check Redis blacklist for token?}
-    H -->|Blacklisted - user logged out| I[Return 401 Token Revoked]
-    H -->|Not blacklisted| J[Set req.user = decoded payload]
-    J --> K[call next - proceed to route handler]
-```
-
-### Global Error Handler
-
-```mermaid
-flowchart TD
-    A[Controller throws error] --> B[next err called]
-    B --> C[errorHandler middleware intercepts]
-    C --> D{Error type?}
-    D -->|Mongoose ValidationError| E[400 Bad Request + field errors]
-    D -->|JWT Error| F[401 Unauthorized]
-    D -->|CastError invalid ObjectId| G[404 Not Found]
-    D -->|Stripe Error| H[402 Payment Required]
-    D -->|Default| I[500 Internal Server Error]
-    E & F & G & H & I --> J[Log full stack trace to Winston]
-    J --> K[Return sanitised JSON - no stack trace in prod]
-```
-
----
-
-# 6. Database Schema & Data Models
-
-## 6.1 Database Configuration
-
-- **Database Type:** MongoDB (NoSQL, Document Store)
-- **Deployment:** 3-Node Replica Set (1 Primary + 2 Secondaries)
-- **ODM:** Mongoose 8.x
-- **Database Name:** `mozhibu`
-- **Total Collections:** 25
-
-## 6.2 Core Collection Schemas
-
-### User Collection
-
-```javascript
-// Collection: users
-{
-  _id:               ObjectId (auto-generated primary key),
-  username:          String   (required),
-  email:             String   (required, unique index),
-  mobile:            String   (required),
-  password:          String   (hashed, select: false — never returned by default),
-  preferredLanguage: String   (required),
-  favoriteGenres:    [String] (required),
-  penName:           String   (unique sparse index — only for writers),
-  legalName:         String,
-  isOnboarded:       Boolean  (default: false),
-  authProvider:      Enum     ["normal", "google", "facebook"],
-  role:              Enum     ["reader", "writer", "superadmin"],
-  status:            Enum     ["active", "suspended", "deactivated"],
-  suspendedUntil:    Date,
-  authorStatus:      Enum     ["none", "pending", "approved", "rejected"],
-  followersCount:    Number   (denormalised for performance),
-  isPremium:         Boolean  (default: false),
-  avatar:            String   (CDN URL),
-  bio:               String,
-  savedBooks:        [ObjectId → Book],
-  favoriteBooks:     [ObjectId → Book],
-  following:         [ObjectId → User],
-  dob:               Date,
-  monetization: {
-    accountName:     String   (AES-256 encrypted),
-    bankName:        String   (AES-256 encrypted),
-    accountNumber:   String   (AES-256 encrypted),
-    ifscCode:        String   (AES-256 encrypted)
-  },
-  resetPasswordToken: String  (select: false),
-  resetPasswordExpire: Date   (select: false),
-  timestamps:        { createdAt, updatedAt }
-}
-```
-
-### Book Collection
-
-```javascript
-// Collection: books
-{
-  _id:              ObjectId,
-  title:            String   (required),
-  author:           ObjectId → User (required),
-  cover:            String   (S3/CDN URL),
-  genre:            String   (required),
-  competitionTag:   String   (links book to Competition),
-  description:      String,
-  views:            Number   (default: 0),
-  rating:           Number   (average rating 0-5),
-  isAudio:          Boolean  (default: false),
-  status:           Enum     ["draft","pending","published","rejected","suspended"],
-  rejectionReason:  String,
-  submittedAt:      Date,
-  reviewedAt:       Date,
-  reviewedBy:       ObjectId → User (admin who reviewed),
-  likes:            [ObjectId → User],
-  likesCount:       Number,
-  bookmarksCount:   Number,
-  favoritesCount:   Number,
-  reportCount:      Number,
-  reports: [{
-    user:           ObjectId → User,
-    reason:         String,
-    comment:        String,
-    createdAt:      Date
-  }],
-  titleTranslations: Map<language, String>,
-  tags:             [String],
-  series:           String,
-  completionStatus: Enum     ["ongoing", "completed"],
-  originalLanguage: String   (default: "English"),
-  accessType:       Enum     ["free", "premium"],
-  isMature:         Boolean,
-  timestamps:       { createdAt, updatedAt }
-}
-
-// Indexes:
-BookSchema.index({ author: 1 });
-BookSchema.index({ genre: 1, status: 1 });      // Compound: filter by genre+status
-BookSchema.index({ status: 1, createdAt: -1 }); // Sort newest published
-BookSchema.index({ views: -1 });                 // Top viewed books
-BookSchema.index({ likesCount: -1 });            // Most liked books
-BookSchema.index({ competitionTag: 1 });         // Competition filtering
-```
-
-### Chapter Collection
-
-```javascript
-// Collection: chapters
-{
-  _id:               ObjectId,
-  book:              ObjectId → Book (required),
-  season:            Number   (default: 1),
-  title:             String   (required),
-  content:           String   (actual story text — large field),
-  cover:             String   (chapter cover image URL),
-  order:             Number   (required — defines reading sequence),
-  status:            Enum     ["draft", "published", "scheduled"],
-  scheduledAt:       Date     (future publish date),
-  translations:      Map<language, content>,
-  titleTranslations: Map<language, title>,
-  accessType:        Enum     ["inherit", "free", "premium"],
-  viewers:           [String] (anonymised viewer IDs),
-  rating:            Number,
-  reviewCount:       Number,
-  timestamps:        { createdAt, updatedAt }
-}
-
-// Indexes:
-ChapterSchema.index({ book: 1, order: 1 });   // Fetch chapters in order
-ChapterSchema.index({ book: 1, status: 1 });  // Published chapters only
-```
-
-### QualifiedRead Collection (Core Analytics)
-
-```javascript
-// Collection: qualifiedreads
-// Written to every time a reader crosses the qualification threshold on a chapter
-{
-  _id:               ObjectId,
-  user:              ObjectId → User (required),
-  book:              ObjectId → Book (required),
-  chapter:           ObjectId → Chapter (required),
-  month:             Number   (1-12),
-  year:              Number,
-  completionPercent: Number   (0-100),
-  timeOnPageSeconds: Number,
-  isFraudFlag:       Boolean  (anti-fraud detection),
-  fraudReason:       String,
-  isQualified:       Boolean  (final qualification result),
-  readAt:            Date,
-  timestamps:        { createdAt, updatedAt }
-}
-
-// Indexes optimised for monthly payout aggregation:
-QualifiedReadSchema.index({ book: 1, month: 1, year: 1 });
-QualifiedReadSchema.index({ user: 1, month: 1, year: 1 });
-QualifiedReadSchema.index({ isQualified: 1, month: 1, year: 1 });
-```
-
-### SubscriptionPlan Collection
-
-```javascript
-// Collection: subscriptionplans
-{
-  _id:              ObjectId,
-  name:             String   (e.g. "Premium Monthly"),
-  description:      String,
-  priceInPaise:     Number   (e.g. 9900 = ₹99.00 — integer to avoid float errors),
-  currency:         String   (default: "INR"),
-  durationDays:     Number,
-  marketingBenefits:[String] (UI bullet points),
-  structuredBenefits: {
-    unlimited_premium_access: Boolean,
-    ad_free:                  Boolean,
-    early_access_days:        Number,
-    offline_downloads:        Boolean,
-    max_offline_downloads:    Number,
-    multi_language_access:    Boolean,
-    priority_support:         Boolean
-  },
-  terms:            String,
-  isActive:         Boolean,
-  displayOrder:     Number,
-  createdBy:        ObjectId → User,
-  timestamps:       { createdAt, updatedAt }
-}
-```
-
-### Competition Collection
-
-```javascript
-// Collection: competitions
-{
-  _id:          ObjectId,
-  isActive:     Boolean  (default: true),
-  tag:          String   (required — matches Book.competitionTag),
-  title:        String   (required — e.g. "The Twelve Tongues Prize 2026"),
-  description:  String   (required),
-  endDate:      Date     (required — deadline for submissions),
-  buttonText:   String   (CTA text on frontend),
-  buttonLink:   String   (route to submission form),
-  winnerBookIds:[ObjectId → Book],
-  timestamps:   { createdAt, updatedAt }
-}
-```
-
----
-
-# 7. Entity Relationship Diagram
-
-## 7.1 Master ER Diagram — All 25 Collections
-
-```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#ffffff',
+    'primaryBorderColor': '#000000',
+    'primaryTextColor': '#000000',
+    'lineColor': '#00008b',
+    'secondaryColor': '#00008b',
+    'tertiaryColor': '#ffffff',
+    'background': '#ffffff'
+  }
+}}%%
 erDiagram
     USERS {
         ObjectId _id PK
-        string username
-        string email
-        string role
+        string email "Unique"
+        string password "Hashed"
+        string role "Reader, Writer, Admin"
         boolean isPremium
-        string status
-        object monetization
+        date createdAt
     }
     BOOKS {
         ObjectId _id PK
-        ObjectId author FK
+        ObjectId author FK "Ref: USERS"
         string title
         string genre
-        string status
-        string accessType
+        string status "Draft, Published"
+        number views
         number likesCount
-        string competitionTag
     }
     CHAPTERS {
         ObjectId _id PK
-        ObjectId book FK
+        ObjectId book FK "Ref: BOOKS"
         number order
-        string content
-        string accessType
-        string status
-    }
-    COMPETITIONS {
-        ObjectId _id PK
-        string tag
         string title
-        date endDate
-        boolean isActive
+        string content "HTML Text"
+        string accessType "Free, Premium"
+        date publishedAt
     }
     QUALIFIED_READS {
         ObjectId _id PK
-        ObjectId user FK
-        ObjectId book FK
-        ObjectId chapter FK
+        ObjectId user FK "Ref: USERS"
+        ObjectId book FK "Ref: BOOKS"
+        ObjectId chapter FK "Ref: CHAPTERS"
+        number timeOnPageSeconds
         number month
         number year
-        boolean isQualified
     }
-    AUTHOR_EARNINGS {
+    SUBSCRIPTIONS {
         ObjectId _id PK
-        ObjectId author FK
-        number amount
-        string month
-        string status
-    }
-    SUBSCRIPTION_PLANS {
-        ObjectId _id PK
-        string name
-        number priceInPaise
-        number durationDays
-        boolean isActive
-    }
-    USER_SUBSCRIPTIONS {
-        ObjectId _id PK
-        ObjectId user FK
-        ObjectId plan FK
+        ObjectId user FK "Ref: USERS"
+        string stripeSubscriptionId
         date startDate
         date endDate
         string status
     }
-    READING_PROGRESS {
+    COMPETITIONS {
         ObjectId _id PK
-        ObjectId user FK
-        ObjectId book FK
-        ObjectId lastChapter FK
-        number percentage
-    }
-    REVIEWS {
-        ObjectId _id PK
-        ObjectId user FK
-        ObjectId book FK
-        number rating
-        string comment
-    }
-    REPORTS {
-        ObjectId _id PK
-        ObjectId reporter FK
-        ObjectId book FK
-        string reason
-        string status
-    }
-    NOTIFICATIONS {
-        ObjectId _id PK
-        ObjectId recipient FK
-        string type
-        boolean isRead
-    }
-    ENGAGEMENT_SCORE {
-        ObjectId _id PK
-        ObjectId book FK
-        number score
-        string month
+        string title
+        string tag
+        date endDate
     }
 
-    USERS ||--o{ BOOKS : "writes"
-    USERS ||--o{ CHAPTERS : "reads"
-    USERS ||--o{ REVIEWS : "submits"
-    USERS ||--o{ QUALIFIED_READS : "generates"
-    USERS ||--o{ READING_PROGRESS : "has"
-    USERS ||--o{ USER_SUBSCRIPTIONS : "purchases"
-    USERS ||--o{ AUTHOR_EARNINGS : "receives"
-    USERS ||--o{ NOTIFICATIONS : "receives"
-    USERS ||--o{ REPORTS : "files"
-    USERS }o--o{ USERS : "follows"
-    BOOKS ||--o{ CHAPTERS : "contains"
-    BOOKS ||--o{ REVIEWS : "has"
-    BOOKS ||--o{ QUALIFIED_READS : "tracked in"
-    BOOKS ||--o{ READING_PROGRESS : "tracked by"
-    BOOKS ||--o{ ENGAGEMENT_SCORE : "scored by"
-    BOOKS }o--|| COMPETITIONS : "entered in"
-    CHAPTERS ||--o{ QUALIFIED_READS : "qualifies"
-    SUBSCRIPTION_PLANS ||--o{ USER_SUBSCRIPTIONS : "defines"
+    USERS ||--o{ BOOKS : "Authors write"
+    BOOKS ||--o{ CHAPTERS : "Contains"
+    USERS ||--o{ QUALIFIED_READS : "Generates"
+    CHAPTERS ||--o{ QUALIFIED_READS : "Recorded on"
+    USERS ||--o| SUBSCRIPTIONS : "Purchases"
+    COMPETITIONS ||--o{ BOOKS : "Includes"
 ```
 
-## 7.2 Revenue & Monetisation Data Flow
+## 11. API Integration: RESTful Endpoints & Payloads
 
-```mermaid
-flowchart TD
-    A[Reader subscribes - Stripe charges ₹99/month] --> B[UserSubscription created]
-    B --> C[User.isPremium = true]
-    C --> D[Reader reads chapters across platform]
-    D --> E{Time on page > threshold?}
-    E -->|Yes| F[QualifiedRead document created]
-    E -->|No| G[QualifiedRead isFraudFlag = true]
-    F --> H[Month-End Cron Job fires]
-    H --> I[Aggregate all QualifiedReads for month]
-    I --> J[Calculate each author's share %]
-    J --> K{RevenueSplitConfig}
-    K --> L[Platform takes 30%, Authors pool 70%]
-    L --> M[AuthorEarnings document created per author]
-    M --> N{Author KYC complete?}
-    N -->|Yes| O[Stripe Connect Transfer initiated]
-    N -->|No| P[status = pending_setup, email sent]
-```
+The API follows strict RESTful conventions. Below are detailed examples of critical integrations.
 
----
+### 7.1 Authentication & Registration
+**POST /api/v1/auth/login**
+- **Request Payload:** { "email": "user@example.com", "password": "SecurePassword123" }
+- **Response (200 OK):** { "token": "eyJhbG...", "user": { "id": "60d5...", "role": "reader", "username": "JohnDoe" } }
 
-# 8. API Architecture & Routing
+### 7.2 Book Publishing (Author Studio)
+**POST /api/v1/books**
+- **Headers:** Authorization: Bearer TOKEN
+- **Request Payload (Multipart):** title="The Lost King", genre="Fantasy", coverImage=Binary File
+- **Response (201 Created):** { "message": "Book created", "bookId": "60d5f..." }
 
-## 8.1 API Overview
+### 7.3 Fetching Chapter Content
+**GET /api/v1/chapters/:chapterId**
+- **Logic:** Validates if the chapter is free or premium. If premium, checks if req.user.isPremium === true. If false, returns a 402 Payment Required error.
+- **Response (200 OK):** { "title": "Chapter 1", "content": "<p>Once upon a time...</p>", "order": 1 }
 
-- **Base URL (Dev):** `http://localhost:3000/api/v1`
-- **Base URL (Prod):** `https://api.mozhibu.com/api/v1`
-- **Request Format:** `application/json` (or `multipart/form-data` for uploads)
-- **Response Format:** Standard Envelope: `{ success, data, message, error }`
-- **Authentication:** `Authorization: Bearer <JWT>`
+## 12. Business Logic: Subscriptions & Revenue Pooling
 
-## 8.2 Complete Route Map
+Mozhibu employs a complex, fair-share revenue model for authors.
 
-### Authentication Routes — `/api/v1/auth`
+### The Subscription Flow
+1. User clicks "Upgrade to Premium".
+2. Frontend calls backend. Backend creates a Stripe Checkout Session via Stripe API.
+3. User enters card details on Stripe's secure hosted page.
+4. Stripe fires a Webhook to the Mozhibu backend (/api/v1/webhooks/stripe).
+5. Backend verifies the webhook signature, finds the corresponding User, sets isPremium = true, and creates a Subscription record.
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| POST | `/auth/register` | Public | Create account, hash password, return JWT |
-| POST | `/auth/login` | Public (Rate Limited) | Authenticate, return JWT + user profile |
-| POST | `/auth/google` | Public | OAuth 2.0 Google login |
-| POST | `/auth/facebook` | Public | OAuth 2.0 Facebook login |
-| GET | `/auth/verify-email/:token` | Public | Verify email address |
-| POST | `/auth/forgot-password` | Public | Send reset email |
-| PUT | `/auth/reset-password/:token` | Public | Reset password with token |
-| POST | `/auth/logout` | Bearer Token | Blacklist JWT in Redis |
+### The Author Payout Algorithm (Cron Job)
+On the 1st of every month at 00:00 UTC, a Node.js Cron job executes:
+1. Calculates Total Subscription Pool (e.g., 10,000 subscribers * $5 = $50,000).
+2. Calculates Platform Cut (e.g., 30% = $15,000).
+3. Author Pool = $35,000.
+4. Aggregates all QualifiedReads for the previous month. Let's say there were 1,000,000 total reads across the platform.
+5. If Author A had 100,000 qualified reads (10% of total), Author A earns 10% of the Author Pool ($3,500).
+6. The system triggers Stripe Connect to automatically transfer $3,500 to Author A's connected bank account.
 
-### Book Routes — `/api/v1/books`
+## 13. Business Logic: Content Moderation & Admin Actions
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| GET | `/books` | Public | Paginated book list with filters |
-| GET | `/books/:id` | Public | Single book detail |
-| POST | `/books` | Writer + Multer | Create new book with cover upload |
-| PUT | `/books/:id` | Writer (owner) | Update book metadata |
-| DELETE | `/books/:id` | Writer (owner) | Delete book and all chapters |
-| POST | `/books/:id/like` | Bearer | Toggle like (atomic $addToSet) |
-| POST | `/books/:id/bookmark` | Bearer | Toggle bookmark |
-| POST | `/books/:id/favorite` | Bearer | Toggle favourite |
-| POST | `/books/:id/report` | Bearer | Submit content report |
-| GET | `/books/:id/chapters` | Public/Premium check | Get chapter list |
-| POST | `/books/:id/chapters` | Writer (owner) | Add chapter |
-| PUT | `/books/:bookId/chapters/:chapterId` | Writer | Update chapter |
-| DELETE | `/books/:bookId/chapters/:chapterId` | Writer | Delete chapter |
+Maintaining platform integrity is critical. 
 
-### User Routes — `/api/v1/users`
+### Reporting System
+Readers can flag books or chapters for violation of Terms of Service (e.g., Plagiarism, Explicit Content).
+- A POST request creates a Report document.
+- Once a book receives >5 reports, it is automatically flagged in the Admin Dashboard.
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| GET | `/users/me` | Bearer | Own profile + saved books |
-| PUT | `/users/me` | Bearer | Update profile, avatar |
-| PUT | `/users/me/monetization` | Writer | Update encrypted bank details |
-| POST | `/users/me/follow/:id` | Bearer | Follow an author |
-| DELETE | `/users/me/follow/:id` | Bearer | Unfollow an author |
-| GET | `/users/:id/profile` | Public | View author's public profile |
+### Admin Dashboard Actions
+Superadmins have exclusive access to moderation endpoints.
+- **Suspend User:** Updates user status to suspended. The JWT strategy immediately rejects all subsequent API requests from this user based on a database validation hook.
+- **Takedown Book:** Changes book status to rejected. The book instantly disappears from the public /explore feed and Search algorithms.
 
-### Subscription Routes — `/api/v1/subscriptions`
+## 14. Third-Party Integrations (Stripe, AWS S3, FCM)
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| GET | `/subscriptions/plans` | Public | List all active plans |
-| POST | `/subscriptions/purchase` | Bearer | Create Stripe PaymentIntent |
-| POST | `/subscriptions/apply-coupon` | Bearer | Validate and apply coupon |
-| GET | `/subscriptions/my-subscription` | Bearer | Active subscription details |
+The platform heavily relies on specialized SaaS providers.
 
-### Admin Routes — `/api/v1/admin`
+### AWS S3 (Media Storage)
+When an author uploads a book cover, the binary file is captured by multer in memory. The Node backend uses the aws-sdk to stream this buffer directly to an S3 bucket. S3 returns a public CDN URL, which is saved in the MongoDB Book document. This keeps the Node servers lightweight.
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| GET | `/admin/users` | Superadmin | List all users with filters |
-| PUT | `/admin/users/:id/suspend` | Superadmin | Suspend user account |
-| PUT | `/admin/users/:id/role` | Superadmin | Change user role |
-| GET | `/admin/reports` | Superadmin | List all content reports |
-| PUT | `/admin/reports/:id/resolve` | Superadmin | Resolve/dismiss a report |
-| POST | `/admin/competitions` | Superadmin | Create a new competition |
-| PUT | `/admin/competitions/:id` | Superadmin | Update competition details |
+### Firebase Cloud Messaging (FCM)
+When an author clicks "Publish Chapter", the backend queries MongoDB for all Users who have the author in their following array. It extracts their FCM Device Tokens and batches a push notification request to Google's FCM servers, ensuring readers are instantly notified on their devices.
 
-## 8.3 Standard Response Envelope
+## 15. Deployment, CI/CD, & DevOps Strategy
 
-```javascript
-// Success Response
-{
-  "success": true,
-  "message": "Books retrieved successfully",
-  "data": { ... },
-  "pagination": {
-    "total": 250,
-    "page": 1,
-    "limit": 20,
-    "pages": 13
-  }
-}
+To handle massive scale, Mozhibu is deployed using modern DevOps practices.
 
-// Error Response
-{
-  "success": false,
-  "error": "You do not have permission to access this resource.",
-  "code": 403
-}
-```
+### Continuous Integration (CI)
+GitHub Actions is configured to run on every Pull Request. It executes:
+1. **Linting:** ESLint and Prettier checks.
+2. **Unit Tests:** Jest suites for Backend Services and Angular Components.
+3. **Build:** Ensures the Angular Production AOT build succeeds without compiler errors.
 
-## 8.4 HTTP Status Code Standards
+### Continuous Deployment (CD)
+- **Frontend:** Merging to the main branch triggers a Vercel webhook. Vercel automatically pulls the code, executes \`ng build --configuration production\`, and deploys the static files to its global Edge CDN.
+- **Backend:** Merging to main triggers Render.com (or AWS Elastic Beanstalk). The platform provisions a fresh container, runs \`npm install\`, starts the Express server, and seamlessly routes traffic from the old container to the new one with zero downtime.
 
-| Code | Meaning | When Used |
-|------|---------|-----------|
-| `200 OK` | Success | Successful GET, PUT |
-| `201 Created` | Created | Successful POST creating new document |
-| `400 Bad Request` | Validation error | Missing fields, invalid format |
-| `401 Unauthorized` | Auth failed | Missing/expired JWT |
-| `402 Payment Required` | Payment error | Stripe card declined |
-| `403 Forbidden` | Insufficient role | Reader accessing Writer endpoint |
-| `404 Not Found` | Resource missing | Invalid ObjectId or deleted document |
-| `415 Unsupported Media Type` | Wrong file type | Uploading .exe as .png |
-| `429 Too Many Requests` | Rate limited | Redis limit exceeded |
-| `500 Internal Server Error` | Server crash | Unhandled exception |
+### Database Scaling
+MongoDB Atlas is used as a fully managed DBaaS. It utilizes a Replica Set (1 Primary node for writing, 2 Secondary nodes for reading). Mongoose is configured to use readPreference=secondaryPreferred for analytical queries to relieve pressure on the primary database during heavy write spikes (e.g., during payout calculations).
 
----
+## 16. Content Recommendation & Discovery Engine
 
-# 9. Test Case Documentation
+The "Explore" and "For You" feeds utilize a weighted scoring algorithm. It evaluates a user's `favoriteGenres`, their historical `QualifiedReads`, and the global `likesCount` of books. By applying collaborative filtering, the Node.js backend pushes highly personalized literature to each reader, drastically increasing engagement and average session duration.
 
-## 9.1 Testing Strategy Overview
+## 17. Multilingual Architecture & i18n Strategy
 
-The platform employs three levels of testing executed automatically in the CI/CD pipeline:
+Mozhibu is fundamentally designed for linguistic diversity. The Angular frontend utilizes `@ngx-translate` to instantly switch UI languages (Tamil, Hindi, Bengali, etc.) without page reloads. In the database, book and chapter text are strictly encoded in UTF-8 to natively support complex Indic scripts, while search queries leverage MongoDB's text indexes optimized for specific languages.
 
-```
-┌───────────────────────────────────────────────────────┐
-│                  TESTING PYRAMID                      │
-│                                                       │
-│            ┌─────────────────┐                        │
-│            │   E2E Tests     │  Cypress (Angular)     │
-│            │    (Fewest)     │                        │
-│          ┌─┴─────────────────┴─┐                      │
-│          │ Integration Tests   │  Supertest (Routes)  │
-│          │    (Medium)         │                      │
-│        ┌─┴─────────────────────┴─┐                    │
-│        │     Unit Tests          │  Jest (Services)   │
-│        │      (Most)             │                    │
-│        └─────────────────────────┘                    │
-└───────────────────────────────────────────────────────┘
-```
+## 18. Search Engine Optimization (SEO) & Web Vitals
 
-## 9.2 Authentication & Security Test Cases
+To ensure stories rank on Google, the platform utilizes strict SEO parameters. `index.html` is injected dynamically with Open Graph (`og:title`, `og:image`) and Twitter Card tags based on the book being viewed. Angular's built-in performance optimization ensures a high Lighthouse score by deferring non-critical CSS and lazy-loading all images.
 
-| Test ID | Scenario | Expected Result | Type |
-|---------|----------|-----------------|------|
-| TC-AUTH-001 | Valid email + password login | 200 OK + signed JWT returned | Integration |
-| TC-AUTH-002 | Login with incorrect password | 401 Unauthorized | Integration |
-| TC-AUTH-003 | 6th login attempt within 15 minutes | 429 Too Many Requests (Redis limit) | Integration |
-| TC-AUTH-004 | Access protected route with no JWT | 401 Unauthorized — redirect to /login | E2E |
-| TC-AUTH-005 | Reader role accesses `/admin` route | 403 Forbidden — AdminModule never loaded | E2E |
-| TC-AUTH-006 | JWT token expired (24hrs old) | 401 Unauthorized — frontend clears localStorage | Integration |
-| TC-AUTH-007 | Logout — use same token again | 401 Token Revoked (Redis blacklist check) | Integration |
-| TC-AUTH-008 | Register with duplicate email | 400 Bad Request — Mongo unique index error | Integration |
+## 19. Advanced Caching & CDN Delivery
 
-## 9.3 Content Publishing Test Cases
+To offload database reads, Redis caches highly-accessed endpoints (like the top 100 ranking books in the Fantasy genre) for 15 minutes. Additionally, Cloudflare sits in front of the AWS Load Balancer to serve all static assets (fonts, compiled JS/CSS) from edge nodes located in India, ensuring sub-second load times for readers.
 
-| Test ID | Scenario | Expected Result | Type |
-|---------|----------|-----------------|------|
-| TC-PUB-001 | Create book missing required `genre` field | 400 Bad Request + validation error array | Integration |
-| TC-PUB-002 | Upload cover image that is a disguised .exe | 415 Unsupported Media Type (magic byte check) | Integration |
-| TC-PUB-003 | Upload cover image larger than 5MB | 400 Bad Request — Multer file size limit | Integration |
-| TC-PUB-004 | Publish chapter to non-owned book | 403 Forbidden — ownership check fails | Integration |
-| TC-PUB-005 | Publish chapter with empty content | 400 Bad Request — Mongoose validation | Integration |
-| TC-PUB-006 | Publish chapter successfully | 201 Created + FCM push to followers triggered | E2E |
-| TC-PUB-007 | Two authors publish simultaneously | Both succeed — no race condition | Unit |
+## 20. Database Indexing & Query Optimization
 
-## 9.4 Reading, Progress & Monetisation Test Cases
+As the database scales to millions of chapters, table scans become disastrous. We utilize Compound Indexes on `(genre, status, views)` to instantly filter and sort books. The `explain()` plans on MongoDB ensure that our aggregations for the monthly author payouts use memory efficiently without exceeding RAM limits.
 
-| Test ID | Scenario | Expected Result | Type |
-|---------|----------|-----------------|------|
-| TC-READ-001 | Free reader accesses free chapter | 200 OK — full content returned | Integration |
-| TC-READ-002 | Free reader accesses premium chapter | 403 + content field stripped from response | Integration |
-| TC-READ-003 | Reader reads chapter for 90 seconds | QualifiedRead document created: isQualified=true | Unit |
-| TC-READ-004 | Reader reads chapter for 10 seconds | QualifiedRead: isFraudFlag=true, isQualified=false | Unit |
-| TC-READ-005 | Valid Stripe webhook fires (payment succeeded) | User.isPremium=true, UserSubscription created | Integration |
-| TC-READ-006 | Stripe webhook with invalid signature | 400 Bad Request — signature verification fails | Integration |
-| TC-READ-007 | Month-end Cron runs with zero qualified reads | AuthorEarnings: amount=0, no Stripe transfer | Unit |
-| TC-READ-008 | Author has no KYC, Cron runs | AuthorEarnings: status='pending_setup', email sent | Integration |
+## 21. Data Privacy, GDPR & KYC Compliance
 
-## 9.5 Competition Module Test Cases
+Handling user data and author banking details requires enterprise security. Passwords are never logged. Bank details (Account Number, IFSC) submitted by authors are encrypted using `AES-256-CBC` before being saved to MongoDB, meaning even database administrators cannot view plain-text financial information.
 
-| Test ID | Scenario | Expected Result | Type |
-|---------|----------|-----------------|------|
-| TC-CMP-001 | Submit book with correct competition tag | Book linked to competition, appears on leaderboard | Integration |
-| TC-CMP-002 | Submit book 1 second after competition `endDate` | 400 Bad Request — server UTC time used, not client | Integration |
-| TC-CMP-003 | Two users like a competition entry simultaneously | Both IDs added correctly ($addToSet, atomic) | Unit |
-| TC-CMP-004 | Admin sets winnerBookIds on a competition | Winners displayed on homepage, competition marked closed | E2E |
+## 22. Competitions Module: Leaderboard Algorithm
 
----
+Mozhibu frequently runs writing contests (e.g., "The Tamil Literature Prize"). The backend aggregates metrics—reads, likes, and completion rates—for all books tagged with a specific `competitionId`. A background worker recalculates the leaderboard every hour, storing the cached leaderboard in Redis for rapid frontend retrieval.
 
-# Appendix
+## 23. Offline Support & Progressive Web App (PWA)
 
-## A. Environment Variables
+To cater to readers with intermittent internet connections, the Angular app includes a Service Worker (`ngsw-config.json`). It caches the application shell and allows readers to "Download" premium chapters for offline reading via IndexedDB. When they reconnect, the heartbeat syncs their reading progress back to the server.
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `MONGO_URI` | MongoDB connection string | `mongodb+srv://...` |
-| `JWT_SECRET` | JWT signing secret | 256-bit random string |
-| `STRIPE_SECRET_KEY` | Stripe API secret | `sk_live_...` |
-| `STRIPE_WEBHOOK_SECRET` | Webhook signature | `whsec_...` |
-| `AWS_S3_BUCKET` | S3 bucket name | `mozhibu-media` |
-| `REDIS_URL` | Redis connection | `redis://localhost:6379` |
-| `FCM_SERVER_KEY` | Firebase server key | `AAAA...` |
-| `SENDGRID_API_KEY` | Email service key | `SG....` |
+## 24. Error Logging & Application Performance Monitoring
 
-## B. Glossary
+We do not rely on standard `console.log`. The backend utilizes `Winston` to stream all error-level logs to an external APM service (like Datadog or Sentry). If an API endpoint takes longer than 1000ms to respond, or if Stripe payments begin failing, the engineering team receives an instant Slack alert.
 
-| Term | Definition |
-|------|-----------|
-| **QualifiedRead** | A reading session where the user spent enough time on a chapter to count toward the author's payout (anti-fraud threshold applied). |
-| **Engagement Score** | A calculated metric combining views, likes, qualified reads, and bookmarks used for leaderboard ranking. |
-| **isPremium** | A boolean flag on the User model indicating they have an active subscription with access to locked chapters. |
-| **competitionTag** | A string on the Book model matching a Competition's `tag` field, linking the book to that competition. |
-| **RevenueSplitConfig** | A configurable system document defining the platform's cut percentage vs. the author pool percentage. |
-| **Oplog** | MongoDB's operations log used to replicate write operations from Primary to Secondary nodes in real time. |
+## 25. Quality Assurance & Automated Testing
+
+The backend features over 150 unit and integration tests written in `Jest` and `Supertest`. These tests simulate HTTP requests to ensure token validation, role guards, and complex payout calculations work flawlessly. Merging code to the `main` branch is physically blocked unless code coverage remains above 85%.
+
+## 26. Real-Time Telemetry & Admin Dashboards
+
+The Superadmin panel provides a bird's-eye view of the platform. Using aggressive MongoDB Aggregation Pipelines, it calculates Daily Active Users (DAU), Monthly Recurring Revenue (MRR) from Stripe, and tracks the volume of flagged content. This allows business stakeholders to make data-driven decisions.
+
+## 27. User Engagement & Gamification Strategy
+
+To increase retention, Readers are rewarded with digital badges based on milestones (e.g., "Read 100 Chapters", "Left 50 Reviews"). The `ReaderReward` Schema tracks these milestones. When a threshold is met, the backend unlocks the badge and triggers a celebratory modal on the frontend via an RxJS subject.
+
+## 28. Local Developer Onboarding & Environment
+
+To run the stack locally, developers must duplicate `.env.example` to `.env` and supply their own Stripe Test keys and MongoDB localhost connection string. Running `npm run start:dev` initializes the Express server with `nodemon` for hot-reloading, while `ng serve` boots the Angular frontend on port 4200.
+
+## 29. Future Scalability Roadmap & Microservices
+
+While currently a majestic monolith, the architecture is designed to split. As traffic grows, the Payment/Payout Cron Jobs and the Notification Dispatcher will be decoupled into isolated AWS Lambda functions or standalone Docker containers, ensuring background processing never impacts the real-time reading experience.
+
+## 30. Test Case Documentation & Execution Scenarios
+
+This section outlines the critical test scenarios executed across the Mozhibu platform to ensure data integrity, role-based access control, and financial accuracy.
+
+### Frontend Test Cases (Angular - Jasmine/Karma)
+| Test ID | Module | Scenario | Expected Result |
+|---------|--------|----------|-----------------|
+| `FE-001` | Auth | User logs in with valid credentials | JWT is stored in localStorage; RxJS Subject emits User object; Navigates to `/home`. |
+| `FE-002` | Auth | User logs in with invalid credentials | API returns 401; Toast service displays "Invalid Email or Password". |
+| `FE-003` | Reader | User spends 60 seconds on Premium chapter | Background heartbeat fires `POST /api/v1/reads`; qualifies as valid read. |
+| `FE-004` | Guards | Reader attempts to access `/admin` | `RoleGuard` intercepts route; redirects user to `/403` Forbidden page. |
+
+### Backend Test Cases (Node.js - Jest/Supertest)
+| Test ID | Module | Scenario | Expected Result |
+|---------|--------|----------|-----------------|
+| `BE-001` | Auth | Register new user with existing email | Mongoose Unique validator throws error; API returns `400 Bad Request`. |
+| `BE-002` | Stripe | Webhook `invoice.payment_succeeded` fires | User's `isPremium` flag set to `true`; Subscription doc updated. |
+| `BE-003` | Payout | Cron Job calculates Author shares | Pools revenue, divides by QualifiedReads, generates accurate Stripe Connect transfers. |
+| `BE-004` | Upload | User uploads malicious `.exe` as Book Cover | Multer MIME-type filter rejects file; returns `415 Unsupported Media Type`. |

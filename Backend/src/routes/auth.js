@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
+const resend = new Resend(process.env.RESEND_API_KEY);
 const { OAuth2Client } = require("google-auth-library");
 const axios = require("axios");
 const User = require("../models/User");
@@ -607,35 +609,27 @@ router.post("/forgot-password", async (req, res) => {
     const frontendUrl = process.env.FRONTEND_URL || "http://localhost:4200";
     const resetUrl = `${frontendUrl}/reset-password?token=${resetToken}`;
 
-    // Setup Nodemailer transport
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    const mailOptions = {
-      from: `"Mozhibu Story" <${process.env.EMAIL_USER}>`,
-      to: user.email,
-      subject: "Mozhibu - Password Reset Request",
-      html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto;">
-          <h2>Password Reset Request</h2>
-          <p>Hello ${user.username},</p>
-          <p>You requested to reset your password. Click the button below to set a new password:</p>
-          <a href="${resetUrl}" style="display: inline-block; padding: 10px 20px; color: white; background-color: #2F4F4F; text-decoration: none; border-radius: 5px; margin-top: 10px;">Reset Password</a>
-          <p style="margin-top: 20px; font-size: 12px; color: #666;">This link is valid for 1 hour. If you didn't request this, you can safely ignore this email.</p>
-        </div>
-      `,
-    };
-
-    // Send email
+    // Send email using Resend
     try {
-      await transporter.sendMail(mailOptions);
+      const { data, error } = await resend.emails.send({
+        from: process.env.EMAIL_FROM || "Mozhibu <support@mozhibu.com>",
+        to: [user.email],
+        subject: "Mozhibu - Password Reset Request",
+        html: `
+          <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto;">
+            <h2>Password Reset Request</h2>
+            <p>Hello ${user.username},</p>
+            <p>You requested to reset your password. Click the button below to set a new password:</p>
+            <a href="${resetUrl}" style="display: inline-block; padding: 10px 20px; color: white; background-color: #2F4F4F; text-decoration: none; border-radius: 5px; margin-top: 10px;">Reset Password</a>
+            <p style="margin-top: 20px; font-size: 12px; color: #666;">This link is valid for 1 hour. If you didn't request this, you can safely ignore this email.</p>
+          </div>
+        `,
+      });
+
+      if (error) {
+        throw error;
+      }
+
       res.json({ msg: "Password reset link has been sent to your email." });
     } catch (emailErr) {
       console.error("Email sending failed:", emailErr);
@@ -645,7 +639,7 @@ router.post("/forgot-password", async (req, res) => {
       user.resetPasswordExpire = undefined;
       await user.save();
 
-      // If email fails (e.g. invalid credentials), still print to console for development
+      // If email fails, still print to console for development
       console.log("\n--- EMAIL FAILED. PASSWORD RESET LINK ---");
       console.log(resetUrl);
       console.log("-----------------------------------------\n");
