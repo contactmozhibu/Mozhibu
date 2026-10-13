@@ -178,6 +178,12 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api/search", searchRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/contact", contactRoutes);
+
+// Google AdSense verification
+app.get("/ads.txt", (req, res) => {
+  res.type("text/plain");
+  res.send("google.com, pub-7352988656804206, DIRECT, f08c47fec0942fa0\n");
+});
 app.use("/api/subscriptions", subscriptionRoutes);
 app.use("/api/revenue", revenueRoutes);
 app.use("/api", earningsRoutes);
