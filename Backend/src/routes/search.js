@@ -54,7 +54,7 @@ router.get("/", async (req, res) => {
 
     if (type === "authors") {
       const authorQuery = {
-        role: { $in: ["writer", "superadmin"] },
+        role: "writer",
         status: "active",
       };
       if (q) {

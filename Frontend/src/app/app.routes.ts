@@ -129,6 +129,11 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
+    path: 'story-editor',
+    redirectTo: 'write/new',
+    pathMatch: 'full',
+  },
+  {
     path: 'write/book/:id',
     loadComponent: () =>
       import('./features/write/story-dashboard.component').then(

@@ -260,7 +260,7 @@ router.get("/me/followers", protect, async (req, res) => {
 router.get("/authors", async (req, res) => {
   try {
     const authors = await User.find({
-      role: { $in: ["writer", "superadmin"] },
+      role: "writer",
       status: "active",
     })
       .select("username avatar followersCount bio role isPremium")

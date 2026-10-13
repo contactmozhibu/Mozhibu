@@ -68,16 +68,17 @@ export class CommunityComponent implements OnInit {
   ngOnInit() {
     this.authService.getAuthors().subscribe({
       next: (res) => {
+        const filtered = res.filter((a: any) => a.role !== 'superadmin' && a.username !== 'superadmin');
         let followingIds = new Set<string>();
 
         // If logged in, fetch following to map isFollowing state
         if (this.authService.user()) {
           this.authService.getFollowing().subscribe((following) => {
             following.forEach((f: any) => followingIds.add(f._id));
-            this.mapAuthors(res, followingIds);
+            this.mapAuthors(filtered, followingIds);
           });
         } else {
-          this.mapAuthors(res, followingIds);
+          this.mapAuthors(filtered, followingIds);
         }
       },
       error: (err) => console.error('Failed to load authors', err),

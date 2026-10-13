@@ -40,7 +40,10 @@ export class AuthorsComponent implements OnInit {
   ngOnInit() {
     this.authService.getAuthors().subscribe({
       next: (data) => {
-        const mapped = data.slice(0, 5).map((a: any, i: number) => {
+        const mapped = data
+          .filter((a: any) => a.role !== 'superadmin' && a.username !== 'superadmin')
+          .slice(0, 5)
+          .map((a: any, i: number) => {
           const name = a.username || 'Unknown';
           const initials = name.substring(0, 2).toUpperCase();
           const followers = a.followersCount

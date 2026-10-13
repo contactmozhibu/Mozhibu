@@ -130,7 +130,7 @@ import { ConfirmService } from '../../core/services/confirm.service';
           ></app-story-section>
 
           <!-- Authors section -->
-          <section class="user-section">
+          <section class="user-section" *ngIf="authorUsers && authorUsers.length > 0">
             <div class="section-header">
               <h2 class="section-title">{{ "home.authors" | translate }}</h2>
               <a routerLink="/community" class="view-all">View All</a>
@@ -146,7 +146,7 @@ import { ConfirmService } from '../../core/services/confirm.service';
           </section>
 
           <!-- Following Users -->
-          <section class="user-section">
+          <section class="user-section" *ngIf="followingUsers && followingUsers.length > 0">
             <div class="section-header">
               <h2 class="section-title">{{ "home.following" | translate }}</h2>
               <a routerLink="/community" class="view-all">View All</a>

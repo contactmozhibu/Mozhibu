@@ -16,7 +16,25 @@ import { forkJoin } from 'rxjs';
       <div class="featured-card">
         <div class="featured-bg-glow"></div>
 
-        <ng-container *ngIf="featuredBooks.length > 0; else defaultHero">
+        <!-- Loading State -->
+        <div
+          *ngIf="isLoadingBooks"
+          class="section-loader-container"
+          style="height: 100%; color: white"
+        >
+          <div
+            class="section-loading-bar"
+            style="background: rgba(255,255,255,0.1)"
+          >
+            <div
+              class="section-loading-progress"
+              style="background: var(--card)"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Featured Books Carousel -->
+        <ng-container *ngIf="!isLoadingBooks && featuredBooks.length > 0">
           <div
             class="carousel-slide"
             *ngFor="let book of featuredBooks; let i = index"
@@ -71,22 +89,26 @@ import { forkJoin } from 'rxjs';
           </div>
         </ng-container>
 
-        <ng-template #defaultHero>
-          <div
-            class="section-loader-container"
-            style="height: 100%; color: white"
-          >
-            <div
-              class="section-loading-bar"
-              style="background: rgba(255,255,255,0.1)"
-            >
-              <div
-                class="section-loading-progress"
-                style="background: var(--card)"
-              ></div>
+        <!-- Empty State When No Books Exist -->
+        <div class="empty-hero" *ngIf="!isLoadingBooks && featuredBooks.length === 0">
+          <div class="featured-content">
+            <div class="featured-eyebrow">
+              <span class="live-dot"></span>
+              Welcome to Mozhibu
             </div>
+            <h1 class="featured-title">Stories in Your Language</h1>
+            <p class="featured-desc">
+              Discover stories, novels, and audiobooks from talented writers, or publish your own work and build your audience.
+            </p>
+            <button (click)="onStartWriting()" class="read-btn" style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              Start Writing
+            </button>
           </div>
-        </ng-template>
+        </div>
       </div>
 
       <!-- Trending Authors -->
@@ -159,6 +181,14 @@ import { forkJoin } from 'rxjs';
         overflow: hidden;
         position: relative;
         min-height: 420px;
+      }
+
+      .empty-hero {
+        display: flex;
+        align-items: center;
+        min-height: 324px;
+        position: relative;
+        z-index: 2;
       }
 
       .carousel-slide {
@@ -619,6 +649,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   featuredBooks: any[] = [];
+  isLoadingBooks = true;
   activeIndex = 0;
   carouselInterval: any;
 
@@ -626,7 +657,10 @@ export class HeroComponent implements OnInit, OnDestroy {
     // Fetch Authors
     this.authService.getAuthors().subscribe({
       next: (data) => {
-        this.authors = data.slice(0, 5).map((a: any) => {
+        this.authors = data
+          .filter((a: any) => a.role !== 'superadmin' && a.username !== 'superadmin')
+          .slice(0, 5)
+          .map((a: any) => {
           return {
             id: a._id,
             name: a.username || 'Unknown',
@@ -651,6 +685,7 @@ export class HeroComponent implements OnInit, OnDestroy {
       trending: this.bookService.getBooks('trending'),
     }).subscribe({
       next: (res: any) => {
+        this.isLoadingBooks = false;
         let combinedBooks: any[] = [];
 
         const mapBook = (b: any, tag: string) => ({
@@ -688,7 +723,10 @@ export class HeroComponent implements OnInit, OnDestroy {
           this.startCarousel();
         }
       },
-      error: (err) => console.error('Failed to load featured books', err),
+      error: (err) => {
+        console.error('Failed to load featured books', err);
+        this.isLoadingBooks = false;
+      },
     });
   }
 
@@ -729,6 +767,19 @@ export class HeroComponent implements OnInit, OnDestroy {
       this.router.navigate(['/library'], { queryParams: { tab: 'history' } });
     } else {
       this.router.navigate(['/login']);
+    }
+  }
+
+  onStartWriting() {
+    const user = this.authService.user();
+    if (!user) {
+      this.router.navigate(['/login']);
+      return;
+    }
+    if (user.role === 'writer' || user.role === 'superadmin') {
+      this.router.navigate(['/write']);
+    } else {
+      this.router.navigate(['/settings']);
     }
   }
 }
